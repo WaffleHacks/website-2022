@@ -3,6 +3,7 @@ module.exports = {
     title: "Waffle Hacks",
     description: "We're hackers with hearts.",
     siteUrl: "https://wafflehacks.tech",
+    image: "/images/logo.png",
     // Twitter handle
     author: `@wafflehacks`,
   },
