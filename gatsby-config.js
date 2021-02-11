@@ -23,8 +23,8 @@ module.exports = {
       options: {
         apiURL: "https://cms.wafflehacks.tech",
         queryLimit: 1000,
-        contentTypes: [],
-        singleTypes: [],
+        contentTypes: ["sponsor", "track"],
+        singleTypes: ["home-page"],
       },
     },
     "gatsby-transformer-sharp",
