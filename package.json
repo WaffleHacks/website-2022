@@ -1,17 +1,15 @@
 {
   "name": "landing-page",
-  "private": true,
-  "description": "The landing page for Waffle Hacks",
-  "version": "0.1.0",
-  "contributors": [
-    "Alex Krantz <alex@krantz.dev>"
-  ],
+  "description": "The landing page for WaffleHacks",
+  "version": "3.0.25",
   "dependencies": {
-    "gatsby": "^2.32.3",
+    "gatsby": "2.32.3",
     "gatsby-image": "^2.11.0",
-    "gatsby-plugin-manifest": "^2.12.0",
-    "gatsby-plugin-offline": "^3.10.0",
-    "gatsby-plugin-react-helmet": "^3.10.0",
+    "gatsby-plugin-manifest": "2.12.0",
+    "gatsby-plugin-offline": "3.10.0",
+    "gatsby-plugin-postcss": "3.7.0",
+    "gatsby-plugin-purgecss": "5.0.0",
+    "gatsby-plugin-react-helmet": "3.10.0",
     "gatsby-plugin-sharp": "^2.14.1",
     "gatsby-plugin-sitemap": "^2.12.0",
     "gatsby-source-filesystem": "^2.11.0",
@@ -22,24 +20,32 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0"
   },
-  "devDependencies": {
-    "prettier": "2.2.1"
-  },
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "analyze:lint": "eslint --ext .jsx --ext .js .",
+    "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
+    "analyze": "npm run analyze:lint && npm run analyze:prettier",
+    "build": "yarn run clean && gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "fix:lint": "eslint --ext .jsx --ext .js . --fix",
+    "fix:prettier": "prettier --write '**/*.{js,css,md,json}'",
+    "fix": "npm run fix:lint && npm run fix:prettier",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "serve": "gatsby serve"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.1.0",
+    "eslint": "7.19.0",
+    "eslint-config-react-app": "6.0.0",
+    "eslint-plugin-flowtype": "5.2.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.22.0",
+    "prettier": "2.2.1",
+    "tailwindcss": "2.0.3"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/WaffleHacks/landing-page"
-  },
-  "bugs": {
-    "url": "https://github.com/WaffleHacks/landing-page/issues"
   }
 }

@@ -1,21 +1,20 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-  </Layout>
-)
+function IndexPage() {
+  return (
+    <Layout>
+    
+      <SEO
+        title="GatsbyJS Tailwind Starter"
+        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+      />
 
-export default IndexPage
+    </Layout>
+  );
+}
+
+export default IndexPage;
