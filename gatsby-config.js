@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Waffle Hacks",
+    title: "WaffleHacks",
     description: "We're hackers with hearts.",
-    author: "@wafflehacks",
+    author: "@WaffleHacks",
     github: "https://github.com/app-generator/gatsbyjs-starter-tailwindplay",
     blog: "https://blog.appseed.us/tag/gatsbyjs",
     product: "https://appseed.us/apps/gatsbyjs",
