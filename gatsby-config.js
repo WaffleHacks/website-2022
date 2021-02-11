@@ -6,7 +6,7 @@ module.exports = {
     github: "https://github.com/app-generator/gatsbyjs-starter-tailwindplay",
     blog: "https://blog.appseed.us/tag/gatsbyjs",
     product: "https://appseed.us/apps/gatsbyjs",
-    docs: "https://docs.appseed.us/apps/gatsbyjs"
+    docs: "https://docs.appseed.us/apps/gatsbyjs",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -16,7 +16,7 @@ module.exports = {
       options: {
         name: "images",
         path: `${__dirname}/src/images`,
-      }
+      },
     },
     {
       resolve: "gatsby-source-strapi",
@@ -37,17 +37,17 @@ module.exports = {
         background_color: "#9d6832",
         theme_color: "#f1af49",
         display: "minimal-ui",
-        icon: "src/images/sample-favicon.png"
-      }
+        icon: "src/images/sample-favicon.png",
+      },
     },
     "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-purgecss",
       options: {
         tailwind: true,
-        purgeOnly: ["src/css/style.css", "src/css/global.css"]
-      }
+        purgeOnly: ["src/css/style.css", "src/css/global.css"],
+      },
     },
-    "gatsby-plugin-offline"
-  ]
+    "gatsby-plugin-offline",
+  ],
 };
