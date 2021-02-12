@@ -3,10 +3,6 @@ module.exports = {
     title: "WaffleHacks",
     description: "We're hackers with hearts.",
     author: "@WaffleHacks",
-    github: "https://github.com/app-generator/gatsbyjs-starter-tailwindplay",
-    blog: "https://blog.appseed.us/tag/gatsbyjs",
-    product: "https://appseed.us/apps/gatsbyjs",
-    docs: "https://docs.appseed.us/apps/gatsbyjs",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
