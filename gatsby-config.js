@@ -41,7 +41,11 @@ module.exports = {
       resolve: "gatsby-plugin-purgecss",
       options: {
         tailwind: true,
-        purgeOnly: ["src/css/style.css", "src/css/global.css"],
+        purgeOnly: [
+          "src/css/style.css", 
+          "src/css/global.css", 
+          "src/css/countdown.css"
+          ],
       },
     },
     "gatsby-plugin-offline",
