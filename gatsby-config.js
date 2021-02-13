@@ -3,6 +3,8 @@ module.exports = {
     title: "WaffleHacks",
     description: "We're hackers with hearts.",
     author: "@WaffleHacks",
+    siteUrl: "https://wafflehacks.tech",
+    image: "/images/logo.png",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
