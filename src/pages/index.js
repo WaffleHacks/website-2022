@@ -10,8 +10,8 @@ import CallToAction from "../components/call-to-action";
 const IndexPage = () => (
   <Layout>
     <Hero />
-
-    <Waves.GradientToWhite />
+		<Waves.GradientToWhite />
+    
 
     <Description />
     <Tracks />

@@ -3,7 +3,6 @@ module.exports = {
     title: "WaffleHacks",
     description: "We're hackers with hearts.",
     author: "@WaffleHacks",
-    siteUrl: "https://wafflehacks.tech"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -42,7 +41,11 @@ module.exports = {
       resolve: "gatsby-plugin-purgecss",
       options: {
         tailwind: true,
-        purgeOnly: ["src/css/style.css", "src/css/global.css"],
+        purgeOnly: [
+          "src/css/style.css", 
+          "src/css/global.css", 
+          "src/css/countdown.css"
+          ],
       },
     },
     "gatsby-plugin-offline",

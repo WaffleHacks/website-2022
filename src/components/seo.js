@@ -1,32 +1,41 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
-const query = graphql`
-  query SEOQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        author
+function SEO({ description, lang, meta, title }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+            siteUrl
+            image
+          }
+        }
       }
-    }
-  }
-`;
+    `
+  )
 
-const SEO = ({ description, lang, keywords, title }) => {
-  const data = useStaticQuery(query);
-  const metaDescription = description || data.site.siteMetadata.description;
+  const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
-      htmlAttributes={{ lang }}
-      title={title}
+      htmlAttributes={{
+        lang,
+      }}
+      title={site.siteMetadata?.title}
       meta={[
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          property: "og:url",
+          content: site.siteMetadata?.siteUrl,
         },
         {
           property: `og:title`,
@@ -41,12 +50,16 @@ const SEO = ({ description, lang, keywords, title }) => {
           content: `website`,
         },
         {
+          property: "og:image",
+          content: site.siteMetadata?.image,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: data.site.siteMetadata.author,
+          content: site.siteMetadata?.author || ``,
         },
         {
           name: `twitter:title`,
@@ -56,28 +69,26 @@ const SEO = ({ description, lang, keywords, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(
-        keywords.length > 0
-          ? {
-              name: `keywords`,
-              content: keywords.join(`, `),
-            }
-          : []
-      )}
+        {
+          name: "twitter:image",
+          content: site.siteMetadata?.image,
+        }
+      ].concat(meta)}
     />
-  );
-};
+  )
+}
 
 SEO.defaultProps = {
   lang: `en`,
-  keywords: [],
-};
+  meta: [],
+  description: ``,
+}
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  keywords: PropTypes.arrayOf(PropTypes.string),
+  meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-};
+}
 
-export default SEO;
+export default SEO

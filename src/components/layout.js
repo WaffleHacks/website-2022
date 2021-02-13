@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Header from "./header";
-import Footer from "./footer";
 import SEO from "./seo";
 
 const Layout = ({ children, pageDescription, pageTitle, lang, keywords }) => (
@@ -17,8 +16,6 @@ const Layout = ({ children, pageDescription, pageTitle, lang, keywords }) => (
     <Header />
 
     {children}
-
-    <Footer />
   </div>
 );
 

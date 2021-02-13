@@ -1,3 +1,8 @@
-.gradient {
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+.gradient{
+	background: rgb(251,173,36);
+	background: linear-gradient(90deg, rgba(251,173,36,1) 0%, rgba(227,145,63,1) 35%, rgba(208,129,50,1) 100%);
 }
+
+/* .gradient-hero{
+	background-image: url("../images/background-image.png"); 
+} */
