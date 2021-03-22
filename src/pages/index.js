@@ -9,7 +9,12 @@ import CallToAction from "../components/call-to-action"
 
 const IndexPage = () => (
   <Layout>
-    <Hero />
+    <Hero
+      title="WaffleHacks"
+      subtitle="We're hackers with hearts"
+      action={{ text: "Register now!", link: "https://apply.wafflehacks.tech" }}
+      image={true}
+    />
     <Waves.GradientToWhite />
 
     <Description />
