@@ -80,7 +80,6 @@ const Countdown = ({ time }) => {
     return () => clearInterval(ticker)
   }, [time])
 
-  // TODO: fix days radius being weird
   const daysRadius = mapNumber(days, 0, 30, 0, 360)
   const hoursRadius = mapNumber(hours, 0, 24, 0, 360)
   const minutesRadius = mapNumber(minutes, 0, 60, 0, 360)
