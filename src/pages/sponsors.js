@@ -97,7 +97,10 @@ const SponsorsPage = () => {
 
   // Extract the sponsor groups
   const sponsors = { platinum: [], gold: [], silver: [], bronze: [] }
-  for (const group of rawGroups) sponsors[group.fieldValue] = group.nodes
+  for (const group of rawGroups)
+    sponsors[group.fieldValue] = group.nodes.filter(
+      n => n.name.toLowerCase() !== "placeholder" // Prevent the placeholder sponsors from being displayed
+    )
 
   return (
     <Layout>
