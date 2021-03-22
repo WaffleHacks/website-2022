@@ -1,12 +1,12 @@
-import React from "react";
-
-import bgImg from "../images/hero.png";
+import React from "react"
 
 const Hero = () => (
   <div className="pt-24 bg-hero-pattern min-h-screen">
     <div className="container mx-auto px-4 flex items-center ">
       <div className="container mx-auto px-4 content-around text-center">
-        <h1 className="my-4 text-5xl font-bold leading-tight pt-12">WaffleHacks</h1>
+        <h1 className="my-4 text-5xl font-bold leading-tight pt-12">
+          WaffleHacks
+        </h1>
         <p className="leading-normal text-2xl mb-8 pb-8">
           We're hackers with hearts
         </p>
@@ -17,10 +17,8 @@ const Hero = () => (
         >
           Register Now!
         </a>
-
-
       </div>
-			{/*
+      {/*
       <div className="w-full md:w-3/5 py-6 text-center">
         <img
           className="w-full md:w-4/5 z-50"
@@ -53,9 +51,8 @@ const Hero = () => (
 				<br></br>
 
 			*/}
-
     </div>
   </div>
-);
+)
 
-export default Hero;
+export default Hero

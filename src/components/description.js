@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 const query = graphql`
   query HomePage {
@@ -14,7 +14,7 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 const Description = () => {
   const {
@@ -24,7 +24,7 @@ const Description = () => {
       origin,
       origin_image: { publicURL: origin_image },
     },
-  } = useStaticQuery(query);
+  } = useStaticQuery(query)
 
   return (
     <section className="bg-white border-b py-8">
@@ -71,7 +71,7 @@ const Description = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Description;
+export default Description

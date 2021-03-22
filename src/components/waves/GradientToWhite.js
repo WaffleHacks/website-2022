@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const GradientToWhite = () => (
   <div className="relative -mt-12 lg:-mt-24">
@@ -37,6 +37,6 @@ const GradientToWhite = () => (
       </g>
     </svg>
   </div>
-);
+)
 
-export default GradientToWhite;
+export default GradientToWhite

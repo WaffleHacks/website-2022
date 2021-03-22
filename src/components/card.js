@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
 const Card = ({ header, content }) => (
   <div className="w-1/2 md:w-1/4 p-6 flex flex-col flex-grow flex-shrink">
@@ -15,11 +15,11 @@ const Card = ({ header, content }) => (
       </a>
     </div>
   </div>
-);
+)
 
 Card.propTypes = {
   header: PropTypes.string,
   content: PropTypes.string,
-};
+}
 
-export default Card;
+export default Card

@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
-import Card from "./card";
-import { useStaticQuery, graphql } from "gatsby";
+import Card from "./card"
+import { useStaticQuery, graphql } from "gatsby"
 
 const query = graphql`
   query Tracks {
@@ -16,12 +16,12 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 const Tracks = () => {
   const {
     allStrapiTrack: { nodes: tracks },
-  } = useStaticQuery(query);
+  } = useStaticQuery(query)
 
   return (
     <section className="bg-white border-b py-8">
@@ -42,7 +42,7 @@ const Tracks = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Tracks;
+export default Tracks
