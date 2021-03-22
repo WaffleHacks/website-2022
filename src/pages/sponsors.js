@@ -77,6 +77,9 @@ const Sponsor = ({ tier, name, url, logo: { publicURL: logoURL } }) => (
 const SponsorsSection = ({ sponsors, tier }) => (
   <>
     <Header title={tier.charAt(0).toUpperCase() + tier.slice(1)} />
+    {sponsors.length === 0 && (
+      <p className="text-center text-gray-800">Be the first {tier} sponsor!</p>
+    )}
     <div className={`grid ${TIER_SETTINGS.GRID_SIZE[tier]} gap-4`}>
       {sponsors.map(s => (
         <Sponsor {...s} />
@@ -105,7 +108,7 @@ const SponsorsPage = () => {
       <section className="bg-white py-8">
         <div className="container max-w-5xl mx-auto m-8">
           <p className="w-full my-2 leading-tight text-center text-gray-800">
-            Want to become a sponsor? Checkout our&nbsp;
+            Want to become a sponsor? Check out our&nbsp;
             <a
               className="text-yellow-600"
               href={prospectusURL}
