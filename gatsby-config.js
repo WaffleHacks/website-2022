@@ -17,6 +17,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "static",
+        path: `${__dirname}/src/static`,
+      },
+    },
+    {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: "https://cms.wafflehacks.tech",
@@ -44,12 +51,12 @@ module.exports = {
       options: {
         tailwind: true,
         purgeOnly: [
-          "src/css/style.css", 
-          "src/css/global.css", 
-          "src/css/countdown.css"
-          ],
+          "src/css/style.css",
+          "src/css/global.css",
+          "src/css/countdown.css",
+        ],
       },
     },
     "gatsby-plugin-offline",
   ],
-};
+}

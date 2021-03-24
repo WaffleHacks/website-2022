@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-import Countdown from "./countdown";
+import Countdown from "./countdown"
 
 const CallToAction = () => (
   <section className="container mx-auto text-center pt-8 pb-12">
@@ -11,13 +11,16 @@ const CallToAction = () => (
       <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
     </div>
 
-    <Countdown time="2021-05-15T08:30:00-07:00"/>
+    <Countdown time="2021-05-15T08:30:00-07:00" />
 
     <br />
-    <a className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="https://apply.wafflehacks.tech">
+    <a
+      className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
+      href="https://apply.wafflehacks.tech"
+    >
       Register
     </a>
   </section>
-);
+)
 
-export default CallToAction;
+export default CallToAction

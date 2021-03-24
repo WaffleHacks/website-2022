@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 const query = graphql`
   query HomePage {
@@ -14,7 +14,7 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 const Description = () => {
   const {
@@ -24,10 +24,10 @@ const Description = () => {
       origin,
       origin_image: { publicURL: origin_image },
     },
-  } = useStaticQuery(query);
+  } = useStaticQuery(query)
 
   return (
-    <section className="bg-white border-b py-8">
+    <section className="bg-white py-8">
       <div className="container max-w-5xl mx-auto m-8">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           WaffleHacks
@@ -71,7 +71,7 @@ const Description = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Description;
+export default Description

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const WhiteToGradient = () => (
   <svg
@@ -31,6 +31,6 @@ const WhiteToGradient = () => (
       </g>
     </g>
   </svg>
-);
+)
 
-export default WhiteToGradient;
+export default WhiteToGradient

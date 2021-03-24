@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
-import Header from "./header";
-import SEO from "./seo";
+import Header from "./header"
+import SEO from "./seo"
 
 const Layout = ({ children, pageDescription, pageTitle, lang, keywords }) => (
   <div className="leading-normal tracking-normal text-white gradient">
@@ -23,14 +23,14 @@ const Layout = ({ children, pageDescription, pageTitle, lang, keywords }) => (
     <a href="https://www.linkedin.com/company/wafflehacks/about/">Linkedin</a>
     </footer>
   </div>
-);
+)
 
 Layout.defaultProps = {
   lang: "en",
   keywords: [],
   pageTitle: "WaffleHacks",
   pageDescription: "We're hackers with hearts",
-};
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
@@ -38,6 +38,6 @@ Layout.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   pageTitle: PropTypes.string,
   pageDescription: PropTypes.string,
-};
+}
 
-export default Layout;
+export default Layout
