@@ -16,6 +16,12 @@ const Layout = ({ children, pageDescription, pageTitle, lang, keywords }) => (
     <Header />
 
     {children}
+    <footer>
+    <h1>Socials</h1>
+    <a href="https://www.instagram.com/waffle.hacks/">Instagram</a>
+    <a href="https://www.facebook.com/WaffleHacks-103974901775671">Facebook</a>
+    <a href="https://www.linkedin.com/company/wafflehacks/about/">Linkedin</a>
+    </footer>
   </div>
 );
 
