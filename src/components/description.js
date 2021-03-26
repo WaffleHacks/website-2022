@@ -45,7 +45,7 @@ const Description = () => {
           </div>
           <div className="w-full sm:w-1/2 p-6">
             <img
-              className="w-full sm:h-64 mx-auto"
+              className="w-auto sm:h-80 mx-auto"
               src={origin_image}
               alt="placeholder"
             />
@@ -55,7 +55,7 @@ const Description = () => {
         <div className="flex flex-wrap flex-col-reverse sm:flex-row">
           <div className="w-full sm:w-1/2 p-6 mt-6">
             <img
-              className="w-5/6 sm:h-64 mx-auto"
+              className="w-auto sm:h-80 mx-auto"
               src={description_image}
               alt="placeholder"
             />
