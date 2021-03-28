@@ -29,7 +29,7 @@ module.exports = {
         apiURL: "https://cms.wafflehacks.tech",
         queryLimit: 1000,
         contentTypes: ["sponsor", "track"],
-        singleTypes: ["home-page"],
+        singleTypes: ["home-page", "footer"],
       },
     },
     "gatsby-transformer-sharp",
