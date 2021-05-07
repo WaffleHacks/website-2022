@@ -13,6 +13,7 @@ const query = graphql`
         image {
           publicURL
         }
+        short_description
       }
     }
   }
@@ -37,6 +38,7 @@ const Tracks = () => {
           <Card
             header={track.name}
             content={track.description}
+            short={track.short_description}
             key={track.id}
           />
         ))}
