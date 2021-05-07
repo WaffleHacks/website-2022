@@ -11,7 +11,7 @@ const CallToAction = () => (
       <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
     </div>
 
-    <Countdown time="2021-07-07T23:59:00-04:00" />
+    <Countdown time="2021-07-08T23:59:00-04:00" />
 
     <br />
     <a
