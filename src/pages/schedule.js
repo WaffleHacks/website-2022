@@ -17,7 +17,7 @@ const SchedulePage = () => (
 
       <iframe
         title="Schedule Calendar"
-        src="https://teamup.com/ksmnb1zuij8z12aako?date=2021-07-09&view=md&showHeader=0&showProfileAndInfo=0&showSidepanel=1&disableSidepanel=1&showViewSelector=0&showMenu=1&showAgendaHeader=1&showAgendaDetails=0&showYearViewHeader=1"
+        src="https://teamup.com/kspyg8xuj8aghxb1dq?date=2021-07-09&view=md&showHeader=0&showProfileAndInfo=0&showSidepanel=1&disableSidepanel=1&showViewSelector=0&showMenu=1&showAgendaHeader=1&showAgendaDetails=0&showYearViewHeader=1"
         width="100%"
         height="800px"
         frameBorder="0"
