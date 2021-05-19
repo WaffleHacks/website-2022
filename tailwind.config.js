@@ -6,9 +6,9 @@ module.exports = {
   purge: production,
   theme: {
     extend: {
-      backgroundImage: theme => ({
+      backgroundImage: {
         "hero-pattern": "url('../images/background-overlay6.png')",
-      }),
+      },
     },
     colors: require("tailwindcss/colors"),
   },
