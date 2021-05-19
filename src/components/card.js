@@ -52,13 +52,11 @@ const Card = ({ header, content, short }) => {
                     <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                       <Dialog.Title
                         as="h3"
-                        className="text-xl leading-6 font-medium text-gray-900"
+                        className="text-3xl leading-6 font-medium text-gray-900"
                       >
                         {header}
                       </Dialog.Title>
-                      <div className="mt-2">
-                        <p className="text-sm text-gray-500">{short}</p>
-                        <br />
+                      <div className="mt-5">
                         <p className="text-base text-black">{content}</p>
                       </div>
                     </div>
@@ -67,7 +65,7 @@ const Card = ({ header, content, short }) => {
                 <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                   <button
                     type="button"
-                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none ring-2 ring-amber-600 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >
@@ -83,13 +81,12 @@ const Card = ({ header, content, short }) => {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="w-1/2 md:w-1/4 p-6 flex flex-col flex-grow flex-shrink"
+        className="w-1/2 md:w-1/4 p-6 flex flex-col flex-grow flex-shrink text-center"
       >
-        <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-          <div className="w-full font-bold text-xl text-gray-800 px-6 pt-6">
+        <div className="flex-1 bg-white rounded-lg overflow-hidden bg-amber-50 hover:shadow-lg transition-shadow">
+          <div className="w-full font-bold text-xl text-gray-800 px-6 py-6">
             {header}
           </div>
-          <p className="text-gray-800 text-base px-6 pt-6 mb-5">{short}</p>
         </div>
       </button>
     </>
