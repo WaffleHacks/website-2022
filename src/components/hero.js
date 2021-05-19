@@ -5,9 +5,13 @@ const Hero = ({ title, subtitle, image, action }) => (
   <div className={image ? "pt-24 bg-hero-pattern min-h-screen" : "py-24"}>
     <div className="container mx-auto px-4 flex items-center ">
       <div className="container mx-auto px-4 content-around text-center">
-        <h1 className="my-4 text-5xl font-bold leading-tight pt-12">{title}</h1>
+        <h1 className="my-4 text-5xl font-bold leading-tight pt-12 text-red-900">
+          {title}
+        </h1>
         {subtitle && (
-          <p className="leading-normal text-2xl mb-8 pb-8">{subtitle}</p>
+          <p className="leading-normal text-2xl mb-8 pb-8 text-red-900">
+            {subtitle}
+          </p>
         )}
 
         {action && (
