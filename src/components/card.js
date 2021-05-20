@@ -2,7 +2,7 @@ import React, { Fragment, useRef, useState } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import PropTypes from "prop-types"
 
-const Card = ({ header, content, short }) => {
+const Card = ({ header, content, questions }) => {
   const [open, setOpen] = useState(false)
   const cancelButtonRef = useRef()
 
@@ -49,7 +49,7 @@ const Card = ({ header, content, short }) => {
               <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                 <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
-                    <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <div className="mt-3 sm:mt-0 sm:ml-4 text-left">
                       <Dialog.Title
                         as="h3"
                         className="text-3xl leading-6 font-medium text-gray-900"
@@ -57,7 +57,18 @@ const Card = ({ header, content, short }) => {
                         {header}
                       </Dialog.Title>
                       <div className="mt-5">
-                        <p className="text-base text-black">{content}</p>
+                        <p className="text-base text-gray-600">{content}</p>
+                        <br />
+                        <h5 className="text-xl leading-3 font-medium mb-2">
+                          Guiding Questions:
+                        </h5>
+                        <ul className="list-disc">
+                          {questions.map(q => (
+                            <li key={q.id} className="text-gray-600">
+                              {q.content}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -96,7 +107,7 @@ const Card = ({ header, content, short }) => {
 Card.propTypes = {
   header: PropTypes.string,
   content: PropTypes.string,
-  short: PropTypes.string,
+  questions: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default Card
