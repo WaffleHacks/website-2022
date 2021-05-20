@@ -1,9 +1,7 @@
 // See https://next.tailwindcss.com/docs/configuration for details
 
-const production = process.env.NODE_ENV === "production"
-
 module.exports = {
-  purge: production,
+  purge: false,
   theme: {
     extend: {
       backgroundImage: {
