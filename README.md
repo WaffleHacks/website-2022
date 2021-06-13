@@ -6,7 +6,7 @@ It is a modified version of the [Gatsby Tailwind Starter](https://github.com/app
 The countdown clock is a modified version of the countdown timer in [this blog post](https://www.florin-pop.com/blog/2019/05/countdown-built-with-react/).
 
 
-### Development
+## Development
 1. Install the latest LTS release of Node.js with [nvm](https://github.com/nvm-sh/nvm) or from the [official releases](https://nodejs.org/en/).
 1. Install dependencies
 ```shell
