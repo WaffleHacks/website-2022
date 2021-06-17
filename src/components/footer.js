@@ -54,7 +54,7 @@ const Footer = () => {
                     key={link.name}
                   >
                     <a
-                      href={link.link}
+                      href={link.url}
                       className="no-underline hover:underline text-gray-600 hover:text-yellow-600"
                       target={link.new_tab ? "_blank" : "_self"}
                       rel="noreferrer"
