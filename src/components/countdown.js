@@ -80,7 +80,7 @@ const Countdown = ({ time }) => {
     return () => clearInterval(ticker)
   }, [time])
 
-  const daysRadius = mapNumber(days, 0, 365, 0, 360)
+  const daysRadius = mapNumber(days, 0, 90, 0, 360) // Timer set to 90 day maximum
   const hoursRadius = mapNumber(hours, 0, 24, 0, 360)
   const minutesRadius = mapNumber(minutes, 0, 60, 0, 360)
   const secondsRadius = mapNumber(seconds, 0, 60, 0, 360)
