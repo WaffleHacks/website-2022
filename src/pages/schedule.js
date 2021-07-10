@@ -12,7 +12,8 @@ const SchedulePage = () => (
 
     <section className="bg-white py-8 xl:px-40 md:px-10">
       <p className="w-full my-2 leading-tight text-center text-gray-800">
-        Full schedule coming soon...
+        Here is the full schedule of events! Click on each event to learn more about the event and access resources for it, 
+        if any. We are still adding and modifying events, so check back for more updates!
       </p>
 
       <iframe
