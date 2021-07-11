@@ -94,8 +94,8 @@ const Card = ({ header, content, questions }) => {
         onClick={() => setOpen(true)}
         className="w-1/2 md:w-1/4 p-6 flex flex-col flex-grow flex-shrink text-center"
       >
-        <div className="flex-1 bg-white rounded-lg overflow-hidden bg-amber-50 hover:shadow-lg transition-shadow">
-          <div className="w-full font-bold text-xl text-gray-800 px-6 py-6">
+        <div className="w-full flex-1 bg-white rounded-lg overflow-hidden bg-amber-50 hover:shadow-lg transition-shadow">
+          <div className="w-full font-bold text-xl text-gray-800 p-6">
             {header}
           </div>
         </div>
