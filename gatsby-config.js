@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: "https://cms.wafflehacks.tech",
+        apiURL: "https://cms-v1.wafflehacks.tech",
         queryLimit: 1000,
         contentTypes: ["sponsor", "track"],
         singleTypes: ["home-page", "footer"],
