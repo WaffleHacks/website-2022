@@ -1,6 +1,7 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
+import { ASSET_URL } from "../constants"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Waves from "../components/waves"
@@ -23,21 +24,19 @@ const TIER_SETTINGS = {
 
 const query = graphql`
   query Sponsors {
+    directus {
+      sponsors {
+        id
+        name
+        tier
+        url
+        logo {
+          id
+        }
+      }
+    }
     file(name: { eq: "sponsorship-package" }) {
       publicURL
-    }
-    allStrapiSponsor {
-      group(field: tier) {
-        nodes {
-          tier
-          logo {
-            publicURL
-          }
-          name
-          url
-        }
-        fieldValue
-      }
     }
   }
 `
@@ -54,11 +53,11 @@ const Header = ({ title }) => (
 )
 
 // TODO: design company logo
-const Sponsor = ({ tier, name, url, logo: { publicURL: logoURL } }) => (
+const Sponsor = ({ tier, name, url, logo: { id } }) => (
   <>
     <div>
       <img
-        src={logoURL}
+        src={`${ASSET_URL}/${id}`}
         alt={`${name}'s logo`}
         style={{ height: TIER_SETTINGS.LOGO_HEIGHT[tier] }}
       />
@@ -91,16 +90,15 @@ const SponsorsSection = ({ sponsors, tier }) => (
 const SponsorsPage = () => {
   // Get a list of all our sponsors
   const {
-    allStrapiSponsor: { group: rawGroups },
+    directus: { sponsors: ungrouped },
     file: { publicURL: prospectusURL },
   } = useStaticQuery(query)
 
   // Extract the sponsor groups
+  // This might not actually work properly lol
   const sponsors = { platinum: [], gold: [], silver: [], bronze: [] }
-  for (const group of rawGroups)
-    sponsors[group.fieldValue] = group.nodes.filter(
-      n => n.name.toLowerCase() !== "placeholder" // Prevent the placeholder sponsors from being displayed
-    )
+  if (ungrouped !== null)
+    for (const group of ungrouped) sponsors[group.tier] = group
 
   return (
     <Layout>
@@ -126,13 +124,12 @@ const SponsorsPage = () => {
           <br />
           <br />
 
-          <SponsorsSection sponsors={sponsors.platinum} tier="platinum" />
-          <br />
-          <SponsorsSection sponsors={sponsors.gold} tier="gold" />
-          <br />
-          <SponsorsSection sponsors={sponsors.silver} tier="silver" />
-          <br />
-          <SponsorsSection sponsors={sponsors.bronze} tier="bronze" />
+          {Object.keys(sponsors).map(k => (
+            <Fragment key={k}>
+              <SponsorsSection sponsors={sponsors[k]} tier={k} />
+              <br />
+            </Fragment>
+          ))}
         </div>
       </section>
     </Layout>

@@ -24,12 +24,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-strapi",
+      resolve: "@directus/gatsby-source-directus",
       options: {
-        apiURL: "https://cms-v1.wafflehacks.tech",
-        queryLimit: 1000,
-        contentTypes: ["sponsor", "track"],
-        singleTypes: ["home-page", "footer"],
+        url: "https://cms.wafflehacks.tech",
+        dev: {
+          refresh: "5m",
+        },
       },
     },
     "gatsby-transformer-sharp",
@@ -42,7 +42,7 @@ module.exports = {
         background_color: "#9d6832",
         theme_color: "#f1af49",
         display: "minimal-ui",
-        icon: "src/images/sample-favicon.png",
+        icon: "src/images/logo.png",
       },
     },
     "gatsby-plugin-postcss",

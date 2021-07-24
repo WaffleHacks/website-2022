@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-pattern": "url('../images/background-overlay6.png')",
+        "hero-pattern": "url('../images/background-overlay.png')",
       },
     },
     colors: require("tailwindcss/colors"),
