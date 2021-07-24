@@ -39,7 +39,7 @@ const Description = () => {
             <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
               Our Origin
             </h3>
-            <p
+            <div
               className="text-gray-600 mb-8"
               dangerouslySetInnerHTML={{ __html: homepage.origin }}
             />
@@ -66,7 +66,7 @@ const Description = () => {
               <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
                 What is WaffleHacks
               </h3>
-              <p
+              <div
                 className="text-gray-600 mb-8"
                 dangerouslySetInnerHTML={{ __html: homepage.description }}
               />
