@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { ASSET_URL } from "../constants"
+import { ASSET_URL, PROSPECTUS_URL } from "../constants"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Waves from "../components/waves"
@@ -34,9 +34,6 @@ const query = graphql`
           id
         }
       }
-    }
-    file(name: { eq: "sponsorship-package" }) {
-      publicURL
     }
   }
 `
@@ -91,7 +88,6 @@ const SponsorsPage = () => {
   // Get a list of all our sponsors
   const {
     directus: { sponsors: ungrouped },
-    file: { publicURL: prospectusURL },
   } = useStaticQuery(query)
 
   // Extract the sponsor groups
@@ -112,7 +108,7 @@ const SponsorsPage = () => {
             Want to become a sponsor? Check out our&nbsp;
             <a
               className="text-yellow-600"
-              href={prospectusURL}
+              href={PROSPECTUS_URL}
               rel="noreferrer"
               target="_blank"
             >
