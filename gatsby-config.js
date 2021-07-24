@@ -42,7 +42,7 @@ module.exports = {
         background_color: "#9d6832",
         theme_color: "#f1af49",
         display: "minimal-ui",
-        icon: "src/images/sample-favicon.png",
+        icon: "src/images/logo.png",
       },
     },
     "gatsby-plugin-postcss",

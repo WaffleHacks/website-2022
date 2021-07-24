@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import { Menu, Transition } from "@headlessui/react"
 import { useLocation } from "@reach/router"
 
-import waffleLogo from "../images/waffle-logo.png"
+import waffleLogo from "../images/logo.png"
 
 const links = [
   {

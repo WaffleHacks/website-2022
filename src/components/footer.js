@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import waffleLogo from "../images/waffle-logo.png"
+import waffleLogo from "../images/logo.png"
 
 const query = graphql`
   query Footer {
