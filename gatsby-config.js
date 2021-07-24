@@ -17,13 +17,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "static",
-        path: `${__dirname}/src/static`,
-      },
-    },
-    {
       resolve: "@directus/gatsby-source-directus",
       options: {
         url: "https://cms.wafflehacks.tech",
