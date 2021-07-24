@@ -1,13 +1,18 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Hero from "../components/hero"
+import Waves from "../components/waves"
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <Layout pageTitle="Not found">
+    <Hero
+      title="Not found"
+      subtitle="You just found a page that doesn't exist... the sadness."
+      image={false}
+    />
+
+    <Waves.GradientToWhite />
   </Layout>
 )
 
