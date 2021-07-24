@@ -5,15 +5,12 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const query = graphql`
   query Tracks {
-    allStrapiTrack {
-      nodes {
-        id
+    directus {
+      tracks(sort: "name") {
         description
         name
-        image {
-          publicURL
-        }
-        guiding_question {
+        id
+        questions {
           content
           id
         }
@@ -24,7 +21,7 @@ const query = graphql`
 
 const Tracks = () => {
   const {
-    allStrapiTrack: { nodes: tracks },
+    directus: { tracks },
   } = useStaticQuery(query)
 
   return (
@@ -41,7 +38,7 @@ const Tracks = () => {
           <Card
             header={track.name}
             content={track.description}
-            questions={track.guiding_question}
+            questions={track.questions}
             key={track.id}
           />
         ))}

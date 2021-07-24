@@ -5,14 +5,16 @@ import waffleLogo from "../images/waffle-logo.png"
 
 const query = graphql`
   query Footer {
-    strapiFooter {
-      Category {
-        Link {
+    directus {
+      footer {
+        categories {
           name
-          new_tab
-          url
+          links {
+            name
+            new_tab
+            url
+          }
         }
-        header
       }
     }
   }
@@ -20,7 +22,9 @@ const query = graphql`
 
 const Footer = () => {
   const {
-    strapiFooter: { Category: categories },
+    directus: {
+      footer: { categories },
+    },
   } = useStaticQuery(query)
 
   return (
@@ -42,13 +46,11 @@ const Footer = () => {
           </div>
 
           {categories.map(category => (
-            <div className="flex-1" key={category.header}>
-              <p className="uppercase text-gray-500 md:mb-6">
-                {category.header}
-              </p>
+            <div className="flex-1" key={category.name}>
+              <p className="uppercase text-gray-500 md:mb-6">{category.name}</p>
 
               <ul className="list-reset mb-6">
-                {category.Link.map(link => (
+                {category.links.map(link => (
                   <li
                     className="mt-2 inline-block mr-2 md:block md:mr-0"
                     key={link.name}

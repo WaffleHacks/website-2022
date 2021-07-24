@@ -24,12 +24,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-strapi",
+      resolve: "@directus/gatsby-source-directus",
       options: {
-        apiURL: "https://cms-v1.wafflehacks.tech",
-        queryLimit: 1000,
-        contentTypes: ["sponsor", "track"],
-        singleTypes: ["home-page", "footer"],
+        url: "https://cms.wafflehacks.tech",
+        dev: {
+          refresh: "5m",
+        },
       },
     },
     "gatsby-transformer-sharp",

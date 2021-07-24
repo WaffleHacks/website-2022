@@ -57,7 +57,10 @@ const Card = ({ header, content, questions }) => {
                         {header}
                       </Dialog.Title>
                       <div className="mt-5">
-                        <p className="text-base text-gray-600">{content}</p>
+                        <p
+                          className="text-base text-gray-600"
+                          dangerouslySetInnerHTML={{ __html: content }}
+                        />
                         <br />
                         <h5 className="text-xl leading-3 font-medium mb-2">
                           Guiding Questions:

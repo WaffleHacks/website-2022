@@ -1,16 +1,19 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { ASSET_URL } from "../constants"
 
 const query = graphql`
   query HomePage {
-    strapiHomePage {
-      description
-      description_image {
-        publicURL
-      }
-      origin
-      origin_image {
-        publicURL
+    directus {
+      homepage {
+        description
+        description_image {
+          id
+        }
+        origin
+        origin_image {
+          id
+        }
       }
     }
   }
@@ -18,12 +21,7 @@ const query = graphql`
 
 const Description = () => {
   const {
-    strapiHomePage: {
-      description,
-      description_image: { publicURL: description_image },
-      origin,
-      origin_image: { publicURL: origin_image },
-    },
+    directus: { homepage },
   } = useStaticQuery(query)
 
   return (
@@ -41,12 +39,15 @@ const Description = () => {
             <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
               Our Origin
             </h3>
-            <p className="text-gray-600 mb-8">{origin}</p>
+            <p
+              className="text-gray-600 mb-8"
+              dangerouslySetInnerHTML={{ __html: homepage.origin }}
+            />
           </div>
           <div className="w-full sm:w-1/2 p-6">
             <img
               className="w-auto sm:h-80 mx-auto"
-              src={origin_image}
+              src={`${ASSET_URL}/${homepage.origin_image.id}`}
               alt="placeholder"
             />
           </div>
@@ -56,7 +57,7 @@ const Description = () => {
           <div className="w-full sm:w-1/2 p-6 mt-6">
             <img
               className="w-auto sm:h-80 mx-auto"
-              src={description_image}
+              src={`${ASSET_URL}/${homepage.description_image.id}`}
               alt="placeholder"
             />
           </div>
@@ -65,7 +66,10 @@ const Description = () => {
               <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
                 What is WaffleHacks
               </h3>
-              <p className="text-gray-600 mb-8">{description}</p>
+              <p
+                className="text-gray-600 mb-8"
+                dangerouslySetInnerHTML={{ __html: homepage.description }}
+              />
             </div>
           </div>
         </div>
