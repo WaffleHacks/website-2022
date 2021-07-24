@@ -85,7 +85,7 @@ const SmallNav = () => (
           >
             <div className="py-1">
               {links.map(link => (
-                <Menu.Item>
+                <Menu.Item key={link.name}>
                   <HeaderLink {...link} withList={false} inline={false} />
                 </Menu.Item>
               ))}
@@ -136,7 +136,7 @@ const Header = () => (
       >
         <ul className="list-reset lg:flex justify-end flex-1 items-center">
           {links.map(link => (
-            <HeaderLink {...link} />
+            <HeaderLink {...link} key={link.name} />
           ))}
         </ul>
         <a
