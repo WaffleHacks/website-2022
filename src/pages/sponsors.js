@@ -9,15 +9,11 @@ const TIER_SETTINGS = {
   // TODO: update the logo sizes
   LOGO_HEIGHT: {
     platinum: 750,
-    gold: 500,
-    silver: 250,
-    bronze: 100,
+    silver: 500,
   },
   GRID_SIZE: {
     platinum: "grid-cols-1",
-    gold: "grid-cols-2",
-    silver: "grid-cols-3",
-    bronze: "grid-cols-4",
+    silver: "grid-cols-2",
   },
 }
 
@@ -105,7 +101,7 @@ const SponsorsPage = () => {
 
   // Extract the sponsor groups
   // This might not actually work properly lol
-  const sponsors = { platinum: [], gold: [], silver: [], bronze: [] }
+  const sponsors = { platinum: [], silver: [] }
   if (ungrouped !== null)
     for (const group of ungrouped) sponsors[group.tier] = group
 
