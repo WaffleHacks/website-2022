@@ -1,7 +1,6 @@
 import React, { Fragment } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { ASSET_URL, PROSPECTUS_URL } from "../constants"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Waves from "../components/waves"
@@ -25,6 +24,14 @@ const TIER_SETTINGS = {
 const query = graphql`
   query Sponsors {
     directus {
+      fields {
+        prospectus {
+          id
+          imageFile {
+            publicURL
+          }
+        }
+      }
       sponsors {
         id
         name
@@ -32,6 +39,9 @@ const query = graphql`
         url
         logo {
           id
+          imageFile {
+            publicURL
+          }
         }
       }
     }
@@ -50,11 +60,11 @@ const Header = ({ title }) => (
 )
 
 // TODO: design company logo
-const Sponsor = ({ tier, name, url, logo: { id } }) => (
+const Sponsor = ({ tier, name, url, logo }) => (
   <>
     <div>
       <img
-        src={`${ASSET_URL}/${id}`}
+        src={logo.imageFile.publicURL}
         alt={`${name}'s logo`}
         style={{ height: TIER_SETTINGS.LOGO_HEIGHT[tier] }}
       />
@@ -87,7 +97,10 @@ const SponsorsSection = ({ sponsors, tier }) => (
 const SponsorsPage = () => {
   // Get a list of all our sponsors
   const {
-    directus: { sponsors: ungrouped },
+    directus: {
+      fields: { prospectus },
+      sponsors: ungrouped,
+    },
   } = useStaticQuery(query)
 
   // Extract the sponsor groups
@@ -108,7 +121,7 @@ const SponsorsPage = () => {
             Want to become a sponsor? Check out our&nbsp;
             <a
               className="text-yellow-600"
-              href={PROSPECTUS_URL}
+              href={prospectus.imageFile.publicURL}
               rel="noreferrer"
               target="_blank"
             >

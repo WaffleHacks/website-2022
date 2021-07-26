@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { ASSET_URL } from "../constants"
 
 const query = graphql`
   query HomePage {
@@ -9,10 +8,16 @@ const query = graphql`
         description
         description_image {
           id
+          imageFile {
+            publicURL
+          }
         }
         origin
         origin_image {
           id
+          imageFile {
+            publicURL
+          }
         }
       }
     }
@@ -47,7 +52,7 @@ const Description = () => {
           <div className="w-full sm:w-1/2 p-6">
             <img
               className="w-auto sm:h-80 mx-auto"
-              src={`${ASSET_URL}/${homepage.origin_image.id}`}
+              src={homepage.origin_image.imageFile.publicURL}
               alt="placeholder"
             />
           </div>
@@ -57,7 +62,7 @@ const Description = () => {
           <div className="w-full sm:w-1/2 p-6 mt-6">
             <img
               className="w-auto sm:h-80 mx-auto"
-              src={`${ASSET_URL}/${homepage.description_image.id}`}
+              src={homepage.description_image.imageFile.publicURL}
               alt="placeholder"
             />
           </div>
