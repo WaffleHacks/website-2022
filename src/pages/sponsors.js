@@ -8,8 +8,8 @@ import Waves from "../components/waves"
 const TIER_SETTINGS = {
   // TODO: update the logo sizes
   LOGO_HEIGHT: {
-    platinum: 750,
-    silver: 500,
+    platinum: 150,
+    silver: 50,
   },
   GRID_SIZE: {
     platinum: "grid-cols-1",
@@ -28,7 +28,7 @@ const query = graphql`
           }
         }
       }
-      sponsors {
+      sponsors(sort: "name") {
         id
         name
         tier
@@ -55,22 +55,15 @@ const Header = ({ title }) => (
   </>
 )
 
-// TODO: design company logo
 const Sponsor = ({ tier, name, url, logo }) => (
   <>
-    <div>
-      <img
-        src={logo.imageFile.publicURL}
-        alt={`${name}'s logo`}
-        style={{ height: TIER_SETTINGS.LOGO_HEIGHT[tier] }}
-      />
-      <a
-        href={url}
-        className="text-yellow-600"
-        target="_blank"
-        rel="noreferrer"
-      >
-        {name}
+    <div className="p-2 flex justify-center items-center">
+      <a href={url} target="_blank" rel="noreferrer">
+        <img
+          src={logo.imageFile.publicURL}
+          alt={`${name}'s logo`}
+          style={{ height: TIER_SETTINGS.LOGO_HEIGHT[tier] }}
+        />
       </a>
     </div>
   </>
@@ -84,7 +77,7 @@ const SponsorsSection = ({ sponsors, tier }) => (
     )}
     <div className={`grid ${TIER_SETTINGS.GRID_SIZE[tier]} gap-4`}>
       {sponsors.map(s => (
-        <Sponsor {...s} />
+        <Sponsor {...s} key={s.name} />
       ))}
     </div>
   </>
@@ -100,10 +93,9 @@ const SponsorsPage = () => {
   } = useStaticQuery(query)
 
   // Extract the sponsor groups
-  // This might not actually work properly lol
   const sponsors = { platinum: [], silver: [] }
   if (ungrouped !== null)
-    for (const group of ungrouped) sponsors[group.tier] = group
+    for (const sponsor of ungrouped) sponsors[sponsor.tier].push(sponsor)
 
   return (
     <Layout>
