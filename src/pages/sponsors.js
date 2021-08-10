@@ -10,10 +10,12 @@ const TIER_SETTINGS = {
   LOGO_HEIGHT: {
     platinum: 150,
     silver: 50,
+    partner: 100,
   },
   GRID_SIZE: {
     platinum: "grid-cols-1",
     silver: "grid-cols-2",
+    partner: "grid-cols-2",
   },
 }
 
@@ -93,7 +95,7 @@ const SponsorsPage = () => {
   } = useStaticQuery(query)
 
   // Extract the sponsor groups
-  const sponsors = { platinum: [], silver: [] }
+  const sponsors = { platinum: [], silver: [], partners: [] }
   if (ungrouped !== null)
     for (const sponsor of ungrouped) sponsors[sponsor.tier].push(sponsor)
 
