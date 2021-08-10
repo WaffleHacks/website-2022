@@ -28,7 +28,7 @@ const query = graphql`
           }
         }
       }
-      sponsors(sort: "name") {
+      sponsors(sort: "priority") {
         id
         name
         tier
