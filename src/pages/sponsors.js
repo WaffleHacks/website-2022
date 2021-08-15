@@ -95,7 +95,7 @@ const SponsorsPage = () => {
   } = useStaticQuery(query)
 
   // Extract the sponsor groups
-  const sponsors = { platinum: [], silver: [], partners: [] }
+  const sponsors = { platinum: [], silver: [], partner: [] }
   if (ungrouped !== null)
     for (const sponsor of ungrouped) sponsors[sponsor.tier].push(sponsor)
 
