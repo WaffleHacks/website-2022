@@ -1,29 +1,19 @@
-import React from "react"
+import * as React from "react";
+import landing_page from "../images/landing_page.svg";
 
-import Layout from "../components/layout"
-import Hero from "../components/hero"
-import Waves from "../components/waves"
-import Description from "../components/description"
-import Tracks from "../components/tracks"
-import CallToAction from "../components/call-to-action"
+// styles
+const pageStyles = {
+  width: "100%",
+};
 
-const IndexPage = () => (
-  <Layout>
-    <Hero
-      title="WaffleHacks"
-      subtitle="We're hackers with hearts"
-      action={{ text: "Register now!", link: "https://apply.wafflehacks.tech" }}
-      image={true}
-    />
-    <Waves.GradientToWhite />
+// markup
+const IndexPage = () => {
+  return (
+    <main style={pageStyles}>
+      <title>WaffleHacks</title>
+      <img src={landing_page} alt="placeholder" width="100%" />
+    </main>
+  );
+};
 
-    <Description />
-    <Tracks />
-
-    <Waves.WhiteToGradient />
-
-    <CallToAction />
-  </Layout>
-)
-
-export default IndexPage
+export default IndexPage;

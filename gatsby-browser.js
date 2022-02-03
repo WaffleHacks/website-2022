@@ -1,2 +1,3 @@
-import "./src/css/style.css";
-import "./src/css/global.css";
+import "./src/global.css";
+
+console.log("loaded gatsby-browser.js");
