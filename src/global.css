@@ -1,4 +1,10 @@
+@font-face {
+  font-family: ShortStack;
+  src: url("./fonts/ShortStack-Regular.ttf");
+}
+
 html,
 body {
   margin: 0;
+  font-family: ShortStack;
 }
