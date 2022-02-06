@@ -1,5 +1,5 @@
 import * as React from "react";
-import landing_page from "../images/landing_page.svg";
+import landing_page from "../images/landing_page.png";
 
 // styles
 const pageStyles = {
