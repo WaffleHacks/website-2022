@@ -2,9 +2,13 @@
   font-family: ShortStack;
   src: url("./fonts/ShortStack-Regular.ttf");
 }
+@font-face {
+  font-family: DreamingOutloud;
+  src: url("./fonts/Dreaming Outloud.otf");
+}
 
 html,
 body {
   margin: 0;
-  font-family: ShortStack;
+  font-family: DreamingOutloud;
 }

@@ -1,0 +1,27 @@
+#nav-sm {
+    display: none;
+}
+
+@media (max-width: 768px) { 
+    #nav-lg {
+        display: none !important;
+    }
+    #nav-sm {
+        display: flex;
+    }
+    #about {
+        flex-direction: column;
+        padding: 3rem 2rem 2rem 2rem !important;
+        box-sizing: border-box;
+    }
+    #about > img {
+        height: auto !important;
+        width: 80%;
+        box-sizing: border-box;
+        margin: 0 2rem;
+        margin-top: 2rem;
+    }
+    #about p {
+        max-width: none !important;
+    }
+ }

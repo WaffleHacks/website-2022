@@ -1,7 +1,10 @@
 import * as React from "react";
+import '../index.css'
 import landing_page from "../images/landing_page.png";
 import note_tape_long from "../images/note_tape_long.svg";
 import about_graphic from "../images/about_graphic.png";
+import pointer_sign from "../images/pointer_sign.svg";
+
 
 // styles
 const pageStyles = {
@@ -14,8 +17,6 @@ const pageStyles = {
 const navStyles = {
   backgroundColor: "#A47556",
   border: "2px solid #FBAD24",
-  display: "flex",
-  justifyContent: "center",
   margin: "0",
 };
 
@@ -36,21 +37,30 @@ const IndexPage = () => {
 
       {/* navbar */}
       <nav style={navStyles}>
-        <a href="#about" style={navLinkStyles}>
-          about
-        </a>
-        <a href="#tracks" style={navLinkStyles}>
-          tracks
-        </a>
-        <a href="#faqs" style={navLinkStyles}>
-          faqs
-        </a>
-        <a href="#sponsors" style={navLinkStyles}>
-          sponsors
-        </a>
-        <a href="#apply" style={navLinkStyles}>
-          apply
-        </a>
+        <div id='nav-lg' style={{display: 'flex', justifyContent: "center"}}>
+          <a href="#about" style={navLinkStyles}>
+            about
+          </a>
+          <a href="#tracks" style={navLinkStyles}>
+            tracks
+          </a>
+          <a href="#faqs" style={navLinkStyles}>
+            faqs
+          </a>
+          <a href="#sponsors" style={navLinkStyles}>
+            sponsors
+          </a>
+          <a href="#apply" style={navLinkStyles}>
+            apply
+          </a>
+        </div>
+
+        <div id='nav-sm' style={{justifyContent: "center", alignItems: 'center'}}>
+          <a href="#about" style={navLinkStyles}>
+            about
+          </a>
+          <span>– – –</span>
+        </div>
       </nav>
 
       {/* about */}
@@ -63,6 +73,7 @@ const IndexPage = () => {
           width: "100%",
         }}
       >
+
         <div
           style={{
             display: "inline-block",
@@ -84,7 +95,7 @@ const IndexPage = () => {
             }}
           />
           <h2 style={{ textAlign: "center" }}>about</h2>
-          <p style={{ maxWidth: "30vw", fontSize: "1.3rem" }}>
+          <p style={{ maxWidth: "30vw", fontSize: "1.3rem", fontFamily: 'ShortStack' }}>
             WaffleHacks is a 48-hour student-organized hackathon working to
             bring technical solutions to your local communities and small
             businesses.
@@ -96,6 +107,16 @@ const IndexPage = () => {
         </div>
         <img src={about_graphic} alt="" style={{ height: "20em" }} />
       </div>
+
+       {/* tracks */}
+       <center>
+         <div style={{backgroundColor: '#DCA480', borderRadius: '2rem', height: '30em', width: '80%'}}>
+            <div>
+              <img src={pointer_sign} alt="pointer" />
+              <span>Tracks</span>
+            </div>
+         </div>
+       </center>
     </main>
   );
 };
