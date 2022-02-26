@@ -2,6 +2,15 @@
     display: none;
 }
 
+#tracks-box {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background-color: #DCA480;
+    border-radius: 1rem;
+    width: 80%;
+}
+
 @media (max-width: 768px) { 
     #nav-lg {
         display: none !important;

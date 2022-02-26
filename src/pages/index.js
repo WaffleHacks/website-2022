@@ -4,6 +4,7 @@ import landing_page from "../images/landing_page.png";
 import note_tape_long from "../images/note_tape_long.svg";
 import about_graphic from "../images/about_graphic.png";
 import pointer_sign from "../images/pointer_sign.svg";
+import note_paper from "../images/note_paper.svg"
 
 
 // styles
@@ -110,10 +111,22 @@ const IndexPage = () => {
 
        {/* tracks */}
        <center>
-         <div style={{backgroundColor: '#DCA480', borderRadius: '2rem', height: '30em', width: '80%'}}>
-            <div>
-              <img src={pointer_sign} alt="pointer" />
-              <span>Tracks</span>
+         <div id='tracks-box' style={{paddingTop: '8rem', paddingBottom: '3rem'}}>
+            <div style={{position: 'absolute', top: '2rem', left: '-2rem'}}>
+              <img src={pointer_sign} alt="pointer" style={{height: '3rem'}} />
+              <span style={{color: 'white', position: 'absolute', top: '45%', left: '40%', transform: 'translate(-50%, -50%)', fontSize: '1.5rem'}}>TRACKS</span>
+            </div>
+            <div style={{margin: '1rem'}}>
+              <img src={note_paper} alt="sticky note" style={{width: '70%'}} />
+            </div>
+            <div style={{margin: '1rem'}}>
+              <img src={note_paper} alt="sticky note" style={{width: '70%'}} />
+            </div>
+            <div style={{margin: '1rem'}}>
+              <img src={note_paper} alt="sticky note" style={{width: '70%'}} />
+            </div>
+            <div style={{margin: '1rem'}}>
+              <img src={note_paper} alt="sticky note" style={{width: '70%'}} />
             </div>
          </div>
        </center>
