@@ -5,11 +5,15 @@ import note_tape_long from "../images/note_tape_long.svg";
 import about_graphic from "../images/about_graphic.png";
 import pointer_sign from "../images/pointer_sign.svg";
 import grid from "../images/grid.svg";
-import StickyNote from "../components/StickyNote";
 import waffles_img from '../images/waffles.svg';
 import sustainability_img from '../images/sustainability.svg';
 import finance_img from '../images/finance.svg';
 import entertainment_img from '../images/entertainment.png';
+import faq_backg from '../images/faqbackg.svg';
+
+import StickyNote from "../components/StickyNote";
+import FaqPointer from "../components/FaqPointer";
+
 
 console.log('GRID:', grid);
 
@@ -129,6 +133,18 @@ const IndexPage = () => {
             <StickyNote img={sustainability_img} name="Sustainability" />
          </div>
        </center>
+
+       {/* faq */}
+       <div id='faq' style={{backgroundImage: 'url(' + faq_backg + ')'}}>
+            <FaqPointer question='What is a hackathon?' />
+            <FaqPointer question='When is the registration deadline?' />
+            <FaqPointer question='Who can attend?' />
+            <FaqPointer question='Do I have to submit a project to join?' />
+            <FaqPointer question='How will teams works?' />
+            <FaqPointer question='What are hackathon tracks?' />
+            <FaqPointer question='I have more questions!' />
+            <FaqPointer question='Any guidance for beginners?' />
+       </div>
     </main>
   );
 };

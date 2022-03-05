@@ -11,6 +11,20 @@
     width: 80%;
 }
 
+#faq {
+    width: 100%;
+    margin-top: 4rem;
+    width: 100%;
+    padding: 2rem 6rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 @media (max-width: 768px) { 
     #nav-lg {
         display: none !important;
