@@ -4,8 +4,14 @@ import landing_page from "../images/landing_page.png";
 import note_tape_long from "../images/note_tape_long.svg";
 import about_graphic from "../images/about_graphic.png";
 import pointer_sign from "../images/pointer_sign.svg";
-import note_paper from "../images/note_paper.svg"
+import grid from "../images/grid.svg";
+import StickyNote from "../components/StickyNote";
+import waffles_img from '../images/waffles.svg';
+import sustainability_img from '../images/sustainability.svg';
+import finance_img from '../images/finance.svg';
+import entertainment_img from '../images/entertainment.png';
 
+console.log('GRID:', grid);
 
 // styles
 const pageStyles = {
@@ -13,6 +19,7 @@ const pageStyles = {
   display: "flex",
   flexDirection: "column",
   backgroundColor: "#DDBC9B",
+  backgroundImage: 'url(' + grid + ')'
 };
 
 const navStyles = {
@@ -116,18 +123,10 @@ const IndexPage = () => {
               <img src={pointer_sign} alt="pointer" style={{height: '3rem'}} />
               <span style={{color: 'white', position: 'absolute', top: '45%', left: '40%', transform: 'translate(-50%, -50%)', fontSize: '1.5rem'}}>TRACKS</span>
             </div>
-            <div style={{margin: '1rem'}}>
-              <img src={note_paper} alt="sticky note" style={{width: '70%'}} />
-            </div>
-            <div style={{margin: '1rem'}}>
-              <img src={note_paper} alt="sticky note" style={{width: '70%'}} />
-            </div>
-            <div style={{margin: '1rem'}}>
-              <img src={note_paper} alt="sticky note" style={{width: '70%'}} />
-            </div>
-            <div style={{margin: '1rem'}}>
-              <img src={note_paper} alt="sticky note" style={{width: '70%'}} />
-            </div>
+            <StickyNote img={waffles_img} name="Community" />
+            <StickyNote img={finance_img} name="Finance" />
+            <StickyNote img={entertainment_img} name="Entertainment" />
+            <StickyNote img={sustainability_img} name="Sustainability" />
          </div>
        </center>
     </main>
