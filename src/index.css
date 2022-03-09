@@ -33,12 +33,16 @@
 }
 
 @media (max-width: 768px) { 
+
+    /* Navbar */
     #nav-lg {
         display: none !important;
     }
     #nav-sm {
         display: flex;
     }
+
+    /* About */
     #about {
         flex-direction: column;
         padding: 3rem 2rem 2rem 2rem !important;
@@ -55,6 +59,7 @@
         max-width: none !important;
     }
 
+    /* Tracks */
     #tracks-box {
         display: flex;
         flex-direction: column;
@@ -62,5 +67,46 @@
     }
     .trackbox {
         padding: 2% !important;
+    }
+
+    /* FAQ area */
+
+    #faq-pointers {
+        position: static !important;
+    }
+    #faq-bkg {
+        position: absolute;
+        top: -8%;
+        left: -5%;
+        height: 120% !important; 
+        width: 110% !important;
+    }
+    #faq-tape img {
+        width: 50vw !important;
+        margin: 0 !important;
+    }
+    #faq-tape span {
+        font-size: 1.5rem !important;
+    }
+    #faq-pointers {
+        flex-direction: column;
+        align-items: center;
+    }
+    .faq-pointer {
+        width: 90% !important;
+        padding: 0.25rem 0.5rem;
+    }
+    .faq-pointer img{
+        width: 100% !important;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .faq-pointer span{
+        font-size: 1.2rem !important;
+        position: static !important;
+        z-index: 1;
     }
  }

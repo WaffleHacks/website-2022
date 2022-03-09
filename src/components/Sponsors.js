@@ -1,11 +1,12 @@
 import * as React from "react";
 import pointer_sign from "../images/pointer_sign.svg";
 import sponsors_img from "../images/sponsors.png";
+import sponsors_plant from "../images/sponsors_plant.png";
 
 const Sponsors = () => {
   return (
     <center>
-          <div id='sponsors-box' style={{paddingTop: '8rem', paddingBottom: '3rem'}}>
+          <div id='sponsors-box' style={{paddingTop: '8rem', paddingBottom: '3rem', position: 'relative'}}>
             <div style={{position: 'absolute', top: '2rem', left: '-2rem'}}>
                 <img src={pointer_sign} alt="pointer" style={{height: '3rem'}} />
                 <span style={{color: 'white', position: 'absolute', top: '45%', left: '40%', transform: 'translate(-50%, -50%)', fontSize: '1.5rem'}}>SPONSORS</span>
@@ -23,6 +24,13 @@ const Sponsors = () => {
               <br /><br />
               <span>Contact <a href="mailto:sponsorships@wafflehacks.org">sponsorships@wafflehacks.org</a> for more information!</span>
             </div>
+            <img src={sponsors_plant} alt="" style={{
+                position: 'absolute',
+                top: '100%',
+                left: '100%',
+                transform: 'translateX(-55%) translateY(-80%)',
+                width: '10rem'
+            }} />
           </div>
       </center>
   )
