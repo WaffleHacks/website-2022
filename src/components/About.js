@@ -37,7 +37,7 @@ const About = () => {
             style={imgStyles}
           />
           <h2 style={{ textAlign: "center" }}>about</h2>
-          <p className='poppins' style={{ maxWidth: "30vw", fontSize: "1rem" }}>
+          <p className='poppins-light' style={{ maxWidth: "30vw", fontSize: "1rem", fontWeight: 'lighter' }}>
             WaffleHacks is a 48-hour student-organized hackathon working to
             bring technical solutions to your local communities and small
             businesses.

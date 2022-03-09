@@ -3,6 +3,10 @@ import '../index.css'
 import landing_page from "../images/landing_page.png";
 import grid from "../images/grid.svg";
 
+import bookcase from '../images/bookcase.svg';
+import hsign from '../images/hanging sign.png';
+import button_sticker from '../images/button_sticker.svg';
+
 import About from "../components/About";
 import Tracks from "../components/Tracks";
 import Faq from "../components/Faq";
@@ -77,6 +81,73 @@ const IndexPage = () => {
 
        {/* Sponsors */}
        <Sponsors />
+
+       {/* Apply */}
+       <div style={{height: '50vw', width: '100vw', position: 'relative'}}>
+         <img src={bookcase} alt="bookcase" style={{
+           position: 'absolute',
+           bottom: 0,
+           left: '-10px',
+           height: '60%'
+         }} />
+         <img src={bookcase} alt="bookcase" style={{
+           position: 'absolute',
+           bottom: 0,
+           right: '-10px',
+           height: '60%',
+           transform: 'scaleX(-1)'
+         }} />
+         <img src={hsign} alt="bookcase" style={{
+           position: 'absolute',
+           top: '20%',
+           right: '25%',
+           height: '40%',
+         }} />
+
+         <span className='poppins-bold' style={{
+           position: 'absolute',
+           top: '30%',
+           left: '18%',
+           height: '40%',
+           fontSize: '8vw',
+           textAlign: 'left',
+           fontWeight: 'bolder',
+           color: '#543E2E'
+         }}>
+           APPLY<br />TODAY!
+         </span>
+
+         <div style={{
+            position: 'absolute',
+            bottom: '6%',
+            left: '50%',
+            transform: 'translateX(-50%)'
+           }}>
+           <img src={button_sticker} alt="" style={{width: '15rem'}} />
+           <span style={{
+              position: 'absolute',
+              top: '45%',
+              left: '50%',
+              transform: 'translateX(-50%) translateY(-50%)',
+              fontSize: '2.5rem',
+              color: '#543E2E'
+            }}>
+              apply
+           </span>
+         </div>
+       </div>
+
+       {/* Footer */}
+       <div style={{
+         width: '100%',
+         padding: '1rem 0',
+         textAlign: 'center',
+         fontSize: '1rem',
+         color: 'white',
+         background: '#A47556'
+       }}>
+         WAFFLEHACKS 2022
+       </div>
     </main>
   );
 };

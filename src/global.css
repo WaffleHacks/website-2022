@@ -7,16 +7,20 @@
   src: url("./fonts/Dreaming Outloud.otf");
 }
 @font-face {
+  font-family: PoppinsBold;
+  src: url("./fonts/Poppins-Black.ttf");
+  font-weight: bolder;
+}
+@font-face {
   font-family: Poppins;
   src: url("./fonts/Poppins-Medium.ttf");
   font-weight: normal;
 }
 @font-face {
-  font-family: Poppins;
+  font-family: PoppinsLight;
   src: url("./fonts/Poppins-Light.ttf");
   font-weight: lighter;
 }
-
 
 html,
 body {
@@ -28,6 +32,12 @@ body {
   position: relative;
 }
 
+.poppins-light {
+  font-family: PoppinsLight !important;
+}
 .poppins {
   font-family: Poppins !important;
+}
+.poppins-bold {
+  font-family: PoppinsBold !important;
 }

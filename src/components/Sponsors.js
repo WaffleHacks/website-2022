@@ -11,7 +11,7 @@ const Sponsors = () => {
                 <img src={pointer_sign} alt="pointer" style={{height: '3rem'}} />
                 <span style={{color: 'white', position: 'absolute', top: '45%', left: '40%', transform: 'translate(-50%, -50%)', fontSize: '1.5rem'}}>SPONSORS</span>
             </div>
-            <div className='poppins' style={{fontSize: '1.3rem', marginBottom: '4rem'}}>
+            <div className='poppins-light' style={{fontSize: '1.3rem', marginBottom: '4rem'}}>
               <span>Sponsorships help us immensely in planning and providing the best experience for our attendees.</span>
               <br /><br />
               <span>Shoutout to our amazing sponsors below!</span>
@@ -19,7 +19,7 @@ const Sponsors = () => {
             <div style={{marginBottom: '4rem'}}>
               <img src={sponsors_img} alt="" style={{width: '90%'}} />
             </div>
-            <div className='poppins' style={{fontSize: '1.5rem', fontWeight: 'bold'}}>
+            <div className='poppins-light' style={{fontSize: '1.5rem', fontWeight: 'bold'}}>
               <span>Interested in sponsoring for WaffleHacks 2022? Check out our sponsorship prospectus here:</span>
               <br /><br />
               <span>Contact <a href="mailto:sponsorships@wafflehacks.org">sponsorships@wafflehacks.org</a> for more information!</span>

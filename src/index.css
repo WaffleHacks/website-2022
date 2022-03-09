@@ -22,6 +22,9 @@
     /* display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr)); */
 }
+span {
+    color: #543E2E;
+}
 
 #sponsors-box {
     display: flex;
@@ -70,7 +73,6 @@
     }
 
     /* FAQ area */
-
     #faq-pointers {
         position: static !important;
     }
