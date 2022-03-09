@@ -1,21 +1,12 @@
 import * as React from "react";
 import '../index.css'
 import landing_page from "../images/landing_page.png";
-import note_tape_long from "../images/note_tape_long.svg";
-import about_graphic from "../images/about_graphic.png";
-import pointer_sign from "../images/pointer_sign.svg";
 import grid from "../images/grid.svg";
-import waffles_img from '../images/waffles.svg';
-import sustainability_img from '../images/sustainability.svg';
-import finance_img from '../images/finance.svg';
-import entertainment_img from '../images/entertainment.png';
-import faq_backg from '../images/faqbackg.svg';
 
-import StickyNote from "../components/StickyNote";
-import FaqPointer from "../components/FaqPointer";
-
-
-console.log('GRID:', grid);
+import About from "../components/About";
+import Tracks from "../components/Tracks";
+import Faq from "../components/Faq";
+import Sponsors from "../components/Sponsors";
 
 // styles
 const pageStyles = {
@@ -76,75 +67,16 @@ const IndexPage = () => {
       </nav>
 
       {/* about */}
-      <div
-        id="about"
-        style={{
-          padding: "4em 0em",
-          display: "flex",
-          justifyContent: "space-around",
-          width: "100%",
-        }}
-      >
-
-        <div
-          style={{
-            display: "inline-block",
-            position: "relative",
-            backgroundColor: "#FDF4EF",
-            padding: "1em",
-            borderRadius: "1rem",
-          }}
-        >
-          <img
-            src={note_tape_long}
-            alt=""
-            style={{
-              position: "absolute",
-              height: "2em",
-              top: "-1rem",
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
-          />
-          <h2 style={{ textAlign: "center" }}>about</h2>
-          <p style={{ maxWidth: "30vw", fontSize: "1.3rem", fontFamily: 'ShortStack' }}>
-            WaffleHacks is a 48-hour student-organized hackathon working to
-            bring technical solutions to your local communities and small
-            businesses.
-            <br />
-            <br />
-            We welcome all students, of high school level and beyond, and of all
-            technical proficiency levels, to join us on June 24th - 26th, 2022.
-          </p>
-        </div>
-        <img src={about_graphic} alt="" style={{ height: "20em" }} />
-      </div>
+      <About />
 
        {/* tracks */}
-       <center>
-         <div id='tracks-box' style={{paddingTop: '8rem', paddingBottom: '3rem'}}>
-            <div style={{position: 'absolute', top: '2rem', left: '-2rem'}}>
-              <img src={pointer_sign} alt="pointer" style={{height: '3rem'}} />
-              <span style={{color: 'white', position: 'absolute', top: '45%', left: '40%', transform: 'translate(-50%, -50%)', fontSize: '1.5rem'}}>TRACKS</span>
-            </div>
-            <StickyNote img={waffles_img} name="Community" />
-            <StickyNote img={finance_img} name="Finance" />
-            <StickyNote img={entertainment_img} name="Entertainment" />
-            <StickyNote img={sustainability_img} name="Sustainability" />
-         </div>
-       </center>
+       <Tracks />
 
        {/* faq */}
-       <div id='faq' style={{backgroundImage: 'url(' + faq_backg + ')'}}>
-            <FaqPointer question='What is a hackathon?' />
-            <FaqPointer question='When is the registration deadline?' />
-            <FaqPointer question='Who can attend?' />
-            <FaqPointer question='Do I have to submit a project to join?' />
-            <FaqPointer question='How will teams works?' />
-            <FaqPointer question='What are hackathon tracks?' />
-            <FaqPointer question='I have more questions!' />
-            <FaqPointer question='Any guidance for beginners?' />
-       </div>
+       <Faq />
+
+       {/* Sponsors */}
+       <Sponsors />
     </main>
   );
 };

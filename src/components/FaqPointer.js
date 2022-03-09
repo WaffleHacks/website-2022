@@ -1,21 +1,21 @@
 import * as React from "react";
 import faq_pointer from '../images/faq_pointer.svg';
 
+let pointerWid = '30vw';
+
 let pointerStyles = {
-    height: '3rem', 
-    lineHeight: '3rem', 
-    // padding: '1.5rem', 
-    // backgroundImage: 'url(' + faq_pointer + ')',
-    display: 'inline',
+    width: pointerWid, 
+    display: 'flex',
+    alignItems: 'center',
     position: 'relative',
-    margin: '2rem 0'
+    margin: '1.6vw 1vw'
 }
 
 const FaqPointer = ({ question, desc }) => {
   return (
-    <div class='faq-pointer' style={pointerStyles}>
-        <img src={faq_pointer} alt="" style={{height: '3rem'}} />
-        <span style={{position: 'absolute', left: '1rem'}}>{question}</span>
+    <div className='faq-pointer' style={pointerStyles}>
+        <img src={faq_pointer} alt="" style={{width: pointerWid}} />
+        <span style={{position: 'absolute', left: '1rem', fontSize: '1.5vw'}}>{question}</span>
     </div>
   )
 }

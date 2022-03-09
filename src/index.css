@@ -12,17 +12,24 @@
 }
 
 #faq {
-    width: 100%;
+    position: relative;
     margin-top: 4rem;
     width: 100%;
-    padding: 2rem 6rem;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
+    margin-bottom: 4rem;
+    /* padding: 2rem 6rem; */
+    /* box-sizing: border-box; */
 
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); */
+}
+
+#sponsors-box {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: #FDF4EF;
+    border-radius: 1rem;
+    width: 80%;
 }
 
 @media (max-width: 768px) { 
