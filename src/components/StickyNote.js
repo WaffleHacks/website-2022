@@ -15,6 +15,7 @@ const StickyNote = ({ img, name }) => {
             width: "30%",
             left: "50%",
             transform: "translateX(-50%) translateY(-50%)",
+            zIndex: 50
           }}
         />
         <img src={note_paper} alt="sticky note" style={{

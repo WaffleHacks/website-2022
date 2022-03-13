@@ -83,7 +83,7 @@ const IndexPage = () => {
        <Sponsors />
 
        {/* Apply */}
-       <div style={{height: '50vw', width: '100vw', position: 'relative'}}>
+       <div style={{height: '45vw', width: '100vw', position: 'relative', marginTop: '-3rem'}}>
          <img src={bookcase} alt="bookcase" style={{
            position: 'absolute',
            bottom: 0,

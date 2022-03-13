@@ -79,9 +79,12 @@ span {
     #faq-bkg {
         position: absolute;
         top: -8%;
-        left: -5%;
+        left: 50%;
+        transform: translateX(-50%);
         height: 120% !important; 
-        width: 110% !important;
+        /* width: 110% !important; */
+        width: 200% !important;
+
     }
     #faq-tape img {
         width: 50vw !important;
@@ -96,7 +99,9 @@ span {
     }
     .faq-pointer {
         width: 90% !important;
-        padding: 0.25rem 0.5rem;
+        padding: 0.5rem 0.5rem;
+        margin-top: 16px !important;
+        margin-bottom: 16px !important;
     }
     .faq-pointer img{
         width: 100% !important;
