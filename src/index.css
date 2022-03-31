@@ -34,6 +34,25 @@ span {
     border-radius: 1rem;
     width: 80%;
 }
+#sponsor-imgs {
+    margin-bottom: 4rem;
+}
+#sponsor-imgs img{
+    max-height: 5rem;
+    max-width: 80vw;
+    margin: 1.5rem;
+}
+#sponsor-msg {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#sponsors-plant {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translateX(-55%) translateY(-80%);
+    width: 10rem;
+}
 
 @media (max-width: 768px) { 
 
@@ -115,5 +134,24 @@ span {
         font-size: 1.2rem !important;
         position: static !important;
         z-index: 1;
+    }
+    #sponsor-imgs {
+        margin-bottom: 2rem;
+    }
+    #sponsor-imgs img {
+        max-height: 5rem;
+        max-width: 80vw;
+        margin: 1rem 0;
+        align-self: center;
+    }
+    #sponsor-msg {
+        font-size: 1rem;
+    }
+    #sponsors-plant {
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        transform: translateX(-55%) translateY(-80%);
+        width: 6rem;
     }
  }

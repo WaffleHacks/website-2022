@@ -6,6 +6,7 @@ import grid from "../images/grid.svg";
 import bookcase from '../images/bookcase.svg';
 import hsign from '../images/hanging sign.png';
 import button_sticker from '../images/button_sticker.svg';
+import hamburger from '../images/menu-icon.svg';
 
 import About from "../components/About";
 import Tracks from "../components/Tracks";
@@ -51,7 +52,7 @@ const IndexPage = () => {
           <a href="#tracks" style={navLinkStyles}>
             tracks
           </a>
-          <a href="#faqs" style={navLinkStyles}>
+          <a href="#faq" style={navLinkStyles}>
             faqs
           </a>
           <a href="#sponsors" style={navLinkStyles}>
@@ -62,12 +63,12 @@ const IndexPage = () => {
           </a>
         </div>
 
-        <div id='nav-sm' style={{justifyContent: "center", alignItems: 'center'}}>
+        {/* <div id='nav-sm' style={{justifyContent: "center", alignItems: 'center'}}>
           <a href="#about" style={navLinkStyles}>
             about
           </a>
-          <span>– – –</span>
-        </div>
+          <img src={hamburger} alt="menu" style={{width: '1.75rem'}} />
+        </div> */}
       </nav>
 
       {/* about */}
@@ -83,7 +84,7 @@ const IndexPage = () => {
        <Sponsors />
 
        {/* Apply */}
-       <div style={{height: '45vw', width: '100vw', position: 'relative', marginTop: '-3rem'}}>
+       <div id='apply' style={{height: '45vw', width: '100vw', position: 'relative', marginTop: '-3rem'}}>
          <img src={bookcase} alt="bookcase" style={{
            position: 'absolute',
            bottom: 0,

@@ -10,7 +10,7 @@ import StickyNote from "./StickyNote";
 
 const Tracks = () => {
   return (
-    <center>
+    <center id='tracks'>
         <div id='tracks-box' style={{paddingTop: '8rem', paddingBottom: '3rem'}}>
         <div style={{position: 'absolute', top: '2rem', left: '-2rem'}}>
             <img src={pointer_sign} alt="pointer" style={{height: '3rem'}} />
