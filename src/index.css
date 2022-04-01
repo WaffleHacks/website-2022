@@ -55,6 +55,55 @@ span {
     width: 10rem;
 }
 
+#apply {
+    height: 45vw;
+    width: 100vw;
+    position: relative;
+    margin-Top: -3rem;
+}
+
+#left-bookcase, #right-bookcase {
+    position: absolute;
+    bottom: 0;
+    height: 60%;
+}
+#left-bookcase {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    height: 60%;
+}
+#right-bookcase {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    height: 60%;transform: scaleX(-1);
+}
+
+#hanging-sign {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    height: 40%;
+}
+#apply-today {
+    position: absolute;
+    top: 30%;
+    left: 18%;
+    height: 40%;
+    font-size: 8vw;
+    text-align: left;
+    font-weight: bolder;
+    color: #543E2E;
+}
+
+#apply-btn {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 @media (max-width: 768px) { 
 
     /* Navbar */
@@ -156,4 +205,47 @@ span {
         transform: translateX(-55%) translateY(-80%);
         width: 6rem;
     }
+
+    #apply {
+        height: 75vh;
+        width: 100vw;
+        position: relative;
+        margin-Top: -3rem;
+    }
+
+    #left-bookcase {
+        left: -20px;
+        height: 40%;
+    }
+    
+    #right-bookcase {
+        right: -20px;
+        height: 40%;
+    }
+
+    #hanging-sign {
+        top: 55%;
+        right: 50%;
+        height: 35%;
+        transform: translateX(50%);
+    }
+
+    #apply-today {
+        top: 13%;
+        left: 50%;
+        height: 40%;
+        font-size: 16vw;
+        text-align: center;
+        transform: translateX(-50%);
+        
+    }
+
+    #apply-btn {
+        position: absolute;
+        bottom: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    
  }

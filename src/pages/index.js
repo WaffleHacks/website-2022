@@ -84,46 +84,19 @@ const IndexPage = () => {
        <Sponsors />
 
        {/* Apply */}
-       <div id='apply' style={{height: '45vw', width: '100vw', position: 'relative', marginTop: '-3rem'}}>
-         <img src={bookcase} alt="bookcase" style={{
-           position: 'absolute',
-           bottom: 0,
-           left: '-10px',
-           height: '60%'
-         }} />
-         <img src={bookcase} alt="bookcase" style={{
-           position: 'absolute',
-           bottom: 0,
-           right: '-10px',
-           height: '60%',
-           transform: 'scaleX(-1)'
-         }} />
-         <img src={hsign} alt="bookcase" style={{
-           position: 'absolute',
-           top: '20%',
-           right: '25%',
-           height: '40%',
-         }} />
-
-         <span className='poppins-bold' style={{
-           position: 'absolute',
-           top: '30%',
-           left: '18%',
-           height: '40%',
-           fontSize: '8vw',
-           textAlign: 'left',
-           fontWeight: 'bolder',
-           color: '#543E2E'
-         }}>
+       <div id='apply'>
+         {/* left bookcase */}
+         <img src={bookcase} alt="bookcase" id='left-bookcase' />
+         {/* right bookcase */}
+         <img src={bookcase} alt="bookcase" id='right-bookcase' />
+          {/* hanging sign */}
+         <img src={hsign} alt="hanging sign" id='hanging-sign' />
+        {/* apply today button */}
+         <span id='apply-today' className='poppins-bold'>
            APPLY<br />TODAY!
          </span>
 
-         <div style={{
-            position: 'absolute',
-            bottom: '6%',
-            left: '50%',
-            transform: 'translateX(-50%)'
-           }}>
+         <div id='apply-btn'>
            <img src={button_sticker} alt="" style={{width: '15rem'}} />
            <span style={{
               position: 'absolute',
