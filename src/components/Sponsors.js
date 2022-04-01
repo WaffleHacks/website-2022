@@ -7,6 +7,7 @@ import hyperx from "../images/hyperx.png";
 import replit from "../images/replit.svg";
 import wolfram from "../images/wolfram.png";
 import wafflelogo from "../images/wafflelogo.png";
+import stickermule from "../images/sticker-mule.svg";
 
 
 const Sponsors = () => {
@@ -17,7 +18,7 @@ const Sponsors = () => {
                 <img src={pointer_sign} alt="pointer" style={{height: '3rem'}} />
                 <span style={{color: 'white', position: 'absolute', top: '45%', left: '40%', transform: 'translate(-50%, -50%)', fontSize: '1.5rem'}}>SPONSORS</span>
             </div>
-            <div className='poppins-light' style={{fontSize: '1.3rem', marginBottom: '4rem'}}>
+            <div className='poppins-light' style={{fontSize: '1.3rem'}}>
               <span>Sponsorships help us immensely in planning and providing the best experience for our attendees.</span>
               <br /><br />
               <span>Shoutout to our amazing sponsors below!</span>
@@ -28,6 +29,7 @@ const Sponsors = () => {
               <img src={hyperx} alt="HyperX" />
               <img src={wolfram} alt="Wolfram Alpha" />
               <img src={wafflelogo} alt="WaffleHacks" />
+              <img src={stickermule} alt="WaffleHacks" />
               {/* <img src={sponsors_img} alt="" style={{width: '90%'}} /> */}
             </div>
             <div id='sponsor-msg' className='poppins-light'>

@@ -36,6 +36,7 @@ span {
 }
 #sponsor-imgs {
     margin-bottom: 4rem;
+    margin-top: 4rem;
 }
 #sponsor-imgs img{
     max-height: 5rem;
@@ -137,6 +138,7 @@ span {
     }
     #sponsor-imgs {
         margin-bottom: 2rem;
+        margin-top: 2rem;
     }
     #sponsor-imgs img {
         max-height: 5rem;
