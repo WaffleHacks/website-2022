@@ -3,7 +3,6 @@ import pointer_sign from "../images/pointer_sign.svg";
 import sponsors_plant from "../images/sponsors_plant.png";
 import hyperx from "../images/hyperx.png";
 import wolfram from "../images/wolfram.png";
-import wafflelogo from "../images/wafflelogo.png";
 import stickermule from "../images/sticker-mule.png";
 
 
@@ -24,7 +23,6 @@ const Sponsors = () => {
               <img src={hyperx} alt="HyperX" />
               <img src={wolfram} alt="Wolfram Alpha" />
               <img src={stickermule} alt="WaffleHacks" />
-              <img src={wafflelogo} alt="WaffleHacks" />
             </div>
             <div id='sponsor-msg' className='poppins-light'>
               <span>Interested in sponsoring for WaffleHacks 2022? Check out our sponsorship prospectus here:</span>
