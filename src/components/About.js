@@ -44,7 +44,7 @@ const About = () => {
             <br />
             <br />
             We welcome all students, of high school level and beyond, and of all
-            technical proficiency levels, to join us on June 24th - 26th, 2022.
+            technical proficiency levels, to join us on June 17th - 19th, 2022.
           </p>
         </div>
         <img src={about_graphic} alt="" style={{ height: "20em" }} />

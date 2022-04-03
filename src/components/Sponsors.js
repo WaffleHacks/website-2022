@@ -1,13 +1,10 @@
 import * as React from "react";
 import pointer_sign from "../images/pointer_sign.svg";
-import sponsors_img from "../images/sponsors.png";
 import sponsors_plant from "../images/sponsors_plant.png";
-import amazon from "../images/amazon.png";
 import hyperx from "../images/hyperx.png";
-import replit from "../images/replit.svg";
 import wolfram from "../images/wolfram.png";
 import wafflelogo from "../images/wafflelogo.png";
-import stickermule from "../images/sticker-mule.svg";
+import stickermule from "../images/sticker-mule.png";
 
 
 const Sponsors = () => {
@@ -24,12 +21,10 @@ const Sponsors = () => {
               <span>Shoutout to our amazing sponsors below!</span>
             </div>
             <div id='sponsor-imgs'>
-              <img src={amazon} alt="Amazon" />
-              <img src={replit} alt="Replit" />
               <img src={hyperx} alt="HyperX" />
               <img src={wolfram} alt="Wolfram Alpha" />
-              <img src={wafflelogo} alt="WaffleHacks" />
               <img src={stickermule} alt="WaffleHacks" />
+              <img src={wafflelogo} alt="WaffleHacks" />
             </div>
             <div id='sponsor-msg' className='poppins-light'>
               <span>Interested in sponsoring for WaffleHacks 2022? Check out our sponsorship prospectus here:</span>
