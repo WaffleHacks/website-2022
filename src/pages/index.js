@@ -96,8 +96,8 @@ const IndexPage = () => {
            APPLY<br />TODAY!
          </span>
 
-         <div id='apply-btn'>
-           <img src={button_sticker} alt="" style={{width: '15rem'}} onClick={() => {location.href = 'apply.wafflehacks.org'}} />
+         <div id='apply-btn' onClick={() => window.location.href = 'https://apply.wafflehacks.org'}>
+           <img src={button_sticker} alt="" style={{width: '15rem'}} />
            <span style={{
               position: 'absolute',
               top: '45%',
@@ -105,7 +105,7 @@ const IndexPage = () => {
               transform: 'translateX(-50%) translateY(-50%)',
               fontSize: '2.5rem',
               color: '#543E2E'
-            }} onClick={() => {location.href = 'apply.wafflehacks.org'}} >
+            }} >
               apply
            </span>
          </div>
