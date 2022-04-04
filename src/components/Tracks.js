@@ -4,7 +4,6 @@ import sustainability_img from '../images/sustainability.svg';
 import entertainment_img from '../images/entertainment.png';
 import pointer_sign from "../images/pointer_sign.svg";
 import stethoscope from "../images/stethoscope.png";
-import diversity from "../images/diversity.png";
 import connections from "../images/connections.png";
 
 import StickyNote from "./StickyNote";

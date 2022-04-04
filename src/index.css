@@ -56,7 +56,6 @@ span {
     transform: rotateY(180deg);
 }
 
-
 @keyframes cardFlip{
     0% { transform: scale(100%); }
     25% { transform: scale(105%); }
@@ -72,6 +71,101 @@ span {
     75% { transform: scale(105%) rotateY(0deg); }
     75% { transform: scale(105%); }
     100% { transform: scale(100%); }
+}
+
+.faq-noshow {
+    animation: faq-disappear 0.25s linear;
+    animation-fill-mode: forwards;
+}
+.faq-reshow {
+    animation: faq-reappear 0.25s linear;
+    animation-fill-mode: forwards;
+}
+
+.main-moveback {
+    animation: moveBack 1s linear;
+    animation-fill-mode: forwards;
+}
+.main-faq {
+    animation: moveToTop 1s linear 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveToTop {
+    0% { opacity: 1; }
+    25% {
+        opacity: 0;
+        
+    }
+    25% {
+        opacity: 0;
+    }
+    75% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(8vw + 2rem);
+        opacity: 0;
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(8vw + 2rem);
+        opacity: 1;
+     }
+}
+@keyframes moveBack {
+    0% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(8vw + 2rem);
+        opacity: 1;
+    }
+    25% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(8vw + 2rem);
+        opacity: 0;
+    }
+    75% {
+        left: auto;
+        top: auto;
+        transform: none;
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+        
+    }
+    100% { opacity: 1; }
+}
+
+
+@keyframes faq-disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+@keyframes faq-reappear {
+    0% {
+        left: 200%;
+        opacity: 0;
+    }
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+    
 }
 
 

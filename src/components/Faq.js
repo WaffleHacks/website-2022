@@ -1,7 +1,7 @@
 import * as React from "react";
 import faq_backg from '../images/faqbackg.svg';
 import note_tape from "../images/note_tape.svg"
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import FaqPointer from "./FaqPointer";
 
@@ -18,6 +18,8 @@ const Faq = () => {
     ['I have more questions!', 'Lorem ipsum'],
     ['Any guidance for beginners?', 'Lorem ipsum'],
   ];
+  const left = useRef(Array(faqs.length).fill(false));
+  const mained = useRef(Array(faqs.length).fill(false));
 
   const [showSingle, setShow] = useState(false);
 
@@ -51,9 +53,10 @@ const Faq = () => {
             </div>
 
             {faqs.map((faq, index) => {
+              if (showSingle !== false && showSingle !== index) left.current[index] = true;
+              if (showSingle === index) mained.current[index] = true;
               return (
-                (showSingle === false || showSingle === index ) &&
-                <FaqPointer key={index} single={showSingle} question={faq[0]} desc={faq[1]} trigger={(e) => {stopProp(e); setShow(index);}}/>
+                <FaqPointer key={index} ind={index} wasLeft={left.current[index]} mained={mained.current[index]} single={showSingle} question={faq[0]} desc={faq[1]} trigger={(e) => {stopProp(e); setShow(index);}}/>
               )
             })}
 
