@@ -1,13 +1,33 @@
 import * as React from "react";
 import faq_backg from '../images/faqbackg.svg';
 import note_tape from "../images/note_tape.svg"
+import { useState } from "react";
 
 import FaqPointer from "./FaqPointer";
 
 
 const Faq = () => {
+  const faqs = [
+    // ['What is WaffleHacks?', 'WaffleHacks is a hackathon that is held annually in the fall of 2019. It is a 24-hour hackathon where students from all over the world come together to create and build something amazing. We are a community of students, hackers, and engineers who are passionate about building the future of technology.'],
+    ['What is a hackathon?', 'A hackathon is a 24-hour event where students come together to create and build something amazing. Hackathons are a great way to learn new skills and gain experience in a fast-paced environment. We are a community of students, hackers, and engineers who are passionate about building the future of technology.'],
+    ['When is the registration deadline?', 'Lorem ipsum'],
+    ['Who can attend?', 'Lorem ipsum'],
+    ['Do I have to submit a project to join?', 'Lorem ipsum'],
+    ['How will teams work?', 'Lorem ipsum'],
+    ['What are hackathon tracks?', 'Lorem ipsum'],
+    ['I have more questions!', 'Lorem ipsum'],
+    ['Any guidance for beginners?', 'Lorem ipsum'],
+  ];
+
+  const [showSingle, setShow] = useState(false);
+
+  function stopProp(e){
+    if ('stopPropagation' in e) e.stopPropagation();
+    e.cancelBubble = true;
+  }
+
   return (
-    <div id='faq'>
+    <div id='faq' onClick={() => setShow(false)}>
         <img id='faq-bkg' src={faq_backg} alt="FAQ background"  style={{width: '100%', height: '100%'}} />
 
         <div id='faq-pointers' style={{position: 'absolute', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', top: 0, width: '100%', padding: '6vw 16vw 0 19vw', boxSizing: 'border-box'}}>
@@ -30,14 +50,13 @@ const Faq = () => {
               </span>
             </div>
 
-            <FaqPointer question='What is a hackathon?' />
-            <FaqPointer question='When is the registration deadline?' />
-            <FaqPointer question='Who can attend?' />
-            <FaqPointer question='Do I have to submit a project to join?' />
-            <FaqPointer question='How will teams works?' />
-            <FaqPointer question='What are hackathon tracks?' />
-            <FaqPointer question='I have more questions!' />
-            <FaqPointer question='Any guidance for beginners?' />
+            {faqs.map((faq, index) => {
+              return (
+                (showSingle === false || showSingle === index ) &&
+                <FaqPointer key={index} single={showSingle} question={faq[0]} desc={faq[1]} trigger={(e) => {stopProp(e); setShow(index);}}/>
+              )
+            })}
+
         </div>
     </div>
   )
