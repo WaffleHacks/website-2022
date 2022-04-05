@@ -23,11 +23,11 @@ const StickyNote = ({ img, name, desc }) => {
           filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))'
         }} />
         
-        <div className='track-front' style={{position: 'absolute', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%', left: '0%', top: '0%'}} >
+        <div className='track-front' style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}} >
           <img src={img} alt="" style={{height: '60%', maxWidth: '70%', maxHeight: '50%'}} />
           <span className='poppins' style={{fontSize: 'calc(1em + 0.8vw)' , fontWeight: 'bolder'}}>{name}</span>
         </div>
-        <div className="track-back" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}>
+        <div className="track-back">
           <br />
           <br />
           <span  className='poppins' style={{fontSize: 'calc(1em + 0.8vw)' , fontWeight: 'bolder'}}>{name}</span>

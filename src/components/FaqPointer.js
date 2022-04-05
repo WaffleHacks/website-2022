@@ -18,10 +18,12 @@ const FaqPointer = ({ single, ind, wasLeft, mained, question, desc, trigger }) =
   let show = single === false || single === ind;
   let showDesc = single === ind;
   let el = useRef(null);
-  if (showDesc) setTimeout(() => {
-    el.current.style.position = 'absolute'
-    el.current.getElementsByClassName('faq-desc')[0].style.display = 'block';
-  }, 750);
+  if (showDesc){
+        setTimeout(() => {
+        el.current.style.position = 'absolute'
+        el.current.getElementsByClassName('faq-desc')[0].style.display = 'block';
+      }, 750);
+  }
   else if (mained){
     el.current.style.position = 'relative';
     el.current.getElementsByClassName('faq-desc')[0].style.display = 'none';
