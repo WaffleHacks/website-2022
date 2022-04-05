@@ -64,20 +64,55 @@ span {
 
 
 @keyframes cardFlip{
-    0% { transform: scale(100%); }
-    25% { transform: scale(105%); }
-    25% { transform: scale(105%) rotateY(0deg); }
-    75% { transform: scale(105%) rotateY(180deg); }
-    75% { transform: scale(105%) rotateY(180deg); }
-    100% { transform: scale(100%) rotateY(180deg); }
+    0% { 
+        transform: scale(100%); 
+        -webkit-transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(105%); 
+        -webkit-transform: scale(1.05, 1.05);}
+    25% { 
+        transform: scale(105%) rotateY(0deg);
+        -webkit-transform: scale(1.05, 1.05) rotateY(0deg);
+    }
+    75% { 
+        transform: scale(105%) rotateY(180deg); 
+        -webkit-transform: scale(1.05, 1.05) rotateY(180deg);
+    }
+    75% { 
+        transform: scale(105%) rotateY(180deg);
+        -webkit-transform: scale(1.05, 1.05) rotateY(180deg);
+    }
+    100% { 
+        transform: scale(100%) rotateY(180deg); 
+        -webkit-transform: scale(1, 1) rotateY(180deg);
+    }
 }
 @keyframes cardFlipBack{
-    0% { transform: scale(100%) rotateY(180deg); }
-    25% { transform: scale(105%) rotateY(180deg); }
-    25% { transform: scale(105%) rotateY(180deg); }
-    75% { transform: scale(105%) rotateY(0deg); }
-    75% { transform: scale(105%); }
-    100% { transform: scale(100%); }
+    0% { 
+        transform: scale(100%) rotateY(180deg); 
+        -webkit-transform: scale(1, 1) rotateY(180deg);
+    }
+    25% { 
+        transform: scale(105%) rotateY(180deg);
+        -webkit-transform: scale(1.05, 1.05) rotateY(180deg);
+    }
+    25% { 
+        transform: scale(105%) rotateY(180deg); 
+        -webkit-transform: scale(1.05, 1.05) rotateY(180deg);
+    }
+    75% { 
+        transform: scale(105%) rotateY(0deg); 
+        -webkit-transform: scale(1.05, 1.05) rotateY(0deg);
+    }
+    75% { 
+        transform: scale(105%); 
+        -webkit-transform: scale(1.05, 1.05);
+    }
+    100% { 
+        transform: scale(100%); 
+        -webkit-transform: scale(1, 1);
+    }
 }
 
 .faq-noshow {

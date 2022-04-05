@@ -4,9 +4,14 @@ import note_tape from "../images/note_tape.svg"
 
 
 const StickyNote = ({ img, name, desc }) => {
+  
   return (
     <div className='stickyNote' style={{marginBottom: '4rem', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <div className='trackbox' onClick={(e) => {e.currentTarget.classList.add('trackbox-flipback'); e.currentTarget.classList.toggle('hover')}}>
+      <div className='trackbox' onClick={(e) => {
+          e.currentTarget.classList.add('trackbox-flipback'); 
+          e.currentTarget.classList.toggle('hover');
+          console.log(e, e.currentTarget);
+        }}>
         <img
           src={note_tape}
           alt=""

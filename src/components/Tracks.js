@@ -5,6 +5,7 @@ import entertainment_img from '../images/entertainment.png';
 import pointer_sign from "../images/pointer_sign.svg";
 import stethoscope from "../images/stethoscope.png";
 import connections from "../images/connections.png";
+import { useRef } from "react";
 
 import StickyNote from "./StickyNote";
 
@@ -21,8 +22,6 @@ const Tracks = () => {
         <StickyNote img={entertainment_img} name="Art and Music" desc="Art and music description" />
         <StickyNote img={stethoscope} name="Healthcare" desc="Healthcare description" />
         <StickyNote img={connections} name="Connections" desc="Connections description" />
-        <StickyNote img={sustainability_img} name="Cozy Theme UI/UX" desc="Cozy Theme description" />
-        <StickyNote img={sustainability_img} name="Diversity &amp; Inclusion" desc="Diversity description" />
         </div>
     </center>
   )
