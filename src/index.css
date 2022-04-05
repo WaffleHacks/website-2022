@@ -363,6 +363,8 @@ span {
         position: static !important;
         z-index: 1;
     }
+
+    /* Sponsors area */
     #sponsor-imgs {
         margin-bottom: 2rem;
         margin-top: 2rem;
@@ -384,6 +386,7 @@ span {
         width: 6rem;
     }
 
+    /* Apply */
     #apply {
         height: 75vh;
         width: 100vw;
@@ -420,7 +423,7 @@ span {
 
     #apply-btn {
         position: absolute;
-        bottom: 45%;
+        bottom: 42%;
         left: 50%;
         transform: translateX(-50%);
     }
