@@ -1,8 +1,8 @@
 import * as React from "react";
 import pointer_sign from "../images/pointer_sign.svg";
 import sponsors_plant from "../images/sponsors_plant.png";
-import hyperx from "../images/hyperx.png";
-import wolfram from "../images/wolfram.png";
+import hyperx from "../images/hyperx.svg";
+import wolfram from "../images/wolfram.svg";
 import stickermule from "../images/stickermule.svg";
 import digitalocean from "../images/digitalocean.svg";
 import belmont from "../images/belmont.png";
