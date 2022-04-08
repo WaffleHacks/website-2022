@@ -36,9 +36,8 @@ const StickyNote = ({ img, name, desc }) => {
           <br />
           <span  className='poppins' style={{fontSize: 'calc(1em + 0.8vw)' , fontWeight: 'bolder'}}>{name}</span>
           <br />
-          <br />
           {/* food insecurity track description */}
-          <span style={{fontSize: 'calc(0.5em + 0.8vw)' , fontWeight: 'bolder'}}>{desc}</span>
+          <span style={{fontSize: 'calc(0.5em + 0.8vw)' , fontWeight: 'bolder', display: 'block', padding: '0 0.5rem'}}>{desc}</span>
 
         </div>
       </div>
