@@ -36,7 +36,7 @@ const FaqPointer = ({ single, ind, wasLeft, mained, question, desc, trigger }) =
       </span>
 
       <div className="faq-desc" style={{display: 'none', position: 'absolute', top: '5rem'}}>
-        <span style={{ fontSize: "1.5vw", color: 'rgb(255, 219, 184)' }}>{desc}</span>
+        {desc}
       </div>
     </div>
   );

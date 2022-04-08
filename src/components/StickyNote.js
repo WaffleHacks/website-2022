@@ -10,7 +10,6 @@ const StickyNote = ({ img, name, desc }) => {
       <div className='trackbox' onClick={(e) => {
           e.currentTarget.classList.add('trackbox-flipback'); 
           e.currentTarget.classList.toggle('hover');
-          console.log(e, e.currentTarget);
         }}>
         <img
           src={note_tape}
