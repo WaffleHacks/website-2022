@@ -56,6 +56,9 @@ span {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+.track-front {
+    transform: rotateX(0deg);
+}
 
 .track-back {
     transform: rotateY(180deg) translateZ(1px);
