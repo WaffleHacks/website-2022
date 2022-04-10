@@ -6,7 +6,7 @@ import grid from "../images/grid.svg";
 import bookcase from '../images/bookcase.svg';
 import hsign from '../images/hanging sign.png';
 import button_sticker from '../images/button_sticker.svg';
-import hamburger from '../images/menu-icon.svg';
+import sign from '../images/sign.png';
 
 import About from "../components/About";
 import Tracks from "../components/Tracks";
@@ -37,11 +37,28 @@ const navLinkStyles = {
 
 // markup
 const IndexPage = () => {
+  let now = Date.now();
+  // make a date for June 17, 2022
+  let endDate = new Date(2022, 5, 17);
+  let timeLeft = endDate - now;
+  let daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  console.log(daysLeft);
   return (
     <main style={pageStyles}>
       <title>WaffleHacks</title>
       {/* top image */}
       <img src={landing_page} alt="placeholder" width="100%" />
+      <img src={sign} alt="" style={{position: 'absolute', width: '14.5vw', top: '34.8vw', left: '5.5vw'}} />
+      <span style={{position: 'absolute', 
+                    fontSize: '1.3vw', 
+                    top: '36.8vw', 
+                    left: '8.8vw', 
+                    color: 'white', 
+                    transform: 'rotateY(358deg) rotateZ(352deg)', 
+                    textAlign: 'center', 
+                    lineHeight: '2vw'}}
+                    >June 17-19<br />&nbsp;11AM-11PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
+      </span>
 
       {/* navbar */}
       <nav style={navStyles}>

@@ -5,7 +5,6 @@ import hyperx from "../images/hyperx.svg";
 import wolfram from "../images/wolfram.svg";
 import stickermule from "../images/stickermule.svg";
 import digitalocean from "../images/digitalocean.svg";
-import belmont from "../images/belmont.png";
 
 
 const Sponsors = () => {
