@@ -29,7 +29,7 @@ const Sponsors = () => {
               {/* <img src={belmont} alt="Belmont Data Collaborative" /> */}
             </div>
             <div id='sponsor-msg' className='poppins-light'>
-              <span>Interested in sponsoring for WaffleHacks 2022? Check out our sponsorship prospectus here:</span>
+              <span>Interested in sponsoring for WaffleHacks 2022? Check out our sponsorship prospectus <a href='https://wffl.link/sponsors'>here</a></span>
               <br /><br />
               <span>Contact <a href="mailto:sponsorships@wafflehacks.org">sponsorships@wafflehacks.org</a> for more information!</span>
             </div>
