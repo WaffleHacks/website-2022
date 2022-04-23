@@ -1,7 +1,3 @@
-#nav-sm {
-    display: none;
-}
-
 #tracks-box {
     display: grid;
     position: relative;
@@ -47,7 +43,7 @@ span {
     animation: cardFlip 1s ease-in-out;
     animation-fill-mode: forwards;
 }
-  
+
 .track-front, .track-back {
     position: absolute;
     width: 100%;
@@ -66,54 +62,54 @@ span {
 }
 
 @keyframes cardFlip{
-    0% { 
-        transform: scale(100%); 
+    0% {
+        transform: scale(100%);
         -webkit-transform: scale(1, 1);
     }
     25% {
-        transform: scale(105%); 
+        transform: scale(105%);
         -webkit-transform: scale(1.05, 1.05);
     }
-    25% { 
+    25% {
         transform: scale(105%) rotateY(0deg);
         -webkit-transform: scale(1.05, 1.05) rotateY(0deg);
     }
-    75% { 
-        transform: scale(105%) rotateY(180deg); 
-        -webkit-transform: scale(1.05, 1.05) rotateY(180deg);
-    }
-    75% { 
+    75% {
         transform: scale(105%) rotateY(180deg);
         -webkit-transform: scale(1.05, 1.05) rotateY(180deg);
     }
-    100% { 
-        transform: scale(100%) rotateY(180deg); 
+    75% {
+        transform: scale(105%) rotateY(180deg);
+        -webkit-transform: scale(1.05, 1.05) rotateY(180deg);
+    }
+    100% {
+        transform: scale(100%) rotateY(180deg);
         -webkit-transform: scale(1, 1) rotateY(180deg);
     }
 }
 @keyframes cardFlipBack{
-    0% { 
-        transform: scale(100%) rotateY(180deg); 
+    0% {
+        transform: scale(100%) rotateY(180deg);
         -webkit-transform: scale(1, 1) rotateY(180deg);
     }
-    25% { 
+    25% {
         transform: scale(105%) rotateY(180deg);
         -webkit-transform: scale(1.05, 1.05) rotateY(180deg);
     }
-    25% { 
-        transform: scale(105%) rotateY(180deg); 
+    25% {
+        transform: scale(105%) rotateY(180deg);
         -webkit-transform: scale(1.05, 1.05) rotateY(180deg);
     }
-    75% { 
-        transform: scale(105%) rotateY(0deg); 
+    75% {
+        transform: scale(105%) rotateY(0deg);
         -webkit-transform: scale(1.05, 1.05) rotateY(0deg);
     }
-    75% { 
-        transform: scale(105%); 
+    75% {
+        transform: scale(105%);
         -webkit-transform: scale(1.05, 1.05);
     }
-    100% { 
-        transform: scale(100%); 
+    100% {
+        transform: scale(100%);
         -webkit-transform: scale(1, 1);
     }
 }
@@ -140,7 +136,7 @@ span {
     0% { opacity: 1; }
     25%, 75% {
         opacity: 0;
-        
+
     }
     75% {
         top: calc(8vw + 2rem);
@@ -172,7 +168,7 @@ span {
     }
     75% {
         opacity: 0;
-        
+
     }
     100% { opacity: 1; }
 }
@@ -202,8 +198,8 @@ span {
     100% {
         opacity: 1;
     }
-    
-    
+
+
 }
 
 
@@ -285,16 +281,7 @@ span {
     transform: translateX(-50%);
 }
 
-@media (max-width: 768px) { 
-
-    /* Navbar */
-    #nav-lg {
-        display: none !important;
-    }
-    #nav-sm {
-        display: flex;
-    }
-
+@media (max-width: 768px) {
     /* About */
     #about {
         flex-direction: column;
@@ -331,7 +318,7 @@ span {
         top: -8%;
         left: 50%;
         transform: translateX(-50%);
-        height: 120% !important; 
+        height: 120% !important;
         /* width: 110% !important; */
         width: 200% !important;
 
@@ -401,7 +388,7 @@ span {
         left: -20px;
         height: 40%;
     }
-    
+
     #right-bookcase {
         right: -20px;
         height: 40%;
@@ -421,7 +408,7 @@ span {
         font-size: 16vw;
         text-align: center;
         transform: translateX(-50%);
-        
+
     }
 
     #apply-btn {
@@ -430,5 +417,5 @@ span {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
  }

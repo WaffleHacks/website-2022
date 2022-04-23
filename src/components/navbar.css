@@ -1,0 +1,30 @@
+#nav-sm {
+    display: none;
+}
+
+.nav {
+    background-color: #a47556;
+    border: 2px solid #fbad24;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #nav-lg {
+        display: none !important;
+    }
+
+    #nav-sm {
+        display: flex;
+    }
+}
