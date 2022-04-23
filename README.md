@@ -21,4 +21,4 @@ If you updated any content in the CMS, simply restart the development server and
 
 ## Attribution
 
-The privacy policy, data sharing policy, rules, and code of conduct are adapted from [MLH's policies repository](https://github.com/MLH/mlh-policies).
+The privacy policy, rules, and code of conduct are adapted from [MLH's policies repository](https://github.com/MLH/mlh-policies).
