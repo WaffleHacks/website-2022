@@ -48,13 +48,13 @@ const IndexPage = () => {
       {/* top image */}
       <img src={landing_page} alt="placeholder" width="100%" />
       <img src={sign} alt="" style={{position: 'absolute', width: '14.5vw', top: '34.8vw', left: '5.5vw'}} />
-      <span style={{position: 'absolute', 
-                    fontSize: '1.3vw', 
-                    top: '36.8vw', 
-                    left: '8.8vw', 
-                    color: 'white', 
-                    transform: 'rotateY(358deg) rotateZ(352deg)', 
-                    textAlign: 'center', 
+      <span style={{position: 'absolute',
+                    fontSize: '1.3vw',
+                    top: '36.8vw',
+                    left: '8.8vw',
+                    color: 'white',
+                    transform: 'rotateY(358deg) rotateZ(352deg)',
+                    textAlign: 'center',
                     lineHeight: '2vw'}}
                     >June 17-19<br />&nbsp;11AM-11PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
       </span>
@@ -74,7 +74,7 @@ const IndexPage = () => {
           <a href="#sponsors" style={navLinkStyles}>
             sponsors
           </a>
-          <a href="#apply" style={navLinkStyles}>
+          <a href="https://apply.wafflehacks.org" style={navLinkStyles} target="_blank" rel="noreferrer">
             apply
           </a>
         </div>
@@ -112,7 +112,7 @@ const IndexPage = () => {
            APPLY<br />TODAY!
          </span>
 
-         <div id='apply-btn' onClick={() => window.location.href = 'https://apply.wafflehacks.org'}>
+         <a id='apply-btn' href="https://apply.wafflehacks.org" target="_blank" rel="noreferrer">
            <img src={button_sticker} alt="" style={{width: '15rem'}} />
            <span style={{
               position: 'absolute',
@@ -124,7 +124,7 @@ const IndexPage = () => {
             }} >
               apply
            </span>
-         </div>
+         </a>
        </div>
 
        {/* Footer */}
