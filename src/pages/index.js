@@ -41,8 +41,7 @@ const IndexPage = () => {
   // make a date for June 17, 2022
   let endDate = new Date(2022, 5, 17);
   let timeLeft = endDate - now;
-  let daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  console.log(daysLeft);
+  let daysLeft = Math.max(0, Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
   return (
     <main style={pageStyles}>
       <title>WaffleHacks</title>
