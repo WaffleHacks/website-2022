@@ -3,5 +3,23 @@ module.exports = {
     title: `Landing Page`,
     siteUrl: `https://www.wafflehacks.tech`,
   },
-  plugins: ["gatsby-plugin-sitemap"],
+  plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/MdxLayout.js"),
+        },
+        extensions: [".mdx", ".md"],
+      },
+    },
+    "gatsby-plugin-sitemap"
+  ],
 };

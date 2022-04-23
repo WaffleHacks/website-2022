@@ -1,6 +1,6 @@
 # WaffleHacks Landing Page
 
-This is a temporary landing page for the Waffle Hacks hackathon.
+This is the landing page for the WaffleHacks hackathon.
 
 ## Development
 
@@ -18,3 +18,7 @@ $ npm start
 ```
 
 If you updated any content in the CMS, simply restart the development server and it will pull the latest information.
+
+## Attribution
+
+The privacy policy, data sharing policy, rules, and code of conduct are adapted from [MLH's policies repository](https://github.com/MLH/mlh-policies).
