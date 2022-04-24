@@ -14,8 +14,6 @@ import Tracks from "../components/Tracks";
 import Faq from "../components/Faq";
 import Sponsors from "../components/Sponsors";
 
-import Helmet from "react-helmet"
-import { withPrefix } from "gatsby"
 import { useEffect } from "react";
 
 // styles
