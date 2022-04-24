@@ -80,7 +80,7 @@ const IndexPage = () => {
       <div id='play-pause' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '13.6vw', borderRadius: '50%'}}></div>
       <div id='skip-forward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '16.1vw', borderRadius: '50%'}}></div>
       <div id='skip-backward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '10.8vw', borderRadius: '50%'}}></div>
-      <span id='song-title' style={{position: 'absolute', background: '#333434', color: 'white', fontSize: '1vw', letterSpacing: '0.06vw', width: '8.1vw', minHeight: '3.2vw', top: '13.6vw', left: '10.3vw', textAlign: 'center'}}>
+      <span id='song-title' style={{position: 'absolute', background: '#333434', color: 'white', fontSize: '1vw', letterSpacing: '0.06vw', width: '8vw', minHeight: '3.2vw', top: '13.6vw', left: '10.3vw', textAlign: 'center'}}>
         Comfy beats
         <br />
         - Lilypichu
