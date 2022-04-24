@@ -1,6 +1,6 @@
 import * as React from "react";
 import '../index.css'
-import landing_page from "../images/landing_page.png";
+import landing_page from "../images/landing_page copy.png";
 import grid from "../images/grid.svg";
 
 import bookcase from '../images/bookcase.svg';
@@ -8,6 +8,7 @@ import hsign from '../images/hanging sign.png';
 import button_sticker from '../images/button_sticker.svg';
 import sign from '../images/sign.png';
 import pause from '../images/pausebutton.png';
+import head from '../images/girl head.png';
 
 import About from "../components/About";
 import Tracks from "../components/Tracks";
@@ -46,11 +47,6 @@ const IndexPage = () => {
   let timeLeft = endDate - now;
   let daysLeft = Math.max(0, Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
 
-  function getSongs(){
-    let el = document.getElementById('player');
-    el.classList.remove('hidden');
-  }
-
   useEffect(() => {
     // This runs the script
     const myScript = require('../script.js');
@@ -74,19 +70,23 @@ const IndexPage = () => {
                     lineHeight: '2vw'}}
                     >June 17-19<br />&nbsp;11AM-5PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
       </span>
-      <img src={pause} id='pause' className='hidden' style={{position: 'absolute', width: '1.8vw', height: '1.8vw', top: '18.2vw', left: '13.6vw', borderRadius: '50%'}} />
+      {/* transparent divs that trigger music functions when pressed */}
+      <img src={pause} alt='pause button' id='pause' className='hidden' style={{position: 'absolute', width: '1.8vw', height: '1.8vw', top: '18.2vw', left: '13.6vw', borderRadius: '50%'}} />
       <div id='play-pause' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '13.6vw', borderRadius: '50%'}}></div>
       <div id='skip-forward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '16.1vw', borderRadius: '50%'}}></div>
       <div id='skip-backward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '10.8vw', borderRadius: '50%'}}></div>
+      {/* song title */}
       <span id='song-title' style={{position: 'absolute', background: '#333434', color: 'white', fontSize: '1vw', letterSpacing: '0.06vw', width: '8vw', minHeight: '3.2vw', top: '13.6vw', left: '10.3vw', textAlign: 'center'}}>
         Comfy beats
         <br />
         - Lilypichu
       </span>
       <div id='player' style={{position: 'absolute', bottom: '100%', right: '100%'}}>
-        <iframe id='player-sc' width="100%" height="100%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1429230328&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
+        <iframe id='player-sc' title='player-sc' width="100%" height="100%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1429230328&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
         </iframe>
       </div>
+
+      <img src={head} alt="girl head" id='girl-head' style={{position: 'absolute', width: '11vw', top: '25.45vw', right: '5vw'}} />
 
       {/* navbar */}
       <nav style={navStyles}>
