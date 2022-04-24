@@ -1,6 +1,29 @@
+.hidden {
+    display: none !important;
+}
+
 #nav-sm {
     display: none;
 }
+
+#player {
+    /* background: white;
+    position: absolute;
+    width: 8.3vw;
+    top: 12.8vw;
+    left: 10.2vw;
+    height: 9.6vw;
+    overflow: hidden;
+    border-radius: 0.5vw;
+    transition: width 0.5s ease, height 0.5s ease;
+    filter: sepia(0.1) saturate(0.8); */
+}
+
+#player:hover {
+    width: min(30vw, 20rem);
+    height: min(30vw, 20rem);
+}
+
 
 #tracks-box {
     display: grid;
@@ -64,6 +87,7 @@ span {
     transform: rotateY(180deg) translateZ(1px);
     -webkit-transform: rotateY(180deg) translateZ(1px);
 }
+
 
 @keyframes cardFlip{
     0% { 
@@ -293,6 +317,10 @@ span {
     }
     #nav-sm {
         display: flex;
+    }
+
+    #player {
+        display: none;
     }
 
     /* About */

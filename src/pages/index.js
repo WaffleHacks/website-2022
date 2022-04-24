@@ -7,11 +7,16 @@ import bookcase from '../images/bookcase.svg';
 import hsign from '../images/hanging sign.png';
 import button_sticker from '../images/button_sticker.svg';
 import sign from '../images/sign.png';
+import pause from '../images/pausebutton.png';
 
 import About from "../components/About";
 import Tracks from "../components/Tracks";
 import Faq from "../components/Faq";
 import Sponsors from "../components/Sponsors";
+
+import Helmet from "react-helmet"
+import { withPrefix } from "gatsby"
+import { useEffect } from "react";
 
 // styles
 const pageStyles = {
@@ -42,8 +47,21 @@ const IndexPage = () => {
   let endDate = new Date(2022, 5, 17);
   let timeLeft = endDate - now;
   let daysLeft = Math.max(0, Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
+
+  function getSongs(){
+    let el = document.getElementById('player');
+    el.classList.remove('hidden');
+  }
+
+  useEffect(() => {
+    // This runs the script
+    const myScript = require('../script.js');
+  }, [])
   return (
     <main style={pageStyles}>
+      {/* <Helmet>
+        <script src={withPrefix('script.js')} type="text/javascript" />
+      </Helmet> */}
       <title>WaffleHacks</title>
       {/* top image */}
       <img src={landing_page} alt="placeholder" width="100%" />
@@ -56,8 +74,21 @@ const IndexPage = () => {
                     transform: 'rotateY(358deg) rotateZ(352deg)', 
                     textAlign: 'center', 
                     lineHeight: '2vw'}}
-                    >June 17-19<br />&nbsp;11AM-11PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
+                    >June 17-19<br />&nbsp;11AM-5PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
       </span>
+      <img src={pause} id='pause' className='hidden' style={{position: 'absolute', width: '1.8vw', height: '1.8vw', top: '18.2vw', left: '13.6vw', borderRadius: '50%'}} />
+      <div id='play-pause' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '13.6vw', borderRadius: '50%'}}></div>
+      <div id='skip-forward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '16.1vw', borderRadius: '50%'}}></div>
+      <div id='skip-backward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '10.8vw', borderRadius: '50%'}}></div>
+      <span id='song-title' style={{position: 'absolute', background: '#333434', color: 'white', fontSize: '1vw', letterSpacing: '0.06vw', width: '8.1vw', minHeight: '3.2vw', top: '13.6vw', left: '10.3vw', textAlign: 'center'}}>
+        Comfy beats
+        <br />
+        - Lilypichu
+      </span>
+      <div id='player' style={{position: 'absolute', bottom: '100%', right: '100%'}}>
+        <iframe id='player-sc' width="100%" height="100%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1429230328&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
+        </iframe>
+      </div>
 
       {/* navbar */}
       <nav style={navStyles}>

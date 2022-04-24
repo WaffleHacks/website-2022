@@ -5,6 +5,9 @@ import hyperx from "../images/hyperx.svg";
 import wolfram from "../images/wolfram.svg";
 import stickermule from "../images/stickermule.svg";
 import digitalocean from "../images/digitalocean.svg";
+import trimble from "../images/trimble.svg";
+import googlecloud from "../images/googlecloud.svg";
+import belmont from '../images/belmont.png';
 
 
 const Sponsors = () => {
@@ -25,6 +28,8 @@ const Sponsors = () => {
               <img src={wolfram} alt="Wolfram Alpha" />
               <img src={stickermule} alt="StickerMule" />
               <img src={digitalocean} alt="DigitalOcean" />
+              <img src={trimble} alt="Trimble" />
+              <img src={googlecloud} alt="Trimble" />
               {/* <img src={belmont} alt="Belmont Data Collaborative" /> */}
             </div>
             <div id='sponsor-msg' className='poppins-light'>
