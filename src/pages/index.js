@@ -22,14 +22,15 @@ const pageStyles = {
   width: "100%",
   display: "flex",
   flexDirection: "column",
+  alignContent: 'flex-start',
   backgroundColor: "#DDBC9B",
-  backgroundImage: 'url(' + grid + ')'
+  backgroundImage: 'url(' + grid + ')',
 };
 
 const navStyles = {
   backgroundColor: "#A47556",
   border: "2px solid #FBAD24",
-  margin: "0",
+  margin: 0,
 };
 
 const navLinkStyles = {
@@ -57,37 +58,38 @@ const IndexPage = () => {
         <script src={withPrefix('script.js')} type="text/javascript" />
       </Helmet> */}
       <title>WaffleHacks</title>
-      {/* top image */}
-      <img src={landing_page} alt="placeholder" width="100%" />
-      <img src={sign} alt="" style={{position: 'absolute', width: '14.5vw', top: '34.8vw', left: '5.5vw'}} />
-      <span style={{position: 'absolute', 
-                    fontSize: '1.3vw', 
-                    top: '36.8vw', 
-                    left: '8.8vw', 
-                    color: 'white', 
-                    transform: 'rotateY(358deg) rotateZ(352deg)', 
-                    textAlign: 'center', 
-                    lineHeight: '2vw'}}
-                    >June 17-19<br />&nbsp;11AM-5PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
-      </span>
-      {/* transparent divs that trigger music functions when pressed */}
-      <img src={pause} alt='pause button' id='pause' className='hidden' style={{position: 'absolute', width: '1.8vw', height: '1.8vw', top: '18.2vw', left: '13.6vw', borderRadius: '50%'}} />
-      <div id='play-pause' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '13.6vw', borderRadius: '50%'}}></div>
-      <div id='skip-forward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '16.1vw', borderRadius: '50%'}}></div>
-      <div id='skip-backward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '18.2vw', left: '10.8vw', borderRadius: '50%'}}></div>
-      {/* song title */}
-      <span id='song-title' style={{position: 'absolute', background: '#333434', color: 'white', fontSize: '1vw', letterSpacing: '0.06vw', width: '8vw', minHeight: '3.2vw', top: '13.6vw', left: '10.3vw', textAlign: 'center'}}>
-        Comfy beats
-        <br />
-        - Lilypichu
-      </span>
-      <div id='player' style={{position: 'absolute', bottom: '100%', right: '100%'}}>
-        <iframe id='player-sc' title='player-sc' width="100%" height="100%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1429230328&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
-        </iframe>
+      <div style={{position: 'relative', display: 'inherit', margin: 0, padding: 0, width: '100%'}}>
+        {/* top image */}
+        <img src={landing_page} alt="placeholder" width="100%" />
+        <img src={sign} alt="" style={{position: 'absolute', width: '14.5vw', top: '34.8vw', left: '5.5vw'}} />
+        <span style={{position: 'absolute', 
+                      fontSize: '1.3vw', 
+                      top: '36.8vw', 
+                      left: '8.8vw', 
+                      color: 'white', 
+                      transform: 'rotateY(358deg) rotateZ(352deg)', 
+                      textAlign: 'center', 
+                      lineHeight: '2vw'}}
+                      >June 17-19<br />&nbsp;11AM-5PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
+        </span>
+        {/* transparent divs that trigger music functions when pressed */}
+        <img src={pause} alt='pause button' id='pause' className='hidden' style={{position: 'absolute', width: '1.8vw', height: '1.8vw', top: '32.4%', left: '13.64%', borderRadius: '50%'}} />
+        <div id='play-pause' style={{position: 'absolute', width: '1.8vw', height: '1.8vw', top: '32.4%', left: '13.64%', borderRadius: '50%'}}></div>
+        <div id='skip-forward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '32.4%', left: '16.15%', borderRadius: '50%'}}></div>
+        <div id='skip-backward' style={{position: 'absolute', width: '1.9vw', height: '1.9vw', top: '32.4%', left: '10.8%', borderRadius: '50%'}}></div>
+        {/* song title */}
+        <span id='song-title' style={{position: 'absolute', background: '#333434', color: 'white', fontSize: '1vw', letterSpacing: '0.06vw', width: '8vw', minHeight: '3.2vw', top: '13.6vw', left: '10.3%', textAlign: 'center'}}>
+          Comfy beats
+          <br />
+          - Lilypichu
+        </span>
+        <div id='player' style={{position: 'absolute', bottom: '100%', right: '100%'}}>
+          <iframe id='player-sc' title='player-sc' width="100%" height="100%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1429230328&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
+          </iframe>
+        </div>
+
+        <img src={head} alt="girl head" id='girl-head' style={{position: 'absolute', width: '11vw', top: '45.4%', right: '5.05%'}} />
       </div>
-
-      <img src={head} alt="girl head" id='girl-head' style={{position: 'absolute', width: '11vw', top: '25.45vw', right: '5vw'}} />
-
       {/* navbar */}
       <nav style={navStyles}>
         <div id='nav-lg' style={{display: 'flex', justifyContent: "center"}}>
