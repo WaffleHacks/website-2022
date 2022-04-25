@@ -61,7 +61,7 @@ const IndexPage = () => {
       <div style={{position: 'relative', display: 'inherit', margin: 0, padding: 0, width: '100%'}}>
         {/* top image */}
         <img src={landing_page} alt="placeholder" width="100%" />
-        <img src={sign} alt="" style={{position: 'absolute', width: '14.5vw', top: '34.8vw', left: '5.5vw'}} />
+        <img src={sign} alt="" style={{position: 'absolute', width: '14.5vw', top: '61.9%', left: '5.5%'}} />
         <span style={{position: 'absolute', 
                       fontSize: '1.3vw', 
                       top: '36.8vw', 
