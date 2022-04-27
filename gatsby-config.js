@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Landing Page`,
-    siteUrl: `https://www.wafflehacks.tech`,
+    title: 'WaffleHacks',
+    description: "We're hackers with hears",
+    siteUrl: 'https://wafflehacks.org',
   },
-  plugins: ["gatsby-plugin-sitemap"],
+  plugins: ["gatsby-plugin-sitemap", "gatsby-plugin-robots-txt"],
 };
