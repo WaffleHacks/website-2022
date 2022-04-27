@@ -366,7 +366,6 @@ function cur(sound){
 }
 document.getElementById('play-pause').addEventListener('click', function () {
     sc.toggle();
-    
 });
 document.getElementById('skip-forward').addEventListener('click', function () {
     if (curSound == songs.length - 1) sc.skip(0);
