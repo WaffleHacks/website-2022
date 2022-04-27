@@ -21,6 +21,10 @@
   src: url("./fonts/Poppins-Light.ttf");
   font-weight: lighter;
 }
+@font-face {
+  font-family: Alyssum;
+  src: url("./fonts/Alyssum-Sans.ttf");
+}
 
 html,
 body {

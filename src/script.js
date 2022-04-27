@@ -339,7 +339,9 @@ SC.Widget = function (e) {
 let player = document.getElementById('player-sc');
 let sc = SC.Widget(player);
 let pauseButton = document.getElementById('pause');
+let playButton = document.getElementById('play');
 let songName = document.getElementById('song-title');
+let curSound = 0;
 var paused = true;
 let songs = [['Comfy beats', 'Lilypichu'], 
              ['Cherry Wine', 'grentperez'], 
@@ -360,27 +362,32 @@ let songs = [['Comfy beats', 'Lilypichu'],
              ['bossa uh', 'potsu']];
 function cur(sound){
     songName.innerHTML = `${songs[sound][0]} <br>- ${songs[sound][1]}`;
+    curSound = sound;
 }
 document.getElementById('play-pause').addEventListener('click', function () {
     sc.toggle();
     
 });
 document.getElementById('skip-forward').addEventListener('click', function () {
-    sc.next();
+    if (curSound == songs.length - 1) sc.skip(0);
+    else sc.next();
     sc.seekTo(0);
 });
 document.getElementById('skip-backward').addEventListener('click', function () {
-    sc.prev();
+    if (curSound == 0) sc.skip(songs.length - 1);
+    else sc.prev();
     sc.seekTo(0);
 });
 
 sc.bind(SC.Widget.Events.PLAY, function () {
     pauseButton.classList.remove('hidden');
+    playButton.classList.add('hidden');
     sc.getCurrentSoundIndex(cur);
     document.getElementById('girl-head').classList.add('bop');
 });
 
 sc.bind(SC.Widget.Events.PAUSE, function () {
     pauseButton.classList.add('hidden');
+    playButton.classList.remove('hidden');
     document.getElementById('girl-head').classList.remove('bop');
 });

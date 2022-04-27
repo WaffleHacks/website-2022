@@ -6,6 +6,23 @@
     display: none;
 }
 
+#wh-text {
+    color: #E2A165 !important;
+    display: block;
+    text-shadow: -0.22vw 0.085vw #704735;
+    line-height: 3.7vw;
+    letter-spacing: 0.1vw;
+}
+#remix-text {
+    color: white !important;
+    font-size: 2.75vw;
+    display: block;
+    text-shadow: -0.13vw 0.05vw #6F7477;
+    letter-spacing: 0.01vw;
+    margin-top: 0.66vw;
+}
+
+
 #girl-head {
     transform-origin: bottom center;
 }
