@@ -30,7 +30,7 @@ const Sponsors = () => {
               <img src={digitalocean} alt="DigitalOcean" />
               <img src={trimble} alt="Trimble" />
               <img src={googlecloud} alt="Trimble" />
-              {/* <img src={belmont} alt="Belmont Data Collaborative" /> */}
+              <img src={belmont} alt="Belmont Data Collaborative" />
             </div>
             <div id='sponsor-msg' className='poppins-light'>
               <span>Interested in sponsoring for WaffleHacks 2022? Check out our sponsorship prospectus <a href='https://wffl.link/sponsors'>here</a></span>

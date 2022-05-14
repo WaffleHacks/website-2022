@@ -102,18 +102,6 @@ const IndexPage = () => {
 
       <Footer />
 
-       {/* Footer */}
-       {/* <div style={{
-         width: '100%',
-         padding: '1rem 0',
-         textAlign: 'center',
-         fontSize: '1rem',
-         color: 'white',
-         background: '#A47556'
-       }}>
-         WAFFLEHACKS 2022
-       </div> */}
-
     </main>
   );
 };
