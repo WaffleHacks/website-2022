@@ -11,12 +11,12 @@ const Apply = () => {
          {/* left bookcase */}
          <img src={bookcase2} draggable={false} alt="bookcase" id='left-bookcase' />
          {/* right bookcase */}
-         <Draggable>
+         {/* <Draggable> */}
             <div id='right-bookcase'>
                 <img src={bookcase2} draggable={false} alt="bookcase" style={{height: '100%'}}  />
             </div>
             
-         </Draggable>
+         {/* </Draggable> */}
           {/* hanging sign */}
          <img src={hsign} alt="hanging sign" id='hanging-sign' />
         {/* apply today button */}
