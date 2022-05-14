@@ -9,6 +9,8 @@ import Faq from "../components/Faq";
 import Sponsors from "../components/Sponsors";
 import TopPicture from "../components/TopPicture";
 import Apply from '../components/Apply';
+import Footer from '../components/Footer';
+
 
 import { useEffect } from "react";
 
@@ -98,8 +100,10 @@ const IndexPage = () => {
 
       </div>
 
+      <Footer />
+
        {/* Footer */}
-       <div style={{
+       {/* <div style={{
          width: '100%',
          padding: '1rem 0',
          textAlign: 'center',
@@ -108,7 +112,7 @@ const IndexPage = () => {
          background: '#A47556'
        }}>
          WAFFLEHACKS 2022
-       </div>
+       </div> */}
 
     </main>
   );
