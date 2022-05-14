@@ -3,16 +3,12 @@ import '../index.css'
 
 import grid from "../images/grid.svg";
 
-import bookcase from '../images/bookcase.svg';
-import hsign from '../images/hanging sign.png';
-import button_sticker from '../images/button_sticker.svg';
-
-
 import About from "../components/About";
 import Tracks from "../components/Tracks";
 import Faq from "../components/Faq";
 import Sponsors from "../components/Sponsors";
 import TopPicture from "../components/TopPicture";
+import Apply from '../components/Apply';
 
 import { useEffect } from "react";
 
@@ -83,45 +79,24 @@ const IndexPage = () => {
         </div> */}
       </nav>
 
-      {/* about */}
-      <About />
+      <div id='content'>
 
-       {/* tracks */}
-       <Tracks />
+        {/* about */}
+        <About />
 
-       {/* faq */}
-       <Faq />
+        {/* tracks */}
+        <Tracks />
 
-       {/* Sponsors */}
-       <Sponsors />
+        {/* faq */}
+        <Faq />
 
-       {/* Apply */}
-       <div id='apply'>
-         {/* left bookcase */}
-         <img src={bookcase} alt="bookcase" id='left-bookcase' />
-         {/* right bookcase */}
-         <img src={bookcase} alt="bookcase" id='right-bookcase' />
-          {/* hanging sign */}
-         <img src={hsign} alt="hanging sign" id='hanging-sign' />
-        {/* apply today button */}
-         <span id='apply-today' className='poppins-bold'>
-           APPLY<br />TODAY!
-         </span>
+        {/* Sponsors */}
+        <Sponsors />
 
-         <div id='apply-btn' onClick={() => window.location.href = 'https://apply.wafflehacks.org'}>
-           <img src={button_sticker} alt="" style={{width: '15rem'}} />
-           <span style={{
-              position: 'absolute',
-              top: '45%',
-              left: '50%',
-              transform: 'translateX(-50%) translateY(-50%)',
-              fontSize: '2.5rem',
-              color: '#543E2E'
-            }} >
-              apply
-           </span>
-         </div>
-       </div>
+        {/* Apply */}
+        <Apply />
+
+      </div>
 
        {/* Footer */}
        <div style={{
@@ -134,6 +109,7 @@ const IndexPage = () => {
        }}>
          WAFFLEHACKS 2022
        </div>
+
     </main>
   );
 };
