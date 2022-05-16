@@ -25,14 +25,15 @@ const Apply = () => {
          </span>
 
          <div id='apply-btn' onClick={() => window.location.href = 'https://apply.wafflehacks.org'}>
-           <img src={button_sticker} alt="" style={{width: '15rem'}} />
+           <img src={button_sticker} alt="" style={{width: '15rem', cursor: 'pointer'}} />
            <span style={{
               position: 'absolute',
               top: '45%',
               left: '50%',
               transform: 'translateX(-50%) translateY(-50%)',
               fontSize: '2.5rem',
-              color: '#543E2E'
+              color: '#543E2E',
+              cursor: 'pointer'
             }} >
               apply
            </span>

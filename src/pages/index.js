@@ -3,6 +3,7 @@ import '../index.css'
 
 import grid from "../images/grid.svg";
 
+import Navbar from '../components/Navbar';
 import About from "../components/About";
 import Tracks from "../components/Tracks";
 import Faq from "../components/Faq";
@@ -54,32 +55,7 @@ const IndexPage = () => {
       <TopPicture />
       
       {/* navbar */}
-      <nav style={navStyles}>
-        <div id='nav-lg' style={{display: 'flex', justifyContent: "center"}}>
-          <a href="#about" style={navLinkStyles}>
-            about
-          </a>
-          <a href="#tracks" style={navLinkStyles}>
-            tracks
-          </a>
-          <a href="#faq" style={navLinkStyles}>
-            faqs
-          </a>
-          <a href="#sponsors" style={navLinkStyles}>
-            sponsors
-          </a>
-          <a href="#apply" style={navLinkStyles}>
-            apply
-          </a>
-        </div>
-
-        {/* <div id='nav-sm' style={{justifyContent: "center", alignItems: 'center'}}>
-          <a href="#about" style={navLinkStyles}>
-            about
-          </a>
-          <img src={hamburger} alt="menu" style={{width: '1.75rem'}} />
-        </div> */}
-      </nav>
+      <Navbar />
 
       <div id='content'>
 
