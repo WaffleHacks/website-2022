@@ -24,13 +24,19 @@ const Sponsors = () => {
               <span>Shoutout to our amazing sponsors below!</span>
             </div>
             <div id='sponsor-imgs'>
-              <img src={hyperx} alt="HyperX" />
-              <img src={wolfram} alt="Wolfram Alpha" />
-              <img src={stickermule} alt="StickerMule" />
-              <img src={digitalocean} alt="DigitalOcean" />
-              <img src={trimble} alt="Trimble" />
-              <img src={googlecloud} alt="Trimble" />
-              <img src={belmont} alt="Belmont Data Collaborative" />
+              <h1>VIP</h1>
+              <img src={belmont} className='vip' alt="Belmont Data Collaborative" />
+              <img src={wolfram} className='vip' alt="Wolfram Alpha" />
+              <img src={digitalocean} className='vip' alt="DigitalOcean" />
+
+              <h1>Headliner</h1>
+              <img src={hyperx} className='headliner' alt="HyperX" />
+              <img src={trimble} className='headliner' alt="Trimble" />
+
+              <h1>Opener</h1>
+              <img src={stickermule} className='opener' alt="StickerMule" />
+              <img src={googlecloud} className='opener' alt="Trimble" />
+              
             </div>
             <div id='sponsor-msg' className='poppins-light'>
               <span>Interested in sponsoring for WaffleHacks 2022? Check out our sponsorship prospectus <a href='https://wffl.link/sponsors'>here</a></span>

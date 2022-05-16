@@ -156,7 +156,7 @@ const TopPicture = () => {
                       transform: 'rotateY(358deg) rotateZ(352deg)', 
                       textAlign: 'center', 
                       lineHeight: '2vw'}}
-                      >June 17-19<br />&nbsp;11AM-5PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
+                      >June 17-19<br />&nbsp;5PM-5PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
           </span>
         </div>
 

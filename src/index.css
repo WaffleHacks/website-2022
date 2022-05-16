@@ -361,10 +361,18 @@
     margin-bottom: 4rem;
     margin-top: 4rem;
 }
-#sponsor-imgs img{
-    max-height: 5rem;
+#sponsor-imgs img {
     max-width: 80vw;
     margin: 1.5rem;
+}
+#sponsor-imgs img.vip {
+    max-height: 5.5rem;
+}
+#sponsor-imgs img.headliner{ 
+    max-height: 4.5rem;
+}
+#sponsor-imgs img.opener {
+    max-height: 3.5rem;
 }
 #sponsor-msg {
     font-size: 1.5rem;
@@ -519,10 +527,18 @@
         margin-top: 2rem;
     }
     #sponsor-imgs img {
-        max-height: 5rem;
         max-width: 80vw;
         margin: 1rem 0;
         align-self: center;
+    }
+    #sponsor-imgs img.vip {
+        max-height: 5.5rem;
+    }
+    #sponsor-imgs img.headliner{ 
+        max-height: 4.5rem;
+    }
+    #sponsor-imgs img.opener {
+        max-height: 3.5rem;
     }
     #sponsor-msg {
         font-size: 1rem;
