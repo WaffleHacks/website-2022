@@ -1,4 +1,4 @@
-var md = `# Privacy Policy
+# Privacy Policy
 
 WaffleHacks ("us" or "we") respects the privacy of the parties visiting its Website, the home page of which is located at https://wafflehacks.org.
 The home page and accompanying pages will collectively be known as "Website".
@@ -57,7 +57,7 @@ As a result, if you register on the Website through a Partner Company, we may pr
 We do not control the privacy practices of these Partner Companies.
 
 We may participate in co-branding or co-promotional agreements with third parties pursuant to which we may share Personal Information.
-We may offer you the chance to participate in drawings, contests, giveaways, and promotions ("Special Promotions") through our Website. 
+We may offer you the chance to participate in drawings, contests, giveaways, and promotions ("Special Promotions") through our Website.
 By registering for a Special Promotion, you agree to the official rules that govern that Special Promotion, which may contain specific requirements of you, including, except where prohibited by law, allowing the sponsor(s) of the Special Promotion to use your name, voice and/or likeness in advertising or marketing associated with the Special Promotion.
 If you choose to enter a drawing, contest or other promotion, personally identifiable information may be disclosed to third parties or the public in connection with the administration of such Special Promotion, including, without limitation, in connection with winner selection, prize fulfillment, and as required by law or permitted by the Special Promotion’s official rules, such as on a winners list.
 
@@ -125,5 +125,4 @@ We may modify this Privacy Policy from time to time by posting updates on this p
 This Privacy Policy was last updated on April 23, 2022.
 
 ## Contact Us
-Should you have any questions, concerns or feedback regarding this Privacy Policy, please contact us by email at: team@wafflehacks.org.`;
-export default md;
+Should you have any questions, concerns or feedback regarding this Privacy Policy, please contact us by email at: team@wafflehacks.org.
