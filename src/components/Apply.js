@@ -15,7 +15,7 @@ const Apply = () => {
             <div id='right-bookcase'>
                 <img src={bookcase2} draggable={false} alt="bookcase" style={{height: '100%'}}  />
             </div>
-            
+
          {/* </Draggable> */}
           {/* hanging sign */}
          <img src={hsign} alt="hanging sign" id='hanging-sign' />
@@ -24,7 +24,7 @@ const Apply = () => {
            APPLY<br />TODAY!
          </span>
 
-         <div id='apply-btn' onClick={() => window.location.href = 'https://apply.wafflehacks.org'}>
+         <a id='apply-btn' href="https://apply.wafflehacks.org">
            <img src={button_sticker} alt="" style={{width: '15rem', cursor: 'pointer'}} />
            <span style={{
               position: 'absolute',
@@ -37,7 +37,7 @@ const Apply = () => {
             }} >
               apply
            </span>
-         </div>
+         </a>
        </div>
   )
 }

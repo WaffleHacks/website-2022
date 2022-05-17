@@ -23,19 +23,19 @@ const Navbar = () => {
   return (
     <nav style={navStyles}>
         <div id='nav-lg' style={{display: 'flex', justifyContent: "center"}}>
-          <a href="#about" style={navLinkStyles}>
+          <a href="/#about" style={navLinkStyles}>
             about
           </a>
-          <a href="#tracks" style={navLinkStyles}>
+          <a href="/#tracks" style={navLinkStyles}>
             tracks
           </a>
-          <a href="#faq" style={navLinkStyles}>
+          <a href="/#faq" style={navLinkStyles}>
             faqs
           </a>
-          <a href="#sponsors" style={navLinkStyles}>
+          <a href="/#sponsors" style={navLinkStyles}>
             sponsors
           </a>
-          <a href="#apply" style={navLinkStyles}>
+          <a href="https://apply.wafflehacks.org" style={devpostStyle}>
             apply
           </a>
         </div>
