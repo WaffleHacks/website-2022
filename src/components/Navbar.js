@@ -38,9 +38,6 @@ const Navbar = () => {
           <a href="#apply" style={navLinkStyles}>
             apply
           </a>
-          <a href="https://wafflehacks-2022.devpost.com/?ref_feature=challenge&ref_medium=discover" style={devpostStyle}>
-            devpost
-          </a>
         </div>
       </nav>
   )
