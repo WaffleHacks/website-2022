@@ -148,6 +148,7 @@ const TopPicture = () => {
     let mouseX = pos.x - (pos.lastX - img.offsetLeft);
     let mouseY = pos.y - (pos.lastY - img.offsetTop);
     if (mouseX === 0 || mouseY === 0) return;
+    
     let vw = mouseX / window.innerWidth * 100;
     let vh = mouseY / window.innerWidth * 100;
     setChalkOffset([vw, vh]);
