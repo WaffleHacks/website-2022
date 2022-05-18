@@ -34,10 +34,16 @@ let imgStyles = {
 
 let note = `I've hidden my prized waffle. This is the only place I know it'll be safe. It was the last waffle I got before the Waffle House closed. It holds a special place in my heart. While I want to keep it safe, I also want to make sure I can find it again. But I don't want to make it easy. I've left clues in this folder that only I can understand. Just remember: the patterns are always there.`;
 
+let riddle1 = `I am lucky to some, and unlucky to others.
+As a person I am too little to be on my own, but in geometry I am just enough.
+Jokingly, me plus myself is 8.
+What am I?`;
+
 const About = () => {
   let [showWindow, setShowWindow] = useState(false);
   let [showNote, setShowNote] = useState(false);
   let [showVault, setShowVault] = useState(false);
+  let [showRiddle1, setShowRiddle1] = useState(false);
   let [coords, setCoords] = useState({x: 0, y: 0});
 
   function displayWindow(showfunc){
@@ -86,6 +92,11 @@ const About = () => {
                 <span style={{cursor: 'pointer'}}>vault.exe</span>
               </div>
 
+              <div onDoubleClick={() => displayWindow(setShowRiddle1)} style={{display: 'flex', alignItems: 'center', cursor: 'pointer', marginBottom: '0.5rem'}}>
+                <img src={paperIcon} alt="exe file icon" style={{height: '1.5rem', marginRight: '0.75rem', cursor: 'pointer'}} />
+                <span style={{cursor: 'pointer'}}>clue 1.txt</span>
+              </div>
+
             </div>
           </Window>
         }
@@ -102,6 +113,14 @@ const About = () => {
             <div style={{background: 'rgb(30, 30, 40)', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center'}}>
               <h2 style={{color: 'white', textDecoration: 'none', marginTop: '0'}}>Password</h2>
               <input type="text" style={{background: 'none', border: '2px solid white', width: '50%', minWidth: '10rem', color: 'white', outline: 'none', padding: '0.25rem', fontSize: '1.1rem'}} />
+            </div>
+          </Window>
+        }
+
+        { showRiddle1 && 
+          <Window removeWindow={() => {setShowRiddle1(false)}} coords={coords} size={[500, 300]} name='Vault :)'>
+             <div style={{width: '100%', height: '100%', padding: '5px', boxSizing: 'border-box'}}>
+              <textarea name="" id="" style={{width: '100%', height: '100%', outline: 'none', border: 'none'}}>{riddle1}</textarea>
             </div>
           </Window>
         }
