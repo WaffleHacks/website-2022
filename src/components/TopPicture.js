@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { DraggableCore } from 'react-draggable';
 import grid from "../images/grid.svg";
 import sign from '../images/sign.png';
@@ -51,17 +51,18 @@ const TopPicture = () => {
   let draggingChalk = useRef(false);
   let chalkPixels = useRef(null);
 
-  let img = new Image();
-  img.src = canvImg;
-  img.onload = () => {
-    let cnv = document.createElement('canvas');
-    let ctx = cnv.getContext('2d');
-    ctx.drawImage(img, 0, 0);
-    // load pixels from canvImg to chalkPixels
-    chalkPixels.current = ctx.getImageData(0, 0, 130, 110);
-  }
-
-
+  useEffect(() => {
+    let img = new Image();
+    img.src = canvImg;
+    img.onload = () => {
+      let cnv = document.createElement('canvas');
+      let ctx = cnv.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      // load pixels from canvImg to chalkPixels
+      chalkPixels.current = ctx.getImageData(0, 0, 130, 110);
+    }
+  }, [])
+  
   function dragPlant(e, pos){
     let img = pos.node;
     let mouseX = pos.x - (pos.lastX - img.offsetLeft);
