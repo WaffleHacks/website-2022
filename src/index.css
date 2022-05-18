@@ -33,22 +33,15 @@
     text-shadow: 0 0 2vw #ede5a8;
     transition-delay: 2s;
 }
-
-#seed {
-    position: absolute;
-    top: 5.1vw;
-    left: 95.5vw;
-    width: 1.25vw;
-    height: 1.25vw;
-    background: rgb(113, 71, 43);
-    border-radius: 50%;
-}
-#seed.activated {
-    animation: seed-roll 10s linear forwards;
-}
-
 #music-sign{
-    transition: transform 0.4s ease;
+    position: absolute;
+    top: 4.4vw;
+    left: 6.7vw;
+    width: 15.34vw;
+    height: 5vw;
+    text-align: center;
+    color: white;
+    /* transition: transform 0.4s ease; */
     transform-origin: center 1.5vw;
 }
 #music-sign.rotatable:hover {
@@ -60,71 +53,6 @@
 }
 #girl-head.bop {
     animation: Bop 1.5s infinite;
-}
-
-@keyframes seed-roll {
-    0% {
-        top: 5.1vw;
-        left: 95.5vw;
-    }
-    5% {
-        top: 6.4vw;
-        left: 94vw;
-    }
-    15% {
-        top: 6.4vw;
-        left: 79vw;
-    }
-    16% { top: 6.8vw;
-    }
-    17% { top: 7.4vw;
-    }
-    18% { top: 8.2vw; }
-    19% { top: 9.2vw; }
-    20% { top: 10.4vw; }
-    22% { top: 11.8vw; }
-    23% {
-        top: 13.4vw;
-        left: 72.5vw;
-    }
-    24% { top: 15.2vw; }
-    26% { top: 15.6vw; }
-    35% {
-        left: 92vw;
-    }
-    36% { top: 15.8vw; }
-    37% { top: 16.2vw; }
-    38% { top: 16.8vw; }
-    39% { top: 17.6vw; }
-    40% { top: 18.6vw; }
-    41% { top: 19.8vw; }
-    42% { top: 21.2vw; }
-    43% { top: 22.8vw; }
-    44% { top: 23.6vw; }
-    45% { top: 24.6vw; }
-    45% {
-        left: 98.75vw;
-    }
-    46% { top: 26.8vw; }
-    47% { top: 29.2vw; }
-    48% { top: 31.8vw; }
-    49% { top: 34.6vw; }
-    50% { top: 37.6vw; }
-    51% { top: 40vw; }
-    51% {
-        top: 40vw;
-        left: 94vw;
-    }
-
-    90% {
-        top: 40vw;
-        left: 50vw;
-    }
-    100% {
-        top: 40vw;
-        left: 50vw;
-    }
-
 }
 
 @keyframes Bop {
