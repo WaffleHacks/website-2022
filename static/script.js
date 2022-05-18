@@ -2,9 +2,9 @@ var SC = "object" == typeof SC ? SC : {};
 SC.Widget = function (e) {
     var t = {};
     function n(r) {
-        if (t[r]) 
+        if (t[r])
             return t[r].exports;
-        
+
         var o = t[r] = {
             i: r,
             l: !1,
@@ -29,23 +29,23 @@ SC.Widget = function (e) {
         }
     },
     n.t = function (e, t) {
-        if (1 & t && (e = n(e)), 8 & t) 
+        if (1 & t && (e = n(e)), 8 & t)
             return e;
-        
-        if (4 & t && "object" == typeof e && e && e.__esModule) 
+
+        if (4 & t && "object" == typeof e && e && e.__esModule)
             return e;
-        
+
         var r = Object.create(null);
         if (n.r(r), Object.defineProperty(r, "default", {
             enumerable: !0,
             value: e
-        }), 2 & t && "string" != typeof e) 
-            for (var o in e) 
+        }), 2 & t && "string" != typeof e)
+            for (var o in e)
                 n.d(r, o, function (t) {
                     return e[t]
                 }.bind(null, o));
-            
-        
+
+
         return r
     },
     n.n = function (e) {
@@ -86,9 +86,9 @@ SC.Widget = function (e) {
         function _(e) {
             var t,
                 n = [];
-            for (t in e) 
+            for (t in e)
                 e.hasOwnProperty(t) && n.push(e[t]);
-            
+
             return n
         }
         function S(e, t, n) {
@@ -99,10 +99,10 @@ SC.Widget = function (e) {
             var n = !0;
             return t.callbacks[e] = [],
             E((function (t) {
-                if ((t.callbacks[e] || []).length) 
+                if ((t.callbacks[e] || []).length)
                     return n = !1,
                     !1
-                
+
             })),
             n
         }
@@ -110,9 +110,9 @@ SC.Widget = function (e) {
             var r,
                 o,
                 i = v(n);
-            if (! i.postMessage) 
+            if (!i || !i.postMessage)
                 return !1;
-            
+
             r = n.getAttribute("src").split("?")[0];
             o = JSON.stringify({method: e, value: t});
             "//" === r.substr(0, 2) && (r = window.location.protocol + r);
@@ -122,20 +122,20 @@ SC.Widget = function (e) {
         function b(e) {
             var t;
             return E((function (n) {
-                if (n.instance === e) 
+                if (n.instance === e)
                     return t = n,
                     !1
-                
+
             })),
             t
         }
         function g(e) {
             var t;
             return E((function (n) {
-                if (v(n.element) === e) 
+                if (v(n.element) === e)
                     return t = n,
                     !1
-                
+
             })),
             t
         }
@@ -155,9 +155,9 @@ SC.Widget = function (e) {
             var r,
                 o,
                 i;
-            for (r = 0, o = t.length; r < o; r++) 
+            for (r = 0, o = t.length; r < o; r++)
                 e[i = t[r]] = m(i, n)
-            
+
         }
         function O(e, t, n) {
             return e + "?url=" + t + "&" + function (e) {
@@ -175,18 +175,18 @@ SC.Widget = function (e) {
             var r,
                 o,
                 i = e.callbacks[t] || [];
-            for (r = 0, o = i.length; r < o; r++) 
+            for (r = 0, o = i.length; r < o; r++)
                 i[r].apply(e.instance, n);
-            
+
             (function (e) {
                 var t,
                     n = !1;
-                for (t in a) 
+                for (t in a)
                     if (a.hasOwnProperty(t) && a[t] === e) {
                         n = !0;
                         break
                     }
-                
+
                 return n
             }(t) || t === s.READY) && (e.callbacks[t] =[])
         }
@@ -215,9 +215,9 @@ SC.Widget = function (e) {
             var i;
             if (("" === (i = e) || i && i.charCodeAt && i.substr) && (e = document.getElementById(e)), !function (e) {
                 return !(! e || 1 !== e.nodeType || "IFRAME" !== e.nodeName.toUpperCase())
-            }(e)) 
+            }(e))
                 throw new Error("SC.Widget function should be given either iframe element or a string specifying id attribute of iframe element.");
-            
+
             if(t){
                 n = n || {};
                 e.src = O("http://wt.soundcloud.test:9200/", t, n);
@@ -241,7 +241,7 @@ SC.Widget = function (e) {
                     o += r[t];
                     t < 2 && (o += "/");
                 }
-                
+
                 return o
             }(t.getAttribute("src"));
             this.isReady = !! n;
@@ -263,9 +263,9 @@ SC.Widget = function (e) {
                         n.bind(s.READY, (function () {
                             var e,
                                 n = r.callbacks;
-                            for (e in n) 
+                            for (e in n)
                                 n.hasOwnProperty(e) && e !== s.READY && y(l.ADD_LISTENER, e, r.element);
-                            
+
                             t.callback && t.callback()
                         }))
                     };
@@ -336,57 +336,62 @@ SC.Widget = function (e) {
     }
 ]);
 
-let player = document.getElementById('player-sc');
-let sc = SC.Widget(player);
-let pauseButton = document.getElementById('pause');
-let playButton = document.getElementById('play');
-let songName = document.getElementById('song-title');
-let curSound = 0;
-var paused = true;
-let songs = [['Comfy beats', 'Lilypichu'], 
-             ['Cherry Wine', 'grentperez'], 
-             ['I Know a Place', 'Chevy'], 
-             ['Two Dimensions', 'EASHA'], 
-             ['the way you say hello', 'tiffi'], 
-             ['cliché', 'mxmtoon'], 
-             ['Sunshine & Butterflies', 'Lilypichu'], 
-             ['Morning Coffee', 'chevy'], 
-             ['best part', 'sora.wav'], 
-             ['wii date', 'City Girl'], 
-             ['Sway', 'Galdive'], 
-             ['Poetry', 'Galdive'],
-             ['All In My Head', 'Eli Noir'], 
-             ['Weakness', 'Eli Noir'], 
-             ['Nobody Else', 'Em Beihold'], 
-             ['First Date', 'frad'], 
-             ['bossa uh', 'potsu']];
-function cur(sound){
-    songName.innerHTML = `${songs[sound][0]} <br>- ${songs[sound][1]}`;
-    curSound = sound;
+try {
+    let player = document.getElementById('player-sc');
+    let sc = SC.Widget(player);
+    let pauseButton = document.getElementById('pause');
+    let playButton = document.getElementById('play');
+    let songName = document.getElementById('song-title');
+    let curSound = 0;
+    var paused = true;
+    let songs = [['Comfy beats', 'Lilypichu'],
+        ['Cherry Wine', 'grentperez'],
+        ['I Know a Place', 'Chevy'],
+        ['Two Dimensions', 'EASHA'],
+        ['the way you say hello', 'tiffi'],
+        ['cliché', 'mxmtoon'],
+        ['Sunshine & Butterflies', 'Lilypichu'],
+        ['Morning Coffee', 'chevy'],
+        ['best part', 'sora.wav'],
+        ['wii date', 'City Girl'],
+        ['Sway', 'Galdive'],
+        ['Poetry', 'Galdive'],
+        ['All In My Head', 'Eli Noir'],
+        ['Weakness', 'Eli Noir'],
+        ['Nobody Else', 'Em Beihold'],
+        ['First Date', 'frad'],
+        ['bossa uh', 'potsu']];
+    function cur(sound){
+        songName.innerHTML = `${songs[sound][0]} <br>- ${songs[sound][1]}`;
+        curSound = sound;
+    }
+    document.getElementById('play-pause').addEventListener('click', function () {
+        sc.toggle();
+    });
+    document.getElementById('skip-forward').addEventListener('click', function () {
+        if (curSound == songs.length - 1) sc.skip(0);
+        else sc.next();
+        sc.seekTo(0);
+    });
+    document.getElementById('skip-backward').addEventListener('click', function () {
+        if (curSound == 0) sc.skip(songs.length - 1);
+        else sc.prev();
+        sc.seekTo(0);
+    });
+
+    sc.bind(SC.Widget.Events.PLAY, function () {
+        pauseButton.classList.remove('hidden');
+        playButton.classList.add('hidden');
+        sc.getCurrentSoundIndex(cur);
+        document.getElementById('girl-head').classList.add('bop');
+    });
+
+    sc.bind(SC.Widget.Events.PAUSE, function () {
+        pauseButton.classList.add('hidden');
+        playButton.classList.remove('hidden');
+        document.getElementById('girl-head').classList.remove('bop');
+    });
+} catch (e) {
+    console.log("Failure in SoundCloud embed:");
+    console.error(e);
 }
-document.getElementById('play-pause').addEventListener('click', function () {
-    sc.toggle();
-});
-document.getElementById('skip-forward').addEventListener('click', function () {
-    if (curSound == songs.length - 1) sc.skip(0);
-    else sc.next();
-    sc.seekTo(0);
-});
-document.getElementById('skip-backward').addEventListener('click', function () {
-    if (curSound == 0) sc.skip(songs.length - 1);
-    else sc.prev();
-    sc.seekTo(0);
-});
-
-sc.bind(SC.Widget.Events.PLAY, function () {
-    pauseButton.classList.remove('hidden');
-    playButton.classList.add('hidden');
-    sc.getCurrentSoundIndex(cur);
-    document.getElementById('girl-head').classList.add('bop');
-});
-
-sc.bind(SC.Widget.Events.PAUSE, function () {
-    pauseButton.classList.add('hidden');
-    playButton.classList.remove('hidden');
-    document.getElementById('girl-head').classList.remove('bop');
-});

@@ -11,9 +11,7 @@ import Sponsors from "../components/Sponsors";
 import TopPicture from "../components/TopPicture";
 import Apply from '../components/Apply';
 import Footer from '../components/Footer';
-
-
-import { useEffect } from "react";
+import Head from "../components/Head";
 
 // styles
 const pageStyles = {
@@ -40,45 +38,41 @@ const navLinkStyles = {
 
 // markup
 const IndexPage = () => {
-
-  useEffect(() => {
-    // This runs the script
-    const myScript = require('../script.js');
-  }, [])
   return (
-    <main style={pageStyles}>
-      {/* <Helmet>
-        <script src={withPrefix('script.js')} type="text/javascript" />
-      </Helmet> */}
-      <title>WaffleHacks</title>
+    <>
+      <Head>
+        <script src="/script.js" type="text/javascript"/>
+      </Head>
 
-      <TopPicture />
-      
-      {/* navbar */}
-      <Navbar />
+      <main style={pageStyles}>
+        <TopPicture />
 
-      <div id='content'>
+        {/* navbar */}
+        <Navbar />
 
-        {/* about */}
-        <About />
+        <div id='content'>
 
-        {/* tracks */}
-        <Tracks />
+          {/* about */}
+          <About />
 
-        {/* faq */}
-        <Faq />
+          {/* tracks */}
+          <Tracks />
 
-        {/* Sponsors */}
-        <Sponsors />
+          {/* faq */}
+          <Faq />
 
-        {/* Apply */}
-        <Apply />
+          {/* Sponsors */}
+          <Sponsors />
 
-      </div>
+          {/* Apply */}
+          <Apply />
 
-      <Footer />
+        </div>
 
-    </main>
+        <Footer />
+
+      </main>
+    </>
   );
 };
 
