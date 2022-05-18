@@ -1,3 +1,7 @@
+---
+title: Rules
+---
+
 # Rules
 
 ## The spirit of the competition

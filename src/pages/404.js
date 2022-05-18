@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import Head from "../components/Head"
 
 // styles
 const pageStyles = {
@@ -28,7 +29,8 @@ const codeStyles = {
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
-      <title>Not found</title>
+      <Head title="Not Found"/>
+
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
         Sorry{" "}

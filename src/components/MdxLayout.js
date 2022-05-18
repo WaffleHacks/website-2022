@@ -5,6 +5,7 @@ import "./mdx-layout.css";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer"
+import Head from "./Head"
 
 const pageStyles = {
   width: "100%",
@@ -15,9 +16,9 @@ const pageStyles = {
   paddingBottom: '2rem',
 };
 
-const MdxLayout = ({ children }) => (
+const MdxLayout = ({ children, pageContext }) => (
   <>
-    <title>WaffleHacks</title>
+    <Head title={pageContext.frontmatter.title}/>
 
     <main style={pageStyles}>
       <Navbar items={[

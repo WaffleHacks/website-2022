@@ -1,3 +1,7 @@
+---
+title: Privacy Policy
+---
+
 # Privacy Policy
 
 WaffleHacks ("us" or "we") respects the privacy of the parties visiting its Website, the home page of which is located at https://wafflehacks.org.
