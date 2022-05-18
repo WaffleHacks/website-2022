@@ -23,19 +23,6 @@ const pageStyles = {
   backgroundImage: 'url(' + grid + ')',
 };
 
-const navStyles = {
-  backgroundColor: "#A47556",
-  border: "2px solid #FBAD24",
-  margin: 0,
-};
-
-const navLinkStyles = {
-  padding: "0.5em 1em",
-  fontSize: "1.5em",
-  color: "white",
-  textDecoration: "none",
-};
-
 // markup
 const IndexPage = () => {
   return (

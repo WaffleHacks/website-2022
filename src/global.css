@@ -36,6 +36,10 @@ body {
   position: relative;
 }
 
+button {
+  font-family: DreamingOutloud;
+}
+
 .poppins-light {
   font-family: PoppinsLight !important;
 }
