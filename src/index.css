@@ -33,11 +33,11 @@
     transition: color 0.4s ease, text-shadow 0.4s ease;
 
 }
-#blackboard:hover .bb-glow {
+/* #blackboard:hover .bb-glow {
     color: #eadb70 !important;
     text-shadow: 0 0 2vw #ede5a8;
     transition-delay: 2s;
-}
+} */
 #music-sign{
     position: absolute;
     top: 4.4vw;
