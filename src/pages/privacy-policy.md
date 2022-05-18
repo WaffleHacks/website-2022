@@ -130,3 +130,6 @@ This Privacy Policy was last updated on April 23, 2022.
 
 ## Contact Us
 Should you have any questions, concerns or feedback regarding this Privacy Policy, please contact us by email at: team@wafflehacks.org.
+
+
+###### _Last Updated: May 17, 2022_

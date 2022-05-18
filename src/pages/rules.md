@@ -109,3 +109,6 @@ The competition is just a part of the hackathon.
 To make the most out of the event, try something new, teach other people, and make new friends!
 
 **Happy Hacking from the WaffleHacks team!**
+
+
+###### _Last Updated: May 17, 2022_
