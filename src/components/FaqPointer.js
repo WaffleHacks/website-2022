@@ -29,7 +29,7 @@ const FaqPointer = ({ single, ind, wasLeft, mained, question, desc, trigger }) =
     el.current.getElementsByClassName('faq-desc')[0].style.display = 'none';
   }
   return (
-    <div ref={el} className={"faq-pointer" + (show ? wasLeft ? ' faq-reshow' : '' : ' faq-noshow') + (showDesc ? ' main-faq' : '')} style={pointerStyles} onClick={trigger}>
+    <button ref={el} className={"as-div faq-pointer" + (show ? wasLeft ? ' faq-reshow' : '' : ' faq-noshow') + (showDesc ? ' main-faq' : '')} style={pointerStyles} onClick={trigger}>
       <img src={faq_pointer} alt="" style={{ width: pointerWid }} />
       <span style={{ position: "absolute", left: "1rem", fontSize: "1.5vw" }}>
         {question}
@@ -38,7 +38,7 @@ const FaqPointer = ({ single, ind, wasLeft, mained, question, desc, trigger }) =
       <div className="faq-desc" style={{display: 'none', position: 'absolute', top: '5rem'}}>
         {desc}
       </div>
-    </div>
+    </button>
   );
 };
 

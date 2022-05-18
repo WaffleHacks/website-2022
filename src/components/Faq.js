@@ -30,7 +30,7 @@ const Faq = () => {
   }
 
   return (
-    <div id='faq' onClick={() => setShow(false)}>
+    <div id='faq' onClick={() => setShow(false)} onKeyDown={() => setShow(false)} role="button" tabIndex={0}>
         <img id='faq-bkg' src={faq_backg} alt="FAQ background"  style={{width: '100%', height: '100%'}} />
 
         <div id='faq-pointers' style={{position: 'absolute', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', top: 0, width: '100%', padding: '6vw 16vw 0 19vw', boxSizing: 'border-box'}}>
