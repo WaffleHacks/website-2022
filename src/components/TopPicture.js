@@ -40,12 +40,12 @@ const TopPicture = () => {
   let timeLeft = endDate - now;
   let daysLeft = Math.max(0, Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
 
-  const [displayDrag, setDisplayDrag] = useState(false);
   const [chalkOffset, setChalkOffset] = useState([0, 0]);
   const [plantOffset, setPlantOffset] = useState([0, 0]);
   const [indicator, setIndicator] = useState([-100, -100]);
   const [musicTilt, setMusicTilt] = useState(false);
   const [tiltEase, setTiltEase] = useState(false);
+  let tiltFound = useRef(false);
   let canvas = useRef(null);
   let enteredCanvas = useRef(false);
   let draggingChalk = useRef(false);
@@ -62,7 +62,7 @@ const TopPicture = () => {
       chalkPixels.current = ctx.getImageData(0, 0, 130, 110);
     }
   }, [])
-  
+
   function dragPlant(e, pos){
     let img = pos.node;
     let mouseX = pos.x - (pos.lastX - img.offsetLeft);
@@ -82,6 +82,7 @@ const TopPicture = () => {
     for (let el of elements){
       if (el.id === 'tablebounds'){
         if (musicTilt === false) setMusicTilt(5);
+        tiltFound.current = true;
         onTable = true;
         setTiltEase(true);
         setTimeout(() => setTiltEase(false), 450);
@@ -92,7 +93,6 @@ const TopPicture = () => {
       setMusicTilt(false);
     }
   }
-
   function rotateMusic(e){
     if (musicTilt === false) return;
     // center of rotation is at 14.3vw, 5.5vw
@@ -107,7 +107,6 @@ const TopPicture = () => {
 
     setMusicTilt(degrees);
   }
-
   function drawOnCanvas(x, y){
     let bounds = canvas.current.getBoundingClientRect();
     let ctx = canvas.current.getContext('2d');
@@ -143,8 +142,8 @@ const TopPicture = () => {
       }
     }
   }
-
   function dragChalk(e, pos){
+    if (!tiltFound.current) return;
     let img = pos.node;
     let mouseX = pos.x - (pos.lastX - img.offsetLeft);
     let mouseY = pos.y - (pos.lastY - img.offsetTop);
@@ -173,7 +172,7 @@ const TopPicture = () => {
             <span id='wh-text'>
               WA<span className='bb-glow'>F</span>F<span className='bb-glow'>LEH</span>ACK<span className='bb-glow'>S</span>
               <br />
-              2022
+              20<span className='bb-glow'>2</span>2
             </span>
             <span id='remix-text'>T<span className='bb-glow'>HE R</span>EMIX</span>
           </div>
