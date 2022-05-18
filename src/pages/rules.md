@@ -8,25 +8,25 @@ title: Rules
 
 Remember that hackathons are like marathons.
 Some people go to compete but most people take part to better themselves and have fun.
-Whatever the reason is you're at a hackathon, make sure you're upholding the [hacker spirit](https://medium.com/@tfogo/the-spirit-of-hackathons-a0d81a65060a#.6cx5ac9t8) by collaborating with other teams, helping beginners, and having fun.
+Whatever the reason you're at a hackathon, make sure you're upholding the [hacker spirit](https://medium.com/@tfogo/the-spirit-of-hackathons-a0d81a65060a#.6cx5ac9t8) by collaborating with other teams, helping beginners, and having fun.
 
 
 ## The rules of the competition
 
 1. A team should consist of a minimum of 1 person and a max of 4.
    There will be up to 4 prizes distributed per team.
-   You are free to choose whoever is going to be on your team either prior or the day of the event.
+   You are free to choose your teammates either prior to or on the day of the event.
    You are also free to work on your own.
 2. Teams should be made up exclusively of high school or undergraduate students who are not organizers, volunteers, judges, sponsors, or in any other privileged position at the event.
 3. All team members should be present at the event and in communication with the rest of the team.
-4. Teams can of course gain advice and support from organizers, volunteers, sponsors, and others.
+4. Teams are welcome to solicit gain advice and support from organizers, volunteers, sponsors, and others.
 5. All work on a project should be done at the hackathon.
 6. Teams can use an idea they had before the event.
 7. Teams can work on ideas that have already been done.
    Hacks do not have to be “innovative”.
-   If somebody wants to work on a common idea they should be allowed to do so and should be judged on the quality of their hack.
-   These days it’s hard to find something that’s fully original and teams might not know an idea has been done before anyway.
-8. Teams can work on an idea that they have worked on before (as long as they do not re-use code or other project materials).
+   If a team wants to work on a common idea they are allowed to do so and will be judged on the quality of their hack.
+   Truly original ideas are hard to find and teams might not know an idea has been done before anyway.
+8. Teams can work on an idea that they have worked on before provided they do not re-use code or other project materials.
 9. Teams can use libraries, frameworks, or open-source code in their projects.
    Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed.
 10. Adding new features to existing projects is allowed.
@@ -37,7 +37,7 @@ Whatever the reason is you're at a hackathon, make sure you're upholding the [ha
     Making large changes or adding new features is not allowed.
 12. Projects that violate the [Code of Conduct](https://mlh.io/code-of-conduct) are not allowed.
 13. Teams can be disqualified from the competition at the organizers' discretion.
-    Reasons might include but are not limited to breaking the Competition Rules, breaking the [Code of Conduct](https://mlh.io/code-of-conduct), or other unsporting behaviour.
+    Reasons might include but are not limited to breaking the Rules of the Competition, breaking the [Code of Conduct](https://mlh.io/code-of-conduct), or other unsporting behaviour.
 
 
 ## Demos
