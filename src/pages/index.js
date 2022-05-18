@@ -70,7 +70,7 @@ const IndexPage = () => {
         </div>
 
         <Footer />
-
+        
       </main>
     </>
   );
