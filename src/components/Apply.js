@@ -1,11 +1,9 @@
 import * as React from 'react'
-import Draggable from 'react-draggable';
 import bookcase2 from '../images/bookcase2.svg';
 import hsign from '../images/hanging sign.png';
 import button_sticker from '../images/button_sticker.svg';
 
 const Apply = () => {
-    console.log(Draggable);
   return (
     <div id='apply'>
          {/* left bookcase */}

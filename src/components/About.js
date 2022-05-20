@@ -1,10 +1,12 @@
 import * as React from "react";
+import { useState } from 'react';
 import note_tape_long from "../images/note_tape_long.svg";
 import about_graphic from "../images/about_graphic.png";
 import paperIcon from "../images/paper icon.webp";
 import exeIcon from "../images/exe.png";
 import Window from './Window';
-import { useState } from 'react';
+import ClueGame from "./ClueGame";
+
 
 let aboutStyles = {
     padding: "4em 0em",
@@ -44,6 +46,7 @@ const About = () => {
   let [showNote, setShowNote] = useState(false);
   let [showVault, setShowVault] = useState(false);
   let [showRiddle1, setShowRiddle1] = useState(false);
+  let [showRiddle2, setShowRiddle2] = useState(false);
   let [coords, setCoords] = useState({x: 0, y: 0});
 
   function displayWindow(showfunc){
@@ -93,8 +96,13 @@ const About = () => {
               </div>
 
               <div onDoubleClick={() => displayWindow(setShowRiddle1)} style={{display: 'flex', alignItems: 'center', cursor: 'pointer', marginBottom: '0.5rem'}}>
-                <img src={paperIcon} alt="exe file icon" style={{height: '1.5rem', marginRight: '0.75rem', cursor: 'pointer'}} />
+                <img src={paperIcon} alt="txt file icon" style={{height: '1.5rem', marginRight: '0.75rem', cursor: 'pointer'}} />
                 <span style={{cursor: 'pointer'}}>clue 1.txt</span>
+              </div>
+
+              <div onDoubleClick={() => displayWindow(setShowRiddle2)} style={{display: 'flex', alignItems: 'center', cursor: 'pointer', marginBottom: '0.5rem'}}>
+                <img src={exeIcon} alt="exe file icon" style={{height: '1.5rem', marginRight: '0.75rem', cursor: 'pointer'}} />
+                <span style={{cursor: 'pointer'}}>clue 2.exe</span>
               </div>
 
             </div>
@@ -118,11 +126,14 @@ const About = () => {
         }
 
         { showRiddle1 && 
-          <Window removeWindow={() => {setShowRiddle1(false)}} coords={coords} size={[500, 300]} name='Vault :)'>
+          <Window removeWindow={() => {setShowRiddle1(false)}} coords={coords} size={[500, 300]} name='Notepad'>
              <div style={{width: '100%', height: '100%', padding: '5px', boxSizing: 'border-box'}}>
               <textarea name="" id="" style={{width: '100%', height: '100%', outline: 'none', border: 'none'}}>{riddle1}</textarea>
             </div>
           </Window>
+        }
+        { showRiddle2 && 
+            <ClueGame showRiddle={setShowRiddle2} windowCoords={coords} />
         }
         
         
