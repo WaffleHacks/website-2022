@@ -180,7 +180,7 @@ const TopPicture = () => {
           <canvas ref={canvas} id='bb-canvas' style={{position: 'absolute', bottom: '2.05vw', left: '1.7vw', width: '13vw', height: '11vw'}}></canvas>
         </div>
 
-        <span style={{position: 'absolute', fontSize: '1.5rem', left: '13.5vw', top: '16vw', transform: 'translate(-50%, -50%)'}}>01100011<br />01101000<br />01100001<br />01101100<br />01101011</span>
+        <span style={{position: 'absolute', fontSize: '1.7vw', left: '13.5vw', top: '16vw', transform: 'translate(-50%, -50%)'}}>01100011<br />01101000<br />01100001<br />01101100<br />01101011</span>
 
         {/* MUSIC PLAYER */}
         <DraggableCore onDrag={rotateMusic}>
