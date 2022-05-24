@@ -148,7 +148,7 @@ const TopPicture = () => {
     let mouseX = pos.x - (pos.lastX - img.offsetLeft);
     let mouseY = pos.y - (pos.lastY - img.offsetTop);
     if (mouseX === 0 || mouseY === 0) return;
-    
+
     let vw = mouseX / window.innerWidth * 100;
     let vh = mouseY / window.innerWidth * 100;
     setChalkOffset([vw, vh]);
@@ -232,7 +232,21 @@ const TopPicture = () => {
                       transform: 'rotateY(358deg) rotateZ(352deg)',
                       textAlign: 'center',
                       lineHeight: '2vw'}}
-                      >June 17-19<br />&nbsp;5PM-5PM<br />&nbsp;&nbsp;EST<br />&nbsp;&nbsp;&nbsp;<u>Days Left</u><br /><span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>&nbsp;&nbsp;&nbsp;{daysLeft}</span>
+                      >
+            June 17-19
+            <br />
+            &nbsp;
+            5PM-5PM
+            <br />
+            &nbsp;&nbsp;
+            EDT
+            <br />
+            &nbsp;&nbsp;&nbsp;
+            <u>Days Left</u>
+            <br />
+            <span style={{color: 'white', fontSize: '2vw', display: 'block', marginTop: '0.7vw'}}>
+              &nbsp;&nbsp;&nbsp;{daysLeft}
+            </span>
           </span>
         </div>
 
