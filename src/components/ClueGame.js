@@ -444,20 +444,20 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
             keyspressed.current.right = true;
             prevInputs.current += 'r';
         }
-        else if (key === 'a'){
+        else if (key.toLowerCase() === 'a'){
             keyspressed.current.a = true;
             prevInputs.current += 'a';
         }
-        else if (key === 'b'){
+        else if (key.toLowerCase() === 'b'){
             keyspressed.current.b = true;
             prevInputs.current += 'b';
         }
-        else if (key === 's'){
+        else if (key.toLowerCase() === 's'){
             keyspressed.current.start = true;
             prevInputs.current += 's';
         }
 
-        let konami = 'uuddlrlrbas';
+        let konami = 'uuddlrlrba';
         if (prevInputs.current.length > konami.length) prevInputs.current = prevInputs.current.substring(1);
         if (prevInputs.current === konami){
             konamiUsed.current = true;
@@ -476,9 +476,9 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
         else if (key === 'ArrowDown')  keyspressed.current.down = false;
         else if (key === 'ArrowLeft')  keyspressed.current.left = false;
         else if (key === 'ArrowRight') keyspressed.current.right = false;
-        else if (key === 'a') keyspressed.current.a = false;
-        else if (key === 'b') keyspressed.current.b = false;
-        else if (key === 's') keyspressed.current.start = false;
+        else if (key.toLowerCase() === 'a') keyspressed.current.a = false;
+        else if (key.toLowerCase() === 'b') keyspressed.current.b = false;
+        else if (key.toLowerCase() === 's') keyspressed.current.start = false;
     }
 
     function exit(){

@@ -383,7 +383,7 @@ try {
 
     document.getElementById('play-pause').addEventListener('click', playpause);
     document.getElementById('play-pause').addEventListener('touchstart', playpause);
-
+    
     document.getElementById('skip-forward').addEventListener('click', skipforward);
     document.getElementById('skip-forward').addEventListener('touchstart', skipforward);
 

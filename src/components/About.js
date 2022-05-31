@@ -34,7 +34,7 @@ let imgStyles = {
     transform: "translateX(-50%)"
 }
 
-let note = `I've hidden my prized waffle. This is the only place I know it'll be safe. It was the last waffle I got before the Waffle House closed. It holds a special place in my heart. While I want to keep it safe, I also want to make sure I can find it again. But I don't want to make it easy. I've left clues in this folder that only I can understand. For anyone who isn't me: good luck :)`;
+let note = `I've hidden my prized waffle. This is the only place I know it'll be safe. It was the last waffle I got before the Waffle House closed, and it holds a special place in my heart. While I want to keep it safe, I also want to make sure I can find it again. But I don't want to make it easy. I've left clues in this folder that only I can understand. For anyone who isn't me: good luck :)`;
 
 let riddle1 = `I am lucky to some, and unlucky to others.
 As a person I am too little to be on my own, but in geometry I am just enough.
