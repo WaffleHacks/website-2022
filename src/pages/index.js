@@ -3,12 +3,13 @@ import '../index.css'
 
 import grid from "../images/grid.svg";
 
+import TopPicture from "../components/TopPicture";
 import Navbar from '../components/Navbar';
 import About from "../components/About";
 import Tracks from "../components/Tracks";
 import Faq from "../components/Faq";
+import Calendar from "../components/Calendar";
 import Sponsors from "../components/Sponsors";
-import TopPicture from "../components/TopPicture";
 import Apply from '../components/Apply';
 import Footer from '../components/Footer';
 import Head from "../components/Head";
@@ -39,19 +40,16 @@ const IndexPage = () => {
 
         <div id='content'>
 
-          {/* about */}
           <About />
 
-          {/* tracks */}
           <Tracks />
 
-          {/* faq */}
           <Faq />
 
-          {/* Sponsors */}
-          <Sponsors />
+          <Calendar />
 
-          {/* Apply */}
+          <Sponsors />
+          
           <Apply />
 
         </div>

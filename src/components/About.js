@@ -76,7 +76,7 @@ const About = () => {
         </div>
         <div style={{marginTop: '1rem'}}>
           <div style={{position: 'relative', display: 'inline-block'}}>
-            <img src={about_graphic} alt="" style={{ height: "20em" }} />
+            <img src={about_graphic} alt="" id="about-graphic"  style={{ height: "20em" }} />
             <div onDoubleClick={() => displayWindow(setShowWindow)} style={{position: 'absolute', left: '77%', top: '28.1%', width: '2.8rem', height: '1.85rem'}}></div>
           </div>
           

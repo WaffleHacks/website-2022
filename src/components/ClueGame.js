@@ -264,7 +264,7 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
 
         if (completed.current && onGround.current){
             if (completedAnimation.current < 10){}
-            else if (completedAnimation.current == 10){ // jump up
+            else if (completedAnimation.current === 10){ // jump up
                 playerCoords.current.y--; 
                 onGround.current = false;
                 playerVel.current.y = -6;
@@ -276,8 +276,8 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
                 }
                 else {
                     
-                    if (completedAnimation.current == 60) layout[6][layout[0].length - 2] = 6;
-                    if (completedAnimation.current == 70) layout[6][layout[0].length - 2] = 7;
+                    if (completedAnimation.current === 60) layout[6][layout[0].length - 2] = 6;
+                    if (completedAnimation.current === 70) layout[6][layout[0].length - 2] = 7;
                     if (completedAnimation.current >= 80 && completedAnimation.current < 100) {
                         ctx.drawImage(sprites.current.ans2, 335, 18*5 + 10 - (completedAnimation.current - 80));
                     }

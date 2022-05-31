@@ -73,7 +73,6 @@
 }
 
 
-
 #content span {
     color: #543E2E;
 }
@@ -128,7 +127,6 @@
     transform: rotateY(180deg) translateZ(1px);
     -webkit-transform: rotateY(180deg) translateZ(1px);
 }
-
 
 @keyframes cardFlip{
     0% {
@@ -202,6 +200,16 @@
 .faq-reshow {
     animation: faq-reappear 0.25s linear;
     animation-fill-mode: forwards;
+}
+.faq-desc-text {
+    font-size: max(1.5vw, 20px);
+    margin: 0;
+}
+.faq-desc-text * {
+    margin: 0;
+}
+.faq-desc {
+    margin-top: -2vw;
 }
 
 .main-moveback {
@@ -282,6 +290,53 @@
 
 
 }
+
+/* CALENDAR */
+#calendar {
+    width: 75vw;
+    row-gap: 1em;
+    column-gap: 1em;
+    background-color: #9e7249;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    
+}
+#calendar > * {
+    background-color: #E2A165;
+    min-height: 4rem;
+    border-radius: 0.5rem;
+    display: grid;
+    place-items: center;
+}
+.calendar-head {
+    font-size: 1.2rem;
+}
+.event-time, .event-day {
+    font-size: 1.1rem;
+    padding: 0;
+}
+.event-day {
+    font-family: PoppinsBold !important;
+}
+.event-name {
+    flex-grow: 1;
+    text-align: center;
+}
+.day-arrow-r, .day-arrow-l {
+    position: absolute;
+    font-size: 2rem;
+    cursor: default;
+}
+.day-arrow-r { right: 2rem; }
+.day-arrow-l { left: 2rem; }
+
+.calendar-syrup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* SPONSORS */
 
@@ -401,6 +456,10 @@
     #about p {
         max-width: none !important;
     }
+    #about-graphic {
+        height: auto !important;
+        max-width: 100%;
+    }
 
     /* Tracks */
     #tracks-box {
@@ -440,8 +499,11 @@
     .faq-pointer {
         width: 90% !important;
         padding: 0.5rem 0.5rem;
-        margin-top: 16px !important;
         margin-bottom: 16px !important;
+    }
+    .faq-pointer.main-faq {
+        margin-top: 3rem !important;
+        transition: margin 0.5s 0.8s ease;
     }
     .faq-pointer img{
         width: 100% !important;
@@ -450,17 +512,44 @@
         top: 0;
         left: 0;
         z-index: 0;
+        padding: 0;
     }
-    .faq-pointer span{
+    .faq-pointer span:not(.faq-back){
         font-size: 1.2rem !important;
         position: static !important;
         z-index: 1;
+    }
+    .faq-back {
+        position: absolute !important;
+        left: 0 !important;
+        bottom: calc(100% + 0.5rem) !important;
+        width: 100% !important;
+    }
+
+    /* Calendar */
+    .calendar-head.head-day {
+        display: none !important;
+    }
+    .calendar-head.head-event {
+        grid-column: span 2 / span 2;
+    }
+    .day-choose {
+        grid-column: span 3 / span 3;
+        grid-row-start: -1;
+    }
+    .day-blank {
+        display: none !important;
+    }
+    .event-name {
+        grid-column: span 2 / span 2;
     }
 
     /* Sponsors area */
     #sponsor-imgs {
         margin-bottom: 2rem;
         margin-top: 2rem;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
     }
     #sponsor-imgs img {
         max-width: 80vw;
@@ -469,12 +558,15 @@
     }
     #sponsor-imgs img.vip {
         max-height: 5.5rem;
+        width: 100%;
     }
     #sponsor-imgs img.headliner{
         max-height: 4.5rem;
+        width: 80%;
     }
     #sponsor-imgs img.opener {
         max-height: 3.5rem;
+        width: 75%;
     }
     #sponsor-msg {
         font-size: 1rem;

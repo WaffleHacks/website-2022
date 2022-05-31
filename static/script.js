@@ -365,19 +365,30 @@ try {
         songName.innerHTML = `${songs[sound][0]} <br>- ${songs[sound][1]}`;
         curSound = sound;
     }
-    document.getElementById('play-pause').addEventListener('click', function () {
+
+    function playpause(){
+        console.log('click');
         sc.toggle();
-    });
-    document.getElementById('skip-forward').addEventListener('click', function () {
+    }
+    function skipforward(){
         if (curSound == songs.length - 1) sc.skip(0);
         else sc.next();
         sc.seekTo(0);
-    });
-    document.getElementById('skip-backward').addEventListener('click', function () {
+    }
+    function skipback(){
         if (curSound == 0) sc.skip(songs.length - 1);
         else sc.prev();
         sc.seekTo(0);
-    });
+    }
+
+    document.getElementById('play-pause').addEventListener('click', playpause);
+    document.getElementById('play-pause').addEventListener('touchstart', playpause);
+
+    document.getElementById('skip-forward').addEventListener('click', skipforward);
+    document.getElementById('skip-forward').addEventListener('touchstart', skipforward);
+
+    document.getElementById('skip-backward').addEventListener('click', skipback);
+    document.getElementById('skip-backward').addEventListener('touchstart', skipback);
 
     sc.bind(SC.Widget.Events.PLAY, function () {
         pauseButton.classList.remove('hidden');

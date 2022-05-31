@@ -25,17 +25,17 @@ const Sponsors = () => {
             </div>
             <div id='sponsor-imgs'>
               <h1>VIP</h1>
-              <img src={belmont} className='vip' alt="Belmont Data Collaborative" />
-              <img src={wolfram} className='vip' alt="Wolfram Alpha" />
-              <img src={digitalocean} className='vip' alt="DigitalOcean" />
+              <a href='https://www.belmont.edu/data/about.html' target='_blank'><img src={belmont} className='vip' alt="Belmont Data Collaborative" /></a>
+              <a href='https://www.wolfram.com/wolfram-one/' target='_blank'><img src={wolfram} className='vip' alt="Wolfram Alpha" /></a>
+              <a href='https://www.digitalocean.com' target='_blank'><img src={digitalocean} className='vip' alt="DigitalOcean" /></a>
 
               <h1>Headliner</h1>
-              <img src={hyperx} className='headliner' alt="HyperX" />
-              <img src={trimble} className='headliner' alt="Trimble" />
+              <a href='https://www.hyperxgaming.com/us' target='_blank'><img src={hyperx} className='headliner' alt="HyperX" /></a>
+              <a href='https://www.trimble.com/en/' target='_blank'><img src={trimble} className='headliner' alt="Trimble" /></a>
 
               <h1>Opener</h1>
-              <img src={stickermule} className='opener' alt="StickerMule" />
-              <img src={googlecloud} className='opener' alt="Trimble" />
+              <a href='https://www.stickermule.com' target='_blank'><img src={stickermule} className='opener' alt="StickerMule" /></a>
+              <a href='https://cloud.google.com' target='_blank'><img src={googlecloud} className='opener' alt="Google Cloud" /></a>
               
             </div>
             <div id='sponsor-msg' className='poppins-light'>
