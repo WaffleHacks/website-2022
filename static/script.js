@@ -337,14 +337,14 @@ SC.Widget = function (e) {
 ]);
 
 try {
-    let player = document.getElementById('player-sc');
-    let sc = SC.Widget(player);
-    let pauseButton = document.getElementById('pause');
-    let playButton = document.getElementById('play');
-    let songName = document.getElementById('song-title');
-    let curSound = 0;
+    var player = document.getElementById('player-sc');
+    var sc = SC.Widget(player);
+    var pauseButton = document.getElementById('pause');
+    var playButton = document.getElementById('play');
+    var songName = document.getElementById('song-title');
+    var curSound = 0;
     var paused = true;
-    let songs = [['Comfy beats', 'Lilypichu'],
+    var songs = [['Comfy beats', 'Lilypichu'],
         ['Cherry Wine', 'grentperez'],
         ['I Know a Place', 'Chevy'],
         ['Two Dimensions', 'EASHA'],
