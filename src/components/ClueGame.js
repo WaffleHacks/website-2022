@@ -64,6 +64,7 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
     let keyspressed = useRef({up: false, down: false, left: false, right: false, a: false, b: false, start: false, select: false});
     let [loading, setLoading] = useState(true);
     let [page, setPage] = useState(0);
+    let lastTime = useRef(0);
 
     // load sprites`
     useEffect(() => {
@@ -219,7 +220,7 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
                 introAnimation.current = false;
                 playing.current = true;
                 playerCoords.current = {x: x, y: 18*6};
-                drawScene();
+                requestAnimationFrame(drawScene);
             }
             else{
                 let mils = Date.now();
@@ -230,7 +231,13 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
         animate();
     }
 
-    function drawScene(){
+    function drawScene(time){
+        if (time - lastTime.current < 1000/45){
+            requestAnimationFrame(drawScene);
+            return;
+        }
+        lastTime.current = time;
+
         let ctx = cntx.current;
         ctx.clearRect(0, 0, 360, 180);
         let coords = playerCoords.current;
@@ -257,7 +264,7 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
 
             konamiAnimation.current++;
             if (playing.current){
-                setTimeout(() => requestAnimationFrame(drawScene), 1000/30);
+                requestAnimationFrame(drawScene);
             }
             return;
         }
@@ -291,7 +298,7 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
             completedAnimation.current++;
 
             if (playing.current){
-                setTimeout(() => requestAnimationFrame(drawScene), 1000/30);
+                requestAnimationFrame(drawScene);
             }
             return;
         }
@@ -318,7 +325,7 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
         collisions();
 
         if (playing.current){
-            setTimeout(() => requestAnimationFrame(drawScene), 1000/30);
+            requestAnimationFrame(drawScene);
         }
     }
 
