@@ -127,7 +127,7 @@ const About = () => {
           <Window removeWindow={() => {setShowVault(false)}} coords={coords} size={[500, 300]} name='Vault :)'>
             <div style={{background: 'rgb(30, 30, 40)', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center'}}>
               <h2 style={{color: 'white', textDecoration: 'none', marginTop: '0'}}>Password</h2>
-              <input type="text" style={{background: 'none', border: '2px solid white', width: '50%', minWidth: '10rem', color: 'white', outline: 'none', padding: '0.25rem', fontSize: '1.1rem'}} />
+              <input type="password" style={{background: 'none', border: '2px solid white', width: '50%', minWidth: '10rem', color: 'white', outline: 'none', padding: '0.25rem', fontSize: '1.1rem'}} />
             </div>
           </Window>
         }
