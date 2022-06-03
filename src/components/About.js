@@ -6,6 +6,8 @@ import paperIcon from "../images/paper icon.webp";
 import exeIcon from "../images/exe.png";
 import Window from './Window';
 import ClueGame from "./ClueGame";
+import Minesweeper from "./Minesweeper";
+
 
 
 let aboutStyles = {
@@ -47,6 +49,7 @@ const About = () => {
   let [showVault, setShowVault] = useState(false);
   let [showRiddle1, setShowRiddle1] = useState(false);
   let [showRiddle2, setShowRiddle2] = useState(false);
+  let [showRiddle3, setShowRiddle3] = useState(false);
   let [coords, setCoords] = useState({x: 0, y: 0});
 
   function displayWindow(showfunc){
@@ -104,6 +107,10 @@ const About = () => {
                 <img src={exeIcon} alt="exe file icon" style={{height: '1.5rem', marginRight: '0.75rem', cursor: 'pointer'}} />
                 <span style={{cursor: 'pointer'}}>clue 2.exe</span>
               </div>
+              <div onDoubleClick={() => displayWindow(setShowRiddle3)} style={{display: 'flex', alignItems: 'center', cursor: 'pointer', marginBottom: '0.5rem'}}>
+                <img src={exeIcon} alt="exe file icon" style={{height: '1.5rem', marginRight: '0.75rem', cursor: 'pointer'}} />
+                <span style={{cursor: 'pointer'}}>clue 3.exe</span>
+              </div>
 
             </div>
           </Window>
@@ -134,6 +141,9 @@ const About = () => {
         }
         { showRiddle2 && 
             <ClueGame showRiddle={setShowRiddle2} windowCoords={coords} />
+        }
+        { showRiddle3 && 
+            <Minesweeper showRiddle={setShowRiddle3} windowCoords={coords} />
         }
         
         

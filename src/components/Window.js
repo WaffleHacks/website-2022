@@ -9,6 +9,7 @@ import Draggable from "react-draggable";
 const Window = (props) => {
 
   let removeWindow = props.removeWindow || (() => {});
+  let onResize = props.onResize || (() => {});
 
   let [coords, setCoords] = useState(props.coords || {x: 0, y: 0});
   let [size, setSize] = useState(props.size || [300, 300]);
@@ -74,6 +75,7 @@ const Window = (props) => {
     setwindowStyles(copy);
     setCoords({x: coords.x, y: y});
     setSize([size[0], newHeight]);
+    onResize(size[0], newHeight);
   }
   function shiftBottom(e, data){
     let copy = {...windowStyles};
@@ -83,6 +85,7 @@ const Window = (props) => {
     copy.height = newHeight + 'px';
     setwindowStyles(copy);
     setSize([size[0], newHeight]);
+    onResize(size[0], newHeight);
   }
   function shiftLeft(e, data){
     let copy = {...windowStyles};
@@ -97,6 +100,7 @@ const Window = (props) => {
     setwindowStyles(copy);
     setCoords({x: x, y: coords.y});
     setSize([newWidth, size[1]]);
+    onResize(newWidth, size[1]);
   }
   function shiftRight(e, data){
     let copy = {...windowStyles};
@@ -106,6 +110,7 @@ const Window = (props) => {
     copy.width = newWidth + 'px';
     setwindowStyles(copy);
     setSize([newWidth, size[1]]);
+    onResize(newWidth, size[1]);
   }
   function shiftTopLeft(e, data){
     let copy = {...windowStyles};
@@ -127,6 +132,7 @@ const Window = (props) => {
     setwindowStyles(copy);
     setCoords({x: x, y: y});
     setSize([newWidth, newHeight]);
+    onResize(newWidth, newHeight);
   }
   function shiftTopRight(e, data){
     let copy = {...windowStyles};
@@ -145,6 +151,7 @@ const Window = (props) => {
     setwindowStyles(copy);
     setCoords({x: coords.x, y: y});
     setSize([newWidth, newHeight]);
+    onResize(newWidth, newHeight);
   }
   function shiftBottomLeft(e, data){
     let copy = {...windowStyles};
@@ -163,6 +170,7 @@ const Window = (props) => {
     setwindowStyles(copy);
     setCoords({x: x, y: coords.y});
     setSize([newWidth, newHeight]);
+    onResize(newWidth, newHeight);
   }
   function shiftBottomRight(e, data){
     let copy = {...windowStyles};
@@ -177,6 +185,7 @@ const Window = (props) => {
 
     setwindowStyles(copy);
     setSize([newWidth, newHeight]);
+    onResize(newWidth, newHeight);
   }
 
   function windowClick(e){
