@@ -129,7 +129,7 @@ const About = ({ setComplete }) => {
         { showNote && 
           <Window removeWindow={() => {setShowNote(false)}} coords={coords} size={[500, 300]} name='Notepad'>
             <div style={{width: '100%', height: '100%', padding: '5px', boxSizing: 'border-box'}}>
-              <textarea name="" id="" style={{width: '100%', height: '100%', outline: 'none', border: 'none'}}>{note}</textarea>
+              <textarea style={{width: '100%', height: '100%', outline: 'none', border: 'none'}}>{note}</textarea>
             </div>
           </Window>
         }

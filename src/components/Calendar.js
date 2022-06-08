@@ -109,8 +109,8 @@ const Calendar = () => {
                         <span key={"day" + i} className={"event-day" + ((newDay || i === 0) ? " day-choose" : " day-blank")} style={{position: (newDay || i === 0) ? 'relative' : ''}}>
                             {(newDay || i === 0) && <>
                                 <span>{numberToDay(event[0])}</span>
-                                { event[0] > 0 && <span className='day-arrow-l' onClick={() => setDay(day-1)}>{'<'}</span> }
-                                { event[0] < 2 && <span className='day-arrow-r' onClick={() => setDay(day+1)}>{'>'}</span> }
+                                { event[0] > 0 && <span className='day-arrow-l' style={{background: 'rgba(255, 255, 255, 0.5)', borderRadius: '0.5rem', padding: '0 1rem'}} onClick={() => setDay(day-1)}>{'<'}</span> }
+                                { event[0] < 2 && <span className='day-arrow-r' style={{background: 'rgba(255, 255, 255, 0.5)', borderRadius: '0.5rem', padding: '0 1rem'}} onClick={() => setDay(day+1)}>{'>'}</span> }
                                 
                             </>
                             }
