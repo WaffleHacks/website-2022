@@ -43,7 +43,6 @@ const Apply = ({ complete }) => {
       //                         angle,        radius (in vw),       opacity (0.75-1),     width (5-7),     speed (2-3)
       sparks.current.push([Math.random()*2*Math.PI, 60, Math.random() * 0.25 + 0.75, Math.random() * 2 + 5, Math.random() * 0.5 + 1.5])
     }
-    console.log(sparks.current, showModal);
     // the height of all the sparks is 15
     let rid = [];
     let ctx = canvas.current.getContext('2d');
@@ -138,7 +137,7 @@ const Apply = ({ complete }) => {
           showModal && (
             <div id='complete-modal' onClick={closeModal}>
               <canvas id='complete-sparks' ref={canvas}></canvas>
-              <div class='round-waffle'>
+              <div className='round-waffle'>
                 <span></span>
               </div>
             </div>
