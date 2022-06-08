@@ -10,7 +10,8 @@ const Apply = ({ complete }) => {
   const [showModal, setShowModal] = useState(false);
   var hidwaffle = useRef(null);
   var canvas = useRef(null);
-  var sparks = useRef([])
+  var sparks = useRef([]);
+  var timeSinceComplete = useRef(0);
 
   useEffect(() => {
     if (complete) {
@@ -30,6 +31,7 @@ const Apply = ({ complete }) => {
   function completeScreen(){
     hidwaffle.current.style.opacity = 0;
     setShowModal(true);
+    timeSinceComplete.current = Date.now();
     setTimeout(() => {
       document.getElementById('complete-modal').style.opacity = 1;
     }, 750);
@@ -69,12 +71,27 @@ const Apply = ({ complete }) => {
       sparks.current.splice(rid[i], 1);
     }
 
+    // draw text on the canvas
+    ctx.font = '2rem "Roboto Mono", monospace';
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'center';
+    ctx.fillText('You found the waffle!', canvas.current.width/2, canvas.current.height/2 - 80);
+
+    let timeCompleted = new Date(timeSinceComplete.current);
+    let weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let timeCompletedString = `${weekdays[timeCompleted.getDay()]}, ${months[timeCompleted.getMonth()]} ${timeCompleted.getDate()} at ${timeCompleted.getHours()}:${timeCompleted.getMinutes()}:${timeCompleted.getSeconds()}`;
+    ctx.fillText(`Completed on ${timeCompletedString}`, canvas.current.width/2, canvas.current.height/2 + 95);
+    ctx.fillText(`Take a screenshot and DM it`, canvas.current.width/2, canvas.current.height/2 + 160);
+    ctx.fillText(`to an organizer on Discord!`, canvas.current.width/2, canvas.current.height/2 + 210);
+
     if (showModal){
       requestAnimationFrame(showSparks);
     }
   }
 
   function closeModal(){
+    if (Date.now() - timeSinceComplete.current < 1000) return;
     document.getElementById('complete-modal').style.opacity = 0;
     document.getElementById('right-bookcase').style.right = '-2.7vw';
     setTimeout(() => {
