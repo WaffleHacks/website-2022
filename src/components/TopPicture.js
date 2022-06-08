@@ -38,7 +38,7 @@ const TopPicture = () => {
   // make a date for June 17, 2022
   let endDate = new Date(2022, 5, 17);
   let timeLeft = endDate - now;
-  let daysLeft = Math.max(0, Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
+  let daysLeft = Math.max(0, Math.ceil(timeLeft / (1000 * 60 * 60 * 24)));
 
   const [chalkOffset, setChalkOffset] = useState([0, 0]);
   const [plantOffset, setPlantOffset] = useState([0, 0]);
@@ -161,7 +161,7 @@ const TopPicture = () => {
 
   return (
     <div id='cafearea' style={divStyles}>
-        {/* top image */}
+        {/* floor image */}
         <img draggable={false} src={cafefloor} alt="floor" style={{position: 'absolute', top: '71%', left: 0, width: '100%'}} />
 
         {/* BLACKBOARD */}
@@ -180,7 +180,7 @@ const TopPicture = () => {
           <canvas ref={canvas} id='bb-canvas' style={{position: 'absolute', bottom: '2.05vw', left: '1.7vw', width: '13vw', height: '11vw'}}></canvas>
         </div>
 
-        <span style={{position: 'absolute', fontSize: '1.7vw', left: '13.5vw', top: '16vw', transform: 'translate(-50%, -50%)'}}>01100011<br />01101000<br />01100001<br />01101100<br />01101011</span>
+        <span style={{position: 'absolute', display: plantOffset === [0, 0] ? 'none' : '', fontSize: '1.7vw', left: '13.5vw', top: '16vw', transform: 'translate(-50%, -50%)'}}>01100011<br />01101000<br />01100001<br />01101100<br />01101011</span>
 
         {/* MUSIC PLAYER */}
         <DraggableCore onDrag={rotateMusic}>

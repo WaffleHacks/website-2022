@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from 'react';
 import '../index.css'
 
 import grid from "../images/grid.svg";
@@ -26,6 +27,7 @@ const pageStyles = {
 
 // markup
 const IndexPage = () => {
+  const [complete, setComplete] = useState(false);
   return (
     <>
       <Head>
@@ -40,7 +42,7 @@ const IndexPage = () => {
 
         <div id='content'>
 
-          <About />
+          <About setComplete={setComplete} />
 
           <Tracks />
 
@@ -50,7 +52,7 @@ const IndexPage = () => {
 
           <Sponsors />
           
-          <Apply />
+          <Apply complete={complete} />
 
         </div>
 

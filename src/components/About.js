@@ -43,7 +43,7 @@ As a person I am too little to be on my own, but in geometry I am just enough.
 Jokingly, me plus myself is 8.
 What am I?`;
 
-const About = () => {
+const About = ({ setComplete }) => {
   let [showWindow, setShowWindow] = useState(false);
   let [showNote, setShowNote] = useState(false);
   let [showVault, setShowVault] = useState(false);
@@ -57,6 +57,16 @@ const About = () => {
     setCoords({x: w - 500 - w/8, y: 0});
     showfunc(true)
   }
+
+  function vaultKeyDown(e){
+    if (e.keyCode === 13){
+      if (e.target.value === '314'){
+        setShowVault(false);
+        setComplete(true);
+      }
+    }
+  }
+
   return (
     <div id="about" style={aboutStyles}>
 
@@ -127,7 +137,7 @@ const About = () => {
           <Window removeWindow={() => {setShowVault(false)}} coords={coords} size={[500, 300]} name='Vault :)'>
             <div style={{background: 'rgb(30, 30, 40)', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center'}}>
               <h2 style={{color: 'white', textDecoration: 'none', marginTop: '0'}}>Password</h2>
-              <input type="password" style={{background: 'none', border: '2px solid white', width: '50%', minWidth: '10rem', color: 'white', outline: 'none', padding: '0.25rem', fontSize: '1.1rem'}} />
+              <input type="password" onKeyDown={vaultKeyDown} style={{background: 'none', border: '2px solid white', width: '50%', minWidth: '10rem', color: 'white', outline: 'none', padding: '0.25rem', fontSize: '1.1rem'}} />
             </div>
           </Window>
         }

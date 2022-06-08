@@ -1,20 +1,28 @@
-import * as React from 'react'
+import * as React from 'react';
+import { useEffect } from 'react';
 import bookcase2 from '../images/bookcase2.svg';
 import hsign from '../images/hanging sign.png';
 import button_sticker from '../images/button_sticker.svg';
+import hwaffle from '../images/hiddenwaffle.svg';
 
-const Apply = () => {
+const Apply = ({ complete }) => {
+
+  useEffect(() => {
+    if (complete) {
+      window.scrollTo(0, document.body.scrollHeight);
+      document.getElementById('right-bookcase').style.right = '0';
+    }
+  }, [complete]);
+  
   return (
     <div id='apply'>
          {/* left bookcase */}
          <img src={bookcase2} draggable={false} alt="bookcase" id='left-bookcase' />
          {/* right bookcase */}
-         {/* <Draggable> */}
-            <div id='right-bookcase'>
-                <img src={bookcase2} draggable={false} alt="bookcase" style={{height: '100%'}}  />
-            </div>
-
-         {/* </Draggable> */}
+          <div id='right-bookcase'>
+              <img src={bookcase2} draggable={false} alt="bookcase" style={{height: '100%'}}  />
+              <img src={hwaffle} alt="waffle" style={{width: '2.3vw', position: 'absolute', left: '0.4vw', bottom: '0.81vw'}}/>
+          </div>
           {/* hanging sign */}
          <img src={hsign} alt="hanging sign" id='hanging-sign' />
         {/* apply today button */}

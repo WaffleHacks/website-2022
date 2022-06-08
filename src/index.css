@@ -442,9 +442,9 @@
 #right-bookcase {
     position: absolute;
     bottom: 0;
-    /* right: -10px; */
     right: -2.7vw;
     height: 60%;transform: scaleX(-1);
+    transition: right 0.5s 0.5s linear;
 }
 
 #hanging-sign {
