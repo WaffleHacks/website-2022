@@ -1,31 +1,30 @@
 import * as React from 'react'
 import pointer_sign from "../images/pointer_sign.svg";
-import { graphql, useStaticQuery } from "gatsby";
-import { useState, useRef, useEffect } from 'react';
-import blob from "../images/syrup blob.svg";
+import { useState } from 'react';
+import down from "../images/down.svg";
 
 let events = [
     [ 0, 17, "WaffleHacks Opening Ceremony", 0],
-    [ 0, 19, "Resume Workshop", 1 ],
-    [ 0, 20.5, "What They Don’t Tell You About Tech Interviews", 1 ],
-    [ 0, 22, "Intro to Python", 2 ],
-    [ 0, 23, "Tetris Tournament", 3 ],
+    [ 0, 19, "Resume Workshop", 1, "Are you a student searching for your next internship? This workshop runs through the basics of tech resume building and additional tips to make your resume stand out. Learn some great tips and tricks from an ex-NASA intern and current full time SWE at Microsoft!" ],
+    [ 0, 20.5, "What They Don’t Tell You About Tech Interviews", 1, "One of the biggest concerns for high school and college students is figuring out how to land a successful job. But for many, one great first step is to land an internship! In this panel, we’ll introduce interns who have gone through the application process and found success. You’ll get to hear exclusive stories from interns at Microsoft, NASA, Google, and more!<br>Please come with questions! We will have a Q & A time at the end of the panel for you to ask your burning questions to our panelists!" ],
+    [ 0, 22, "Intro to Python", 2, "Wheeeeeeeee (thank you Kevin)" ],
+    [ 0, 23, "Tetris Tournament", 3, "Interested in showing off t-spins or just looking to have a fun time? Come join our annual Tetris Tournament and compete against other participants via <a href='tetr.io'>tetr.io</a>. Tetr.io is a completely free multiplayer browser game so if you don’t have an account, please make sure to register before the tournament starts!" ],
 
-    [ 1, 0, "Tetris Tournament", 3 ],
+    [ 1, 0, "Tetris Tournament", 3, "Interested in showing off t-spins or just looking to have a fun time? Come join our annual Tetris Tournament and compete against other participants via <a href='tetr.io'>tetr.io</a>. Tetr.io is a completely free multiplayer browser game so if you don’t have an account, please make sure to register before the tournament starts!" ],
     [ 1, 10, "Intro to Start Ups", 2 ],
     [ 1, 11, "Fighting the Tech Bros with Ella", 1 ],
-    [ 1, 12, "Backend Workshop", 2 ],
-    [ 1, 13, "BIPOC in Tech", 1 ],
+    [ 1, 12, "Backend Workshop", 2, "Learn how to quickly plan, build, and deploy a backend in Python using Flask, and then integrate it with a React frontend. In this workshop you will learn to create a todo list webapp complete with lists and tags." ],
+    [ 1, 13, "BIPOC in Tech", 1, "Did you know that 16% of the tech industry is made up of persons who identify as BIPOC (Black, Indigenous, and People of Color)? In 2022, it is sad to hear this number is low considering the many talented individuals who are being looked over for opportunities. Join us for a celebration of achievements and an honest conversation about what it means to be a person of color in tech." ],
     [ 1, 14, "Hacker Icebreakers with MLH", 3 ],
-    [ 1, 15, "Data Visualization (Plotly Express)", 2 ],
+    [ 1, 15, "Data Visualization (Plotly Express)", 2, "Data visualization is an integral part of data. It allows us to see data in aesthetically pleasing ways and helps us understand its importance. In this workshop, we will learn what data visualization is, its importance, and create a visualization for the biggest girl group in the world. Prior to attending this workshop, participants should download the dataset and install the latest version of Python on their machine. <br> <i>Link to install can be found <a href='https://www.python.org/downloads/'>here.</a></i><br><br>Find the Colab Notebook <a href=\"https://colab.research.google.com/drive/1Ov0hDJFBqKwiWo0x09Xm9JvN66-ND1Nh?usp=sharing\">here</a>" ],
     [ 1, 16, "How to Start Your Career from Hackathons", 1 ],
     [ 1, 17, "Sponsor Music", 2 ],
-    [ 1, 18, "Intro to UI/UX - Figma", 2 ],
-    [ 1, 19, "Intro to Web Development", 2 ],
-    [ 1, 20, "Intro to Notion", 2 ],
+    [ 1, 18, "Intro to UI/UX - Figma", 2, "Planning out what your project looks like is a very important part of the coding process! We know that creating a hackathon project can be a little daunting for some, so in this session, we’re presenting a way for you to turn your idea into a professional mock MVP through Figma, a design and prototyping tool. We’ll be creating a music player & queue to demonstrate wireframing/prototyping techniques!" ],
+    [ 1, 19, "Intro to Web Development", 2, "Throughout this hackathon you’re tasked with coming up with a minimum viable product (MVP) or solution to make an impact on others in your community. We know that can be a little daunting for some, so in this session, we’re presenting a way for you to turn your idea into reality, by taking a design and coding it! " ],
+    [ 1, 20, "Intro to Notion", 2, "Do you ever feel overwhelmed with due dates, exams, assignments, and life in general because it seems like your life is a big chaotic mess? Well, don’t fret. In this workshop, we will help you better organize your daily tasks and manage your time better with Notion! You will learn how to effectively use the application to fit YOUR needs and receive organization tips from our workshop leader, Amara. She is a rising junior at Stony Brook University who has used Notion for over two years. You can contact her @amaraim22 on instagram for more information." ],
     [ 1, 21, "Generative Art", 2 ],
 
-    [ 2, 10, "Drawing Competition/Photo Raffle Submission Deadline", 0 ],
+    [ 2, 10, "Drawing Competition/Photo Raffle Submission Deadline", 0, "In honor of the great waffle, we present to you the Best Waffle Drawing Competition! Submit an original work of art depicting anything related to waffles. We encourage you to use whatever media you prefer, although digital works of art would be nice :) <br><hr style='border-color: black'> Submit a picture of you and your team members working on your project. Every team member can submit a picture to get an entry into the photo raffle. We’d love to see your smiling faces and look forward to seeing all the entries." ],
     [ 2, 12, "Hacker Project Submission Deadline", 0 ],
     [ 2, 14, "Internship Panel", 1 ],
     [ 2, 15, "College Applications Panel", 1 ],
@@ -61,30 +60,9 @@ function numberToTime(num){
     return hour + ":" + min + " " + ampm;
 }
 
-const Syrupblob = ({color}) => {
-    return (
-        <svg className='calendar-syrup' width="434" height="116" viewBox="0 0 434 116" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clipPath="url(#clip0_407_111)">
-                <path d="M92.15 23.0779C129.33 10.0774 148.492 -4.01658 168.798 1.45092C188.818 7.03992 209.696 32.0689 250.022 35.8354C290.348 39.6019 350.408 21.8629 388.732 22.4704C427.056 22.9564 443.644 41.7889 428.772 55.8829C413.9 70.0984 367.282 79.5754 336.68 90.2674C306.364 101.081 291.778 112.866 270.614 115.539C249.45 118.091 221.708 111.53 194.538 106.67C167.368 101.81 140.77 98.6509 99.3 91.3609C57.544 83.9494 0.91601 72.1639 0.34401 60.2569C-0.22799 48.3499 54.97 36.1999 92.15 23.0779Z" fill={color}/>
-            </g>
-            <defs>
-                <clipPath id="clip0_407_111">
-                    <rect width="116" height="434" fill="white" transform="translate(0 116) rotate(-90)"/>
-                </clipPath>
-            </defs>
-        </svg>
-    );
-}
-
 const Calendar = () => {
-//     const data = useStaticQuery(graphql`
-//     query CalendarQuery {
-//         directus
-//     }
-//   `);
-//   console.log(data);
-
     const [day, setDay] = useState(0);
+    const [open, setOpen] = useState(new Array(events.length).fill(false));
 
     return (
     <center style={{marginTop: '6rem'}}>
@@ -116,7 +94,19 @@ const Calendar = () => {
                             }
                         </span>
                         <span key={"time" + i} className="event-time">{numberToTime(event[1])}</span>
-                        <span key={"name" + i} className="event-name" style={{position: 'relative', background: colors[event[3]]}}>{event[2]}</span>
+                        <div key={"name" + i} className="event-name" style={{position: 'relative', background: colors[event[3]], overflow: 'hidden', padding: open[i] ? '1rem' : ''}}>
+                            {
+                                event.length === 5 && <div className='event-desc-btn' onClick={() => setOpen(open.map((e, ind) => ind === i ? !e : e))}></div>
+                            }
+                            <span style={{padding: '0 0.5rem'}}>{event[2]}</span>
+                            {
+                                event.length == 5 && <img src={down} alt="See description" onClick={() => setOpen(open.map((e, ind) => ind === i ? !e : e))} style={{position: 'absolute', right: '0.2rem', bottom: '0.3rem', width: '0.9rem', transform: open[i] ? 'scaleY(-1)' : ''}} />
+                            }
+                            {
+                                open[i] && <p className='poppins-light event-desc' style={{fontSize: '0.9rem', padding: '0.5rem', textAlign: 'left'}} dangerouslySetInnerHTML={{__html: event[4]}}></p>
+                            }
+                        </div>
+
                         </>
                     )
                 })

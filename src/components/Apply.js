@@ -31,7 +31,7 @@ const Apply = ({ complete }) => {
   function completeScreen(){
     hidwaffle.current.style.opacity = 0;
     setShowModal(true);
-    timeSinceComplete.current = Date.now();
+    if (timeSinceComplete.current === 0) timeSinceComplete.current = Date.now();
     setTimeout(() => {
       document.getElementById('complete-modal').style.opacity = 1;
     }, 750);
@@ -92,7 +92,7 @@ const Apply = ({ complete }) => {
   function closeModal(){
     if (Date.now() - timeSinceComplete.current < 1000) return;
     document.getElementById('complete-modal').style.opacity = 0;
-    document.getElementById('right-bookcase').style.right = '-2.7vw';
+    hidwaffle.current.style.opacity = 1;
     setTimeout(() => {
       setShowModal(false);
     }, 400);
