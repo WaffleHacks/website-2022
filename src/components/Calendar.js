@@ -7,7 +7,7 @@ import blob from "../images/syrup blob.svg";
 let events = [
     [ 0, 17, "WaffleHacks Opening Ceremony", 0],
     [ 0, 19, "Resume Workshop", 1 ],
-    [ 0, 20.5, "What they don’t tell you about tech interviews", 1 ],
+    [ 0, 20.5, "What They Don’t Tell You About Tech Interviews", 1 ],
     [ 0, 22, "Intro to Python", 2 ],
     [ 0, 23, "Tetris Tournament", 3 ],
 
