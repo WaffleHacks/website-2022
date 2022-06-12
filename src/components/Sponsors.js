@@ -8,6 +8,7 @@ import digitalocean from "../images/digitalocean.svg";
 import trimble from "../images/trimble.svg";
 import googlecloud from "../images/googlecloud.svg";
 import belmont from '../images/belmont.png';
+import codedex from '../images/codedex.png';
 
 
 const Sponsors = () => {
@@ -36,6 +37,8 @@ const Sponsors = () => {
               <h1>Opener</h1>
               <a href='https://www.stickermule.com' target='_blank'><img src={stickermule} className='opener' alt="StickerMule" /></a>
               <a href='https://cloud.google.com' target='_blank'><img src={googlecloud} className='opener' alt="Google Cloud" /></a>
+              <a href='https://www.codedex.io' target='_blank'><img src={codedex} className='opener' alt="Codedex" /></a>
+              
               
             </div>
             <div id='sponsor-msg' className='poppins-light'>
