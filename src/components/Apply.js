@@ -79,7 +79,7 @@ const Apply = ({ complete }) => {
     let timeCompleted = new Date(timeSinceComplete.current);
     let weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    let timeCompletedString = `${weekdays[timeCompleted.getDay()]}, ${months[timeCompleted.getMonth()]} ${timeCompleted.getDate()} at ${timeCompleted.getHours()}:${timeCompleted.getMinutes()}:${timeCompleted.getSeconds()}`;
+    let timeCompletedString = `${weekdays[timeCompleted.getUTCDay()]}, ${months[timeCompleted.getUTCMonth()]} ${timeCompleted.getUTCDate()} at ${timeCompleted.getUTCHours()}:${timeCompleted.getUTCMinutes()}:${timeCompleted.getUTCSeconds()} UTC`;
     ctx.fillText(`Completed on ${timeCompletedString}`, canvas.current.width/2, canvas.current.height/2 + 95);
     ctx.fillText(`Take a screenshot and DM it`, canvas.current.width/2, canvas.current.height/2 + 160);
     ctx.fillText(`to an organizer on Discord!`, canvas.current.width/2, canvas.current.height/2 + 210);
