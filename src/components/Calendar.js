@@ -9,8 +9,7 @@ let events = [
     [ 0, 20.5, "What They Don’t Tell You About Tech Interviews", 1, "One of the biggest concerns for high school and college students is figuring out how to land a successful job. But for many, one great first step is to land an internship! In this panel, we’ll introduce interns who have gone through the application process and found success. You’ll get to hear exclusive stories from interns at Microsoft, NASA, Google, and more!<br>Please come with questions! We will have a Q & A time at the end of the panel for you to ask your burning questions to our panelists!" ],
     [ 0, 22, "Intro to Python", 2, "Wheeeeeeeee (thank you Kevin)" ],
     [ 0, 23, "Tetris Tournament", 3, "Interested in showing off t-spins or just looking to have a fun time? Come join our annual Tetris Tournament and compete against other participants via <a href='tetr.io'>tetr.io</a>. Tetr.io is a completely free multiplayer browser game so if you don’t have an account, please make sure to register before the tournament starts!" ],
-
-    [ 1, 0, "Tetris Tournament", 3, "Interested in showing off t-spins or just looking to have a fun time? Come join our annual Tetris Tournament and compete against other participants via <a href='tetr.io'>tetr.io</a>. Tetr.io is a completely free multiplayer browser game so if you don’t have an account, please make sure to register before the tournament starts!" ],
+    
     [ 1, 10, "Intro to Start Ups", 2 ],
     [ 1, 11, "Fighting the Tech Bros with Ella", 1 ],
     [ 1, 12, "Backend Workshop", 2, "Learn how to quickly plan, build, and deploy a backend in Python using Flask, and then integrate it with a React frontend. In this workshop you will learn to create a todo list webapp complete with lists and tags." ],

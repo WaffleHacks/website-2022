@@ -32,6 +32,9 @@ const Navbar = () => {
           <a href="/#faq" style={navLinkStyles}>
             faqs
           </a>
+          <a href="/#calendar" style={navLinkStyles}>
+            calendar
+          </a>
           <a href="/#sponsors" style={navLinkStyles}>
             sponsors
           </a>
