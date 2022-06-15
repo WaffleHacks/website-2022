@@ -259,6 +259,7 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
                     if (curscroll === 18*(layout[0].length-20) + 21*3) layout[6][23] = 2;
                     if (curscroll === 18*(layout[0].length-20) + 23*3) layout[5][24] = 2;
                     if (curscroll === 18*(layout[0].length-20) + 25*3) layout[4][25] = 2;
+                    if (curscroll === 18*(layout[0].length-20) + 27*3) layout[4][26] = 2;
                 }
             }
 
@@ -502,7 +503,7 @@ const ClueGame = ({ showRiddle, windowCoords }) => {
     }
     
     return (
-        <Window removeWindow={exit} coords={windowCoords} size={[720, 360]} name='Game'>
+        <Window removeWindow={exit} coords={windowCoords} size={[720, 360]} name="Don't Cheat">
             <canvas ref={canvas} id='game-canv' tabIndex="0" onMouseMove={mouseMove} onClick={mouseClick} onKeyDown={keyDown} onKeyUp={keyUp} className='pixelated' style={{width: '100%', height: '100%', outline: 'none'}}></canvas>
         </Window>
         )
