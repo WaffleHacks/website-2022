@@ -38,6 +38,8 @@ Whatever the reason you're at a hackathon, make sure you're upholding the [hacke
 12. Projects that violate the [Code of Conduct](https://mlh.io/code-of-conduct) are not allowed.
 13. Teams can be disqualified from the competition at the organizers' discretion.
     Reasons might include but are not limited to breaking the Rules of the Competition, breaking the [Code of Conduct](https://mlh.io/code-of-conduct), or other unsporting behaviour.
+14. To receive any awarded prizes and/or swag, you must have submitted an application, and been accepted, in the [WaffleHacks Application Portal](https://apply.wafflehacks.org).
+    Submitting a project on Devpost is **NOT** sufficient. 
 
 
 ## Demos
