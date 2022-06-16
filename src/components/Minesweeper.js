@@ -174,7 +174,7 @@ const Minesweeper = ({ showRiddle, windowCoords }) => {
     }
     
     return (
-        <Window removeWindow={exit} coords={windowCoords} size={winSize} name='Game' onResize={(w, h) => setWinSize([w, h])}>
+        <Window removeWindow={exit} coords={windowCoords} size={winSize} name='WaffleSweeper' onResize={(w, h) => setWinSize([w, h])}>
             {/* 9x9 grid */}
             <center id='ms-container' style={{width: '100%', height: '100%', fontSize: Math.min(...winSize) / 20}}>
                 <h1 style={{marginTop: 0, paddingTop: '1rem', marginBottom: '0.5rem', fontSize: Math.min(...winSize) / 10}}>Wafflesweeper</h1>
