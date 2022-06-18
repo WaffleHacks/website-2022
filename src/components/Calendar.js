@@ -13,7 +13,7 @@ let events = [
     [ 0, 23, "Tetris Tournament", 3, "Interested in showing off t-spins or just looking to have a fun time? Come join our annual Tetris Tournament and compete against other participants via Tetr.io. <a href='https://tetr.io'>Tetr.io</a> is a completely free multiplayer browser game so if you don’t have an account, please make sure to register before the tournament starts!" ],
 
     [ 1, 10, "Intro to Start Ups", 2, "Learn more about the startup ecosystem in Nashville and opportunities for students to plug in, start companies, or get hired." ],
-    [ 1, 11, "Fighting the Tech Bros with Ella", 1 ],
+    [ 1, 11, "Fighting the Tech Bros with Ella", 1, "Join Gabriella and Ellie as they guide you through their own personal journeys to tech, suggest some amazing resources for breaking into tech, and provide advice for fighting the tech bros along your own journey." ],
     [ 1, 12, "Backend Workshop", 2, "Learn how to quickly plan, build, and deploy a backend in Python using Flask, and then integrate it with a React frontend. In this workshop you will learn to create a todo list webapp complete with lists and tags." ],
     [ 1, 13, "BIPOC in Tech", 1, "Did you know that 16% of the tech industry is made up of persons who identify as BIPOC (Black, Indigenous, and People of Color)? It’s 2022. Time to do better. Join us for a celebration of achievements and an honest conversation about what it means to be a person of color in tech." ],
     [ 1, 14, "Slideshow Karaoke with Ellie from MLH!", 3, "Need a break from hacking? Join our MLH coach, Ellie Popoca, for a game of Slideshow Karaoke!" ],
