@@ -38,8 +38,8 @@ const Navbar = () => {
           <a href="/#sponsors" style={navLinkStyles}>
             sponsors
           </a>
-          <a href="https://apply.wafflehacks.org" style={devpostStyle}>
-            apply
+          <a style={devpostStyle}>
+            <s>apply</s>
           </a>
         </div>
       </nav>

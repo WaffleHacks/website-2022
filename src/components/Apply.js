@@ -118,7 +118,7 @@ const Apply = ({ complete }) => {
           APPLY<br />TODAY!
         </span>
 
-        <a id='apply-btn' href="https://apply.wafflehacks.org">
+        <a id='apply-btn'>
           <img src={button_sticker} alt="" style={{width: '15rem', cursor: 'pointer'}} />
           <span style={{
             position: 'absolute',
@@ -129,7 +129,7 @@ const Apply = ({ complete }) => {
             color: '#543E2E',
             cursor: 'pointer'
           }} >
-            apply
+            <s>apply</s>
           </span>
         </a>
     </div>
