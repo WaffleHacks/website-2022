@@ -16,10 +16,7 @@ const Apply = ({ complete }) => {
 
   useEffect(() => {
     if (complete) {
-      document.querySelector('#hbd-jendy').scrollIntoView({
-        behavior: 'smooth'
-      });
-      // window.scrollTo(0, document.body.scrollHeight);
+      window.scrollTo(0, document.body.scrollHeight);
       document.getElementById('right-bookcase').style.right = '0';
     }
   }, [complete]);
