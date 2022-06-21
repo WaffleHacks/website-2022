@@ -4,18 +4,24 @@ import bookcase2 from '../images/bookcase2.svg';
 import hsign from '../images/hanging sign.png';
 import button_sticker from '../images/button_sticker.svg';
 import hwaffle from '../images/hiddenwaffle.svg';
+import bday from '../images/bday.png';
 
 const Apply = ({ complete }) => {
 
   const [showModal, setShowModal] = useState(false);
+  const [bdayshow, setBday] = useState(true);
   var hidwaffle = useRef(null);
   var canvas = useRef(null);
   var sparks = useRef([]);
   var timeSinceComplete = useRef(0);
+  
 
   useEffect(() => {
     if (complete) {
-      window.scrollTo(0, document.body.scrollHeight);
+      document.querySelector('#hbd-jendy').scrollIntoView({
+        behavior: 'smooth'
+      });
+      // window.scrollTo(0, document.body.scrollHeight);
       document.getElementById('right-bookcase').style.right = '0';
     }
   }, [complete]);
@@ -132,6 +138,7 @@ const Apply = ({ complete }) => {
             <s>apply</s>
           </span>
         </a>
+        <img id='hbd-jendy' src={bday} onClick={() => setBday(false)} alt="Happy birthday Jendy!" style={{width: '100%', left: 0, bottom: 0, zIndex: 100000000, position: 'absolute', display: bdayshow ? '' : 'none'}} />
     </div>
     {
           showModal && (

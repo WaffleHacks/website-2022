@@ -20,6 +20,7 @@ import cafegirl from '../images/cafe girl.png';
 import cup from '../images/cafe cup.png';
 import canvImg from '../images/chalkboard img.png';
 
+
 let divStyles = {
     position: 'relative',
     display: 'inherit',
