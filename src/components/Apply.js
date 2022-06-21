@@ -138,7 +138,7 @@ const Apply = ({ complete }) => {
             <s>apply</s>
           </span>
         </a>
-        <img id='hbd-jendy' src={bday} onClick={() => setBday(false)} alt="Happy birthday Jendy!" style={{width: '100%', left: 0, bottom: 0, zIndex: 100000000, position: 'absolute', display: bdayshow ? '' : 'none'}} />
+        <img id='hbd-jendy' src={bday} onClick={() => setBday(false)} alt="Happy birthday Jendy!" style={{width: '100%', left: 0, bottom: 0, zIndex: 100000000, position: 'absolute', display: complete ? '' : 'none'}} />
     </div>
     {
           showModal && (
