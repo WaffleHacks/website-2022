@@ -68,8 +68,9 @@ const About = ({ setComplete }) => {
   }
 
   return (
+    <>
+    <h1 style={{textAlign: 'center', textDecoration: 'none'}}>WaffleHacks 2022 is over!</h1>
     <div id="about" style={aboutStyles}>
-
         <div style={ cardStyles }>
           <img
             src={note_tape_long}
@@ -158,6 +159,7 @@ const About = ({ setComplete }) => {
         
         
       </div>
+      </>
   )
 }
 
