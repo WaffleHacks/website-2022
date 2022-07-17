@@ -13,15 +13,6 @@ module.exports = {
       },
     },
     {
-      resolve: "@directus/gatsby-source-directus",
-      options: {
-        url: "https://cms.wafflehacks.org",
-        dev: {
-          refresh: "5m",
-        },
-      },
-    },
-    {
       resolve: "gatsby-plugin-mdx",
       options: {
         defaultLayouts: {
