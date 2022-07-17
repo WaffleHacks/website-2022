@@ -341,7 +341,7 @@
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 4rem;
-    
+
 }
 #calendar > * {
     background-color: #E2A165;
@@ -792,3 +792,54 @@
     }
 
  }
+
+/* Get notified form */
+.reminder-form {
+    font-size: 1.25rem;
+}
+
+.reminder-form-inputs {
+    display: flex;
+    justify-content: center;
+}
+
+.reminder-form-input {
+    margin-left: 2rem;
+    padding-right: 5rem;
+}
+
+.reminder-form-input input {
+    height: 1.25rem;
+    width: 125%;
+}
+
+.reminder-form-submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.reminder-form-submit {
+    position: relative;
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+}
+
+.reminder-form-submit img {
+    height: 3rem;
+}
+
+.reminder-form-submit span {
+    color: white!important;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+.reminder-form-submit:hover span {
+    color: lightgray!important;
+}
